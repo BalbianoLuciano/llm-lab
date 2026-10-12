@@ -44,6 +44,7 @@ Ordenados de lo básico a lo que se usa en producción. Cada uno responde una pr
 | 08 | Tool use y agentes | Un agente con herramientas: ¿cuántos pasos usa y cuándo se equivoca de herramienta? |
 | 09 | Costo y caché | Tokens, prompt caching y latencia: ¿cuánto cuesta cada respuesta y cómo se baja? |
 | 10 | Evaluación | Un evaluador automático: ¿coincide con el juicio humano en un set etiquetado a mano? |
+| 11 | Parseo | ¿Cuánta estructura (títulos, listas, tablas, enlaces) sobrevive al pasar de PDF, HTML y Word a bloques? |
 
 ## Instalación
 

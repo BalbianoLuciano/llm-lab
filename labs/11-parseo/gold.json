@@ -1,0 +1,153 @@
+{
+  "_doc": "Hand-labelled from the rendered originals (PDF pages as images, HTML/DOC as rendered text), not from any parser output. headings: what a reader sees as a heading. neutral: may or may not be a heading, never penalised. tables: header + number of data rows (null = not scored). list_items: start of each item. links: URL prefixes. facts: strings that must survive somewhere. noise: must not appear at all. repeated: page furniture that may appear at most once.",
+  "caba-licencias-exencion-bui-jubilados": {
+    "headings": [
+      "EXENCIONES DE PAGO BUI | JUBILADOS Y PENSIONADOS",
+      "¿Cómo accedo a la exención del pago de la BUI para los trámites de Licencias de Conducir?",
+      "DETALLE DE LAS EXENCIONES Y DESCUENTOS"
+    ],
+    "neutral": [],
+    "tables": [{"header": ["TRÁMITE", "BENEFICIO", "PERCIBIDO POR JUBILACIÓN"], "rows": 7}],
+    "list_items": [],
+    "links": [],
+    "facts": ["100% exceptuado", "Renovación por cambio de jurisdicción", "Estudio Neuropsicológico", "MiANSES"],
+    "noise": [],
+    "repeated": []
+  },
+  "pba-arba-baja-exencion": {
+    "headings": [
+      "Cese de Exención del Impuesto Automotor y/o Inmobiliario",
+      "Índice",
+      "Introducción",
+      "Requisitos",
+      "Documentación",
+      "Acceso a la Web",
+      "Tené en cuenta",
+      "Importante",
+      "En caso de dudas, contactanos"
+    ],
+    "neutral": ["Trámites Generales", "INSTRUCTIVO", "Contribuyente"],
+    "tables": [{"header": ["Automotor", "Inmobiliario"], "rows": 3}],
+    "list_items": [
+      "Poseer Clave de Identificación Tributaria",
+      "Ser persona beneficiaria titular",
+      "Identificar el Impuesto Automotor",
+      "Identificar la fecha de baja",
+      "Ingresar en la página Web de ARBA",
+      "Colocar CUIT y Clave de Identificación Tributaria",
+      "Desplegar la solapa",
+      "Datos a completar",
+      "Nombre y Apellido o Razón Social",
+      "CUIT / CUIL",
+      "Correo Electrónico, confirmación",
+      "Teléfono, de quien solicita",
+      "En Objetos Imponibles completar",
+      "Detalles del reclamo completar",
+      "Documentación Adjunta es un campo obligatorio",
+      "Copia del DNI",
+      "La documentación correspondiente según el motivo"
+    ],
+    "links": ["https://web.arba.gov.ar/", "https://web.arba.gov.ar/contacto"],
+    "facts": ["OBLIGATORIO", "Por cambio de titularidad", "manera comprimida", "Centro de ayuda", "fecha desde la cual debe regir"],
+    "noise": [],
+    "repeated": ["Cese de Exención del Impuesto Automotor y/o Inmobiliario", "Trámites Generales"]
+  },
+  "caba-resolucion-tarifas-colectivos-julio-2026": {
+    "headings": [
+      "RESOLUCIÓN N.º 132/SECT/26",
+      "CONSIDERANDO:",
+      "EL SECRETARIO DE TRANSPORTE RESUELVE:"
+    ],
+    "neutral": ["Gobierno de la Ciudad Autónoma de Buenos Aires", "VISTO:", "EL SECRETARIO DE TRANSPORTE", "RESUELVE:"],
+    "tables": [],
+    "list_items": [],
+    "links": [],
+    "facts": ["24 de junio de 2026", "2,15%", "1º de julio de 2026", "0 a 3 km", "Krantzer"],
+    "noise": [],
+    "repeated": ["Gobierno de la Ciudad Autónoma de Buenos Aires", "2026 - Año del 30° Aniversario de la sanción de la Constitución de la Ciudad Autónoma de Buenos Aires"]
+  },
+  "caba-licencias-aranceles": {
+    "headings": [
+      "Aranceles",
+      "Costos de los trámites",
+      "Reclamo por devoluciones de Pago BUI",
+      "Excepciones de boleta BUI"
+    ],
+    "neutral": ["Costo de solicitud de licencia de conducir"],
+    "tables": [],
+    "list_items": [
+      "Costo de solicitud de licencia de conducir",
+      "Certificado Nacional de Antecedentes de Tránsito",
+      "Certificado de Legalidad",
+      "Estudios complementarios",
+      "Jubilados o pensionados",
+      "Cursantes del Instituto Superior",
+      "Veteranos de Malvinas",
+      "Personas carentes de recursos",
+      "Personas con Certificado Único de Discapacidad"
+    ],
+    "links": [
+      "http://www.buepp.com.ar",
+      "mailto:devolucionesdghct@buenosaires.gob.ar",
+      "https://buenosaires.gob.ar/tramites/solicitud-de-devolucion-de-pagos"
+    ],
+    "facts": ["$42.230,00", "$23.460,00", "$10.150", "48 horas", "Veteranos de Malvinas"],
+    "noise": ["Teléfonos útiles", "Redes de la ciudad", "Te fue útil esta página", "Pasar al contenido principal"],
+    "repeated": []
+  },
+  "caba-registro-civil-partidas-urgentes": {
+    "headings": [
+      "Solicitud partidas urgentes",
+      "Requisitos para iniciar el trámite",
+      "Requisitos obligatorios para partidas urgentes",
+      "Pasos para completar el trámite",
+      "Ingresá a TAD",
+      "Completá tu solicitud",
+      "Aboná la Boleta Única Inteligente (BUI)",
+      "Recibí tu partida",
+      "Costos del trámite",
+      "Más información",
+      "Solicitudes no urgentes",
+      "Partidas parroquiales",
+      "Apostillado de Partidas",
+      "Organismo responsable"
+    ],
+    "neutral": ["Ubicación", "Días y horarios de atención", "Modalidad: Online"],
+    "tables": [],
+    "list_items": [
+      "Contar con usuario y clave miBA",
+      "Si sos titular de la partida",
+      "Conocer el nombre y apellido",
+      "Conocer los datos de Circunscripción",
+      "Contar con una tarjeta de crédito",
+      "Contar con una casilla de correo",
+      "Se realizará la búsqueda del acta",
+      "El Archivo del Registro Civil",
+      "El rango de año de Libros",
+      "El mencionado Fondo Documental"
+    ],
+    "links": [
+      "https://buenosaires.gob.ar/innovacionytransformaciondigital/login-miba",
+      "https://buenosaires.gob.ar/gcaba_historico/bax",
+      "https://buenosaires.gob.ar/tramites/solicitud-partidas",
+      "http://www.buepp.com.ar",
+      "https://login.buenosaires.gob.ar/auth/realms/miba"
+    ],
+    "facts": ["17540,00", "3 días hábiles", "15 días hábiles", "Uruguay 753", "7:30 a 19 h", "10/08/1886", "no incluye legalización ni apostillado"],
+    "noise": ["Teléfonos útiles", "Ayudanos a mejorar", "Redes de la ciudad", "Pasar al contenido principal"],
+    "repeated": []
+  },
+  "pba-transporte-formulario-d-sube": {
+    "headings": [
+      "FORMULARIO D",
+      "DESIGNACIÓN DE RESPONSABLE DEL S.U.B.E. Y CUENTA BANCARIA"
+    ],
+    "neutral": ["(JURISDICCIÓN PROVINCIAL O MUNICIPAL)"],
+    "tables": null,
+    "list_items": [],
+    "links": [],
+    "facts": ["22 dígitos", "declaración jurada", "Adjuntar copia certificada del poder", "Resol. CNRT Nº 23/11"],
+    "noise": [],
+    "repeated": []
+  }
+}

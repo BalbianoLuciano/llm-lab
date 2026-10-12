@@ -17,3 +17,4 @@ data/raw/*.wav
 
 # Corpus descargado: se versiona la lista de URLs, no los archivos
 data/raw/corpus/
+data/interim/
