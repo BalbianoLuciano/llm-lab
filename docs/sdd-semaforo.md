@@ -116,13 +116,15 @@ flowchart LR
 muestra en la UI y se corrige.
 
 ```python
-class Bloque(BaseModel):
-    id: str            # estable entre versiones: doc_id + posición
-    tipo: str          # "titulo" | "parrafo" | "tabla" | "lista"
-    texto: str         # en markdown; las tablas como tabla markdown
-    seccion: list[str] # ruta de títulos: ["Requisitos", "Documentación"]
-    pagina: int | None
-    estilo: dict       # lo que el texto plano pierde: color, fondo, negrita, resaltado
+class Block:                 # src/llm_lab/blocks.py
+    kind: str                # "heading" | "paragraph" | "list_item" | "table"
+    text: str
+    level: int               # solo títulos: 1 es el más alto
+    page: int | None
+    rows: list[list[str]]    # solo tablas; la primera fila es el encabezado
+    links: list[Link]        # texto y URL de cada enlace
+    path: list[str]          # ruta de títulos: ["Requisitos", "Documentación"]
+    style: dict              # (pendiente) lo que el texto plano pierde: color, fondo, resaltado
 ```
 
 **Herramienta: [Docling](https://github.com/docling-project/docling)** (open source, local,
@@ -144,20 +146,20 @@ Un LLM la **compila** a una definición tipada (Pydantic), que una persona revis
 
 ```yaml
 id: montos-moneda-vigencia
-fuente: "ISO 4217; ISO 24495-1 (relevante)"   # la norma de la que sale la regla
+source: "ISO 4217; ISO 24495-1 (relevante)"   # la norma de la que sale la regla
 version: 1
-tipo: semantica             # semantica (la evalúa un modelo) | determinista (código)
-alcance: bloque             # bloque | documento
-aplica_a: [tabla, parrafo]
-pregunta: "¿Los montos del texto indican moneda y fecha desde la que rigen?"
-niveles:
-  verde: "Indica moneda y fecha de vigencia."
-  amarillo: "Indica solo una de las dos, o es ambigua."
-  rojo: "Tiene montos sin moneda ni vigencia."
-bloqueante: true            # si queda en rojo, el documento no se indexa
-ejemplos:
-  - texto: "| Trámite | Arancel |\n| DNI | 5000 |"
-    esperado: rojo
+kind: semantic              # semantic (la evalúa un modelo) | deterministic (código)
+scope: block                # block | document
+applies_to: [table, paragraph]
+question: "¿Los montos del texto indican moneda y fecha desde la que rigen?"
+levels:
+  green: "Indica moneda y fecha de vigencia."
+  yellow: "Indica solo una de las dos, o es ambigua."
+  red: "Tiene montos sin moneda ni vigencia."
+blocking: true              # si queda en rojo, el documento no se indexa
+examples:
+  - text: "| Trámite | Arancel |\n| DNI | 5000 |"
+    expected: red
 ```
 
 - *Por qué compilar*: la regla queda auditable, versionada y probada con sus ejemplos antes
@@ -192,12 +194,12 @@ etiquetado. Es lo que hacen las alternativas open source a Jev
 ([open-alternative-jev](https://github.com/ikermoel/open-alternative-jev), Von y otras).
 
 ```python
-class Evaluador(Protocol):
-    def evaluar(self, state: str, reglas: list[Regla]) -> dict[str, Veredicto]: ...
+class Evaluator(Protocol):
+    def evaluate(self, state: str, rules: list[Rule]) -> dict[str, Verdict]: ...
 
-class EvaluadorLogprobs:     # propio: mlx-lm + Qwen chico local, lee logprobs de A/B/C
-class EvaluadorLibreria:     # una alternativa open source a Jev (Von / so1), para contrastar
-class EvaluadorGenerativo:   # LLM por API free tier, JSON validado con Pydantic (línea base)
+class LogprobsEvaluator:     # propio: mlx-lm + Qwen chico local, lee logprobs de A/B/C
+class LibraryEvaluator:      # una alternativa open source a Jev (Von / so1), para contrastar
+class GenerativeEvaluator:   # LLM por API free tier, JSON validado con Pydantic (línea base)
 ```
 
 - **Modelo local**: un Qwen de 4B a 8B cuantizado a 4 bits con `mlx-lm` en la M4. No cuesta
@@ -206,7 +208,7 @@ class EvaluadorGenerativo:   # LLM por API free tier, JSON validado con Pydantic
   el siguiente recortados, marcando cuál se evalúa.
 - **Agregación**: el bloque toma el peor nivel de sus reglas. Con confianza baja (umbral a
   calibrar) queda **amarillo "dudoso"**, nunca verde. El documento pasa si ningún bloque
-  queda rojo en una regla `bloqueante` y se cumplen las reglas de alcance documento.
+  queda rojo en una regla `blocking` y se cumplen las reglas de alcance documento.
 - **Caché** por hash de (texto del bloque, versión de la regla): re-evaluar después de una
   corrección cuesta un solo bloque.
 
@@ -241,7 +243,7 @@ cortan; si son largas, se parten por filas repitiendo el encabezado. Tamaño y s
 salen del lab 03. Metadatos de cada chunk:
 
 ```python
-{"doc_id", "version", "bloque_ids", "seccion", "pagina", "permisos", "fecha_indexado"}
+{"doc_id", "version", "block_ids", "path", "page", "permissions", "indexed_at"}
 ```
 
 **Embeddings (locales, gratis).** Un modelo multilingüe corriendo en la M4: `bge-m3` (da
@@ -301,18 +303,21 @@ archivo, semáforo y revisión guiada) y **Chat**.
 
 ```
 src/llm_lab/
-  modelos.py        cliente OpenAI-compatible con cadena de free tiers + local
-  parseo/           archivo → bloques (PyMuPDF a mano, Docling)
-  reglas/           compilador, esquema Pydantic, almacenamiento versionado
-  evaluacion/       Evaluador (Protocol), logprobs local, librería, generativo; calibración
-  revision/         reescritura + guardrails + diff
-  indice/           chunking, embeddings, Qdrant
+  models.py         cliente OpenAI-compatible con cadena de free tiers + local
+  blocks.py         formato común de bloques (lo produce el parseo, lo usan reglas y chunking)
+  parsing/          archivo → bloques (PyMuPDF a mano, Docling)
+  rules/            compilador, esquema Pydantic, almacenamiento versionado
+  evaluation/       Evaluator (Protocol), logprobs local, librería, generativo; calibración
+  review/           reescritura + guardrails + diff
+  index/            chunking, embeddings, Qdrant
   rag/              recuperación, re-ranking, generación con citas
   evals/            métricas: accuracy, ECE, recall@k, MRR, fidelidad
 app/                FastAPI + plantillas Jinja/htmx
-corpus/             urls.txt + descargar.py (los archivos no se versionan)
+corpus/             urls.tsv + download.py (los archivos no se versionan)
 labs/NN-*/          un experimento por carpeta que usa src/llm_lab
 ```
+
+El código (nombres, comentarios, docstrings) va en inglés; la documentación, en español.
 
 Persistencia: **SQLite** para documentos, versiones, reglas y resultados; Qdrant local para
 vectores.
@@ -332,7 +337,7 @@ recaudación o de un organismo de seguridad social, en PDF, DOCX y HTML.
 
 ### Reglas: derivadas de estándares
 
-Las reglas no son opinión: cada una cita la norma de la que sale (campo `fuente` en la
+Las reglas no son opinión: cada una cita la norma de la que sale (campo `source` en la
 definición de la regla). Así el semáforo es defendible ("esto incumple WCAG 1.4.1") y otra
 temática puede cargar sus propias normas con el mismo mecanismo.
 

@@ -2,343 +2,343 @@
   "caba-abl-exencion-jubilados": {
     "bytes": 52632,
     "content_type": "text/html",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "f4256e7daf96396226c028a41143f22169bd4c351c80a3c083910adbf818a75e",
     "url": "https://buenosaires.gob.ar/tramites/inmobiliarioabl-solicitud-de-exencion-jubilados-y-pensionados"
   },
   "caba-agip-registro-empleadores": {
     "bytes": 637575,
     "content_type": "application/pdf",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "08f4931ace89ba427e9c115f37b5d4e9eac215b28c6b8ca52baf857ee6a9a159",
     "url": "https://buenosaires.gob.ar/sites/default/files/2026-07/Instructivo_Registro_empleadores_2024.pdf"
   },
   "caba-canales-lugares-pago": {
     "bytes": 43901,
     "content_type": "text/html",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "d0c27d42aaa10c69121b0811ee31fe6ff75d6f905cd3a4d5375f47b64a607cb9",
     "url": "https://buenosaires.gob.ar/tramites/canales-y-lugares-de-pago"
   },
   "caba-dgiur-consulta-usos": {
     "bytes": 458496,
     "content_type": "application/pdf",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "573dc65e003a66b7b2b7a3f469c83b9612262a483b0894b4c21272f9dfed361e",
     "url": "https://static.buenosaires.gob.ar/sites/default/files/2023-06/USOS%20%281%29.pdf"
   },
   "caba-educacion-estudiantes-otros-paises": {
     "bytes": 865019,
     "content_type": "application/pdf",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "e79e0d6c185fafd6b42b1a10024a5ce23fb1cebeea380852e897c8a39cc570fb",
     "url": "https://static.buenosaires.gob.ar/sites/default/files/2026-03/Estudiantes%20provenientes%20de%20otros%20pa%C3%ADses.pdf"
   },
   "caba-educacion-preguntas-frecuentes": {
     "bytes": 113404,
     "content_type": "text/html",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "d42aec6f4e788e43ab9342ed43560d5aac042dbfe42ea2f8d7a435d07e466dfa",
     "url": "https://buenosaires.gob.ar/educacion/preguntas-frecuentes"
   },
   "caba-ente-manual-2024": {
     "bytes": 2870115,
     "content_type": "application/pdf",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "7103de78a1b112991845000ac0ceef2c00f8726cf5c0294d8c06f7ea07ac5358",
     "url": "https://entedelaciudad.gov.ar/wp-content/uploads/2024/12/Manual_Ente_2024-Digital_Web.pdf"
   },
   "caba-estacionamiento-beneficio-residentes": {
     "bytes": 57769,
     "content_type": "text/html",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "80234c5a80f967830c2cd15e59101b616794f6a3838032be7f03e499e583d5ee",
     "url": "https://buenosaires.gob.ar/infraestructura/movilidad/beneficio-para-residentes"
   },
   "caba-habilitar-local-comercial": {
     "bytes": 59892,
     "content_type": "text/html",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "ee5422f82628b31955570666378dc66304124c3f854a1d42a0c3ffd5083805af",
     "url": "https://buenosaires.gob.ar/tramites/como-habilitar-tu-local-comercial-en-la-ciudad"
   },
   "caba-ivc-contrato-locacion-modelo": {
     "bytes": 60416,
     "content_type": "application/msword",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "172f7f04e0c4b8ef1b1b0e28ea223bbd100a598934cf53926732844f90709ecc",
     "url": "https://vivienda.buenosaires.gob.ar/modelo-contrato-2024"
   },
   "caba-ivc-guia-inquilinos-propietarios": {
     "bytes": 36582,
     "content_type": "text/html",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "9c80822ff040b959475496621a081d4d6e0108148ca38da8e3db9757d68b94b1",
     "url": "https://vivienda.buenosaires.gob.ar/guia-inquilinos-propietarios"
   },
   "caba-ley-arancelaria-anexo": {
     "bytes": 3097628,
     "content_type": "application/pdf",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "5a68cea5d1619126152df2adc6615d3db36ede7c44c7ddeb633be2ceae60ca1a",
     "url": "https://buenosaires.gob.ar/sites/default/files/2026-07/PL-LEY-LCABA-LCBA-6928-25-ANX_1.pdf"
   },
   "caba-licencias-aranceles": {
     "bytes": 37562,
     "content_type": "text/html",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "86605404e25138d0d0b97693a56ff5008bece55d0aae6f40e05b27a0c1a9525d",
     "url": "https://buenosaires.gob.ar/licenciasdeconducir/aranceles"
   },
   "caba-licencias-exencion-bui-cud": {
     "bytes": 355953,
     "content_type": "application/pdf",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "62d979b9de472226cdee1859b3e9841294f4dbf0144caf9047a9ac7c22a14203",
     "url": "https://static.buenosaires.gob.ar/sites/default/files/2025-01/ARCHIVO%20CUD%20OFICIAL%20pdf%20%281%29_1.pdf"
   },
   "caba-licencias-exencion-bui-jubilados": {
     "bytes": 515206,
     "content_type": "application/pdf",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "799f375a7087337823708de1f1f82469e9f18b17b6ff43946df738113600091c",
     "url": "https://static.buenosaires.gob.ar/sites/default/files/2025-01/PDF%20-%20JUBILADOS%20PENSIONADOS.pdf"
   },
   "caba-mecenazgo-instructivo-2024": {
     "bytes": 7695351,
     "content_type": "application/pdf",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "7421aeaf645232e51ca4f97bc4980597dc46bdfa10300ba8ebd414c4a7763700",
     "url": "https://static.buenosaires.gob.ar/sites/default/files/2024-09/Instructivo%20-%20C%C3%B3mo%20aplicar%20a%20Mecenazgo%202024.pdf"
   },
   "caba-obsba-afiliaciones": {
     "bytes": 163457,
     "content_type": "text/html",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "a054fa68758ff72276ffa00f11abdfa2deb3900790d94ba50431e05aa6d9e0d0",
     "url": "https://www.obsba.org.ar/afiliaciones/"
   },
   "caba-obsba-copagos": {
     "bytes": 223821,
     "content_type": "text/html",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "f6e9a317bf31f09f853d68ac1eba2a77a9e444ed7b10c9d69ada016fcb677aaa",
     "url": "https://www.obsba.org.ar/informacion-importante-copagos/"
   },
   "caba-portal-unico-pago": {
     "bytes": 46474,
     "content_type": "text/html",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "d45f4b21278b7b7a728fdb3542ba1103c1049d9d108b602109cccb42f5af9c49",
     "url": "https://buenosaires.gob.ar/tramites/portal-unico-de-pago-electronico"
   },
   "caba-registro-civil-partidas-urgentes": {
     "bytes": 52211,
     "content_type": "text/html",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "ed6c0d8c75a3efdf52d53598a500a2f52e8c199fbf50da840de44f91bacc20bc",
     "url": "https://buenosaires.gob.ar/tramites/solicitud-partidas-urgentes"
   },
   "caba-resolucion-tarifas-colectivos-julio-2026": {
     "bytes": 52693,
     "content_type": "application/pdf",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "b6df1a8d24c07ac73cf93a11af8c1cd8132b27a0cc8e9f944d10671415c64f6a",
     "url": "https://static.buenosaires.gob.ar/sites/default/files/2026-06/RESOLUCI%C3%93N_TARIFAS_CABA_JULIO_2026.pdf"
   },
   "caba-tad-manual-usuario": {
     "bytes": 1276249,
     "content_type": "application/pdf",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "44ae5803b80e0d7308f53871a37edd0390ffb1cdb9f5a2114a9f03e11e22f614",
     "url": "https://buenosaires.gob.ar/sites/default/files/2026-06/TAD-Manual-de-Usuario_0.pdf"
   },
   "caba-tesoreria-manual-pago-boletas-2017": {
     "bytes": 1509967,
     "content_type": "application/pdf",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "ee39a7bd5a12419024e4e541da86d5be773b10a9ba512f7ec190af692e198185",
     "url": "https://static.buenosaires.gob.ar/sites/default/files/media/document/2017/06/15/0b530d4fa7e8e406ee369b7673ba5398ac1d9cce.pdf"
   },
   "pba-arba-alta-sas-iibb": {
     "bytes": 1471429,
     "content_type": "application/pdf",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "44adec7850b282bc8d955e17a7c741687ca2cdcb058cd672713074b1e18e12a9",
     "url": "https://web.arba.gov.ar/sites/default/files/2023-04/instructivoaltasasiibb.pdf"
   },
   "pba-arba-baja-exencion": {
     "bytes": 654956,
     "content_type": "application/pdf",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "c9d31d9981f6111f5d4a227ef1ee21fc46b05d6fffda55e9958a499c3f336094",
     "url": "https://www.arba.gov.ar/archivos/Publicaciones/instructivobajaexenciondelimpuestoAutomotoryoInmobiliario.pdf"
   },
   "pba-arba-calendario-vencimientos-2026": {
     "bytes": 396671,
     "content_type": "application/pdf",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "20efbaf983096d253ef7172a7aed5f98a26d11fc3a3eed91ac9de39168f913a4",
     "url": "https://web.arba.gov.ar/sites/default/files/2026-02/Calendario2026_02_0.pdf"
   },
   "pba-arba-clave-cit": {
     "bytes": 1709961,
     "content_type": "application/pdf",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "14a648307cbbbf8543f7fd3afaa1e94092ba2853be4f05f847285ebf87ce9b23",
     "url": "https://www.arba.gov.ar/archivos/Publicaciones/ClavedeIdentificacionTributaria-CIT-Instructivo-Contribuyente.pdf"
   },
   "pba-arba-exenciones-automotor-flyer": {
     "bytes": 339263,
     "content_type": "application/pdf",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "d57cb075141da00860629d20463e970c0c353129da8578a157338f9545d4f465",
     "url": "https://www.arba.gov.ar/archivos/Publicaciones/pdfexcenci%C3%B3nimpuestoautomotor.pdf"
   },
   "pba-arba-planes-pago-cbu": {
     "bytes": 1130775,
     "content_type": "application/pdf",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "f0711399bb57f02bdb1198c973a60f961e30a25372e9db0df1f55db045e0367d",
     "url": "https://www.arba.gov.ar/archivos/Publicaciones/confeccion-planes-pago-adhesion-cbu.pdf"
   },
   "pba-arba-solicitud-exencion-general": {
     "bytes": 1049681,
     "content_type": "application/pdf",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "6219a86027bef62a71f68610e82260edb58456d2fce716dd794033678d3888c6",
     "url": "https://www.arba.gov.ar/archivos/Publicaciones/SolicituddeExencionTramitesGenerales.pdf"
   },
   "pba-arba-transferencia-automotor": {
     "bytes": 505535,
     "content_type": "application/pdf",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "60fcf63103526aa35b6af87c310456e4104eb4a7bbc0e16b2aad3e9c6f85bee6",
     "url": "https://www.arba.gov.ar/archivos/Publicaciones/instructivo-alta-baja-transferencia-automotor.pdf"
   },
   "pba-cic-instructivo-sigeva": {
     "bytes": 400384,
     "content_type": "application/msword",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "99f7cc89e8cb1c26058de039f792f94f5c41cb6f8e642299c0c153983789438a",
     "url": "https://www.cic.gba.gob.ar/wp-content/uploads/2024/07/Instructivo-SIGEVA-General-InformesPA.doc"
   },
   "pba-ioma-afiliaciones-voluntarias": {
     "bytes": 195019,
     "content_type": "text/html",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "7dc8437ef71ce333d2c19d68d9223b606ff603995b7827a5ff1266d4123e8f45",
     "url": "https://www.ioma.gba.gob.ar/index.php/afiliaciones-voluntarias/"
   },
   "pba-ioma-aumento-cuota-avi-2026": {
     "bytes": 231461,
     "content_type": "application/pdf",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "b27e0186fe91cbb93cb8046de19becbcd75d711fb0f1407642296bd4560e1289",
     "url": "https://www.ioma.gba.gob.ar/wp-content/uploads/2026/03/Aumento-de-cuota-AVI_2026-1.pdf"
   },
   "pba-ioma-flyer-afiliaciones": {
     "bytes": 10202696,
     "content_type": "application/pdf",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "e286eafa79b863b316c265054d41421b957362c354adc0e9b6a2192525b4c97b",
     "url": "https://www.ioma.gba.gob.ar/wp-content/uploads/2022/09/Flyer-Afiliaciones-1.pdf"
   },
   "pba-ioma-guia-cobertura-resumida": {
     "bytes": 215309,
     "content_type": "text/html",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "013a6e89dc63d05cf3d74e86091cb6d157e5e11cb4ce0524a4317faf1c3f9a39",
     "url": "https://www.ioma.gba.gob.ar/index.php/guia-de-cobertura-y-prestaciones-resumida/"
   },
   "pba-ioma-panales": {
     "bytes": 196963,
     "content_type": "text/html",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "c5f9f6781f400cd74a57cbd83cd7f2d26e654ba0bc4701bec786dbca66a7c908",
     "url": "https://www.ioma.gba.gob.ar/index.php/panales-descartables/"
   },
   "pba-ioma-reglamento-ingreso-carencia": {
     "bytes": 473275,
     "content_type": "application/pdf",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "78c7aae216cc7410c7ec7ead212f305708ffb785b8b4139d64065b1be324c6a5",
     "url": "https://www.ioma.gba.gob.ar/wp-content/uploads/2023/05/REGLAMENTO-DE-INGRESO-COBERTURA-Y-PER%C3%8DODOS-DE-CARENCIA_abril23-5.pdf"
   },
   "pba-licencias-conducir": {
     "bytes": 257422,
     "content_type": "text/html",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "de92dc3d6627ce3b10a0a7d17fb7509bcb3113e85177df78173bfcec214e6267",
     "url": "https://gba.gob.ar/seguridadvial/licencias_de_conducir"
   },
   "pba-manual-del-conductor": {
     "bytes": 2988226,
     "content_type": "application/pdf",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "b3ff30998455f7e5d19e50becbd0b0736454580230747a8f2636913f6b6b219c",
     "url": "https://www.gba.gob.ar/static/seguridadvial/docs/manual_del_conductor.pdf"
   },
   "pba-rpba-guia-tasas-2026": {
     "bytes": 295571,
     "content_type": "application/pdf",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "d74fe1e96bdb4814cb201d20f596a1636fcfcf1b78a0fa241b78cca84e03d451",
     "url": "https://www.rpba.gov.ar/noticias/assets/pdf/Tasas-2026.pdf"
   },
   "pba-rpp-inscripcion-nacimiento-online": {
     "bytes": 1015654,
     "content_type": "application/pdf",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "0e4b6d821459e877b2201c6b1f335413c2d8b3a5e4a13c5f4fc2a27a1387ab0e",
     "url": "https://publicaciones.gob.gba.gob.ar/rpp/Instructivo_Nacimiento_Online.pdf"
   },
   "pba-rpp-partidas-digitales-manual": {
     "bytes": 1840927,
     "content_type": "application/pdf",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "80ddbc31c6bf17ab26e6b9ee22e88e5a5800ffaf13a37c938ae4299c6b6d0da1",
     "url": "https://gba.gob.ar/static/registro_personas/docs/Manual_del_Usuario_Ciudadano_Partidas_Digitales.pdf"
   },
   "pba-trabajo-verificacion-digital-qr": {
     "bytes": 3812009,
     "content_type": "application/pdf",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "fefdbed54cde52289abd4435738734c08467fc0ae66659a1ed90eff3d81bfa52",
     "url": "https://www.trabajo.gba.gov.ar/documentos/Instructivo%20del%20QR.pdf"
   },
   "pba-transporte-exencion-automotor-ley15558": {
     "bytes": 116164,
     "content_type": "application/pdf",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "c71ebc16924bb61942fcb5a68ae0ba4d6e974a759562362310c1da594dccef11",
     "url": "https://publicaciones.transporte.gba.gob.ar/prensa/INSTRUCTIVO-EXENCI%C3%93N-DEL-IMPUESTO-AUTOMOTOR.pdf"
   },
   "pba-transporte-formulario-d-sube": {
     "bytes": 29696,
     "content_type": "application/msword",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "274bc7c79e2e7de5472b7bc39141579b3e9b89351cb0d2bd415e13f1e338905c",
     "url": "https://www.minfra.gba.gob.ar/web/Transporte/tramites_empresas/7-FormularioDSUBE.doc"
   },
   "pba-transporte-formulario-e-recorridos": {
     "bytes": 270848,
     "content_type": "application/msword",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "b60cc37f7c659e7c2058556ef2a1ba914782b8ce456e2246670153017ef13f53",
     "url": "https://www.minfra.gba.gob.ar/web/Transporte/tramites_empresas/4-%20Formulario%20E%20%28CNRT%29.doc"
   },
   "pba-transporte-nota-modelo-monitoreo": {
     "bytes": 18554,
     "content_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "87e7fe47973132ee9a48422652a1cb170ed6ae4bd6dc8a24e03cfd6cb4401f47",
     "url": "https://publicaciones.transporte.gba.gob.ar/prensa/NOTAMODELO%E2%80%93SOLICITUDALTADEMONITOREO(1).docx"
   },
   "pba-vtv-resolucion-tarifa-2026": {
     "bytes": 112800,
     "content_type": "application/pdf",
-    "descargado": "2026-10-11",
+    "downloaded": "2026-10-11",
     "sha256": "6888384348837953319c8d5b23a8373e1a24eb7877730bedeaafdb33d2be0c96",
     "url": "https://normas.gba.gob.ar/documentos/BK4b76In.pdf"
   }

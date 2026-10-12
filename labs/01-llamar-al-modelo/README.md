@@ -56,12 +56,12 @@ contestar "NO". Esto tiene consecuencias de costo, de latencia y de cortes (expe
 
 ### Un solo cliente para todos los proveedores
 Groq, NVIDIA, Gemini y OpenRouter exponen el mismo protocolo que OpenAI (`/chat/completions`).
-Por eso `src/llm_lab/modelos.py` usa el SDK `openai` y solo cambia la URL base y la clave. Si
+Por eso `src/llm_lab/models.py` usa el SDK `openai` y solo cambia la URL base y la clave. Si
 un proveedor contesta 429 (límite de uso) o 5xx, se pasa al siguiente de la cadena.
 
 ## 2. Método
 
-- **20 preguntas fijas** en `preguntas.jsonl`, sobre textos cortos de trámites escritos para
+- **20 preguntas fijas** en `questions.jsonl`, sobre textos cortos de trámites escritos para
   este lab: extracción de datos (montos, fechas, plazos), chequeo de reglas del semáforo
   (R3, R5, R6, R7, R14), preguntas cuya respuesta **no está** en el texto (para ver si el
   modelo inventa) y dos de razonamiento simple.
@@ -76,7 +76,7 @@ un proveedor contesta 429 (límite de uso) o 5xx, se pasa al siguiente de la cad
 | C | con y sin system prompt | un modelo que no razona y uno que sí |
 | D | max_tokens 16 / 64 / 512 / sin tope | gpt-oss-120b (razona) |
 
-Cada llamada se guarda en `corridas.jsonl` apenas termina, así una corrida cortada se retoma
+Cada llamada se guarda en `runs.jsonl` apenas termina, así una corrida cortada se retoma
 sin repetir llamadas (y sin gastar cupo). El script respeta una pausa por proveedor para no
 pasar el límite por minuto.
 
@@ -139,7 +139,7 @@ importante del lab.
    tareas: baja los aciertos y vuelve irreproducible el resultado. Se reserva para cuando
    haga falta variedad (por ejemplo, proponer varias reescrituras de un bloque).
 3. **Con modelos que razonan, nunca un max_tokens chico.** El razonamiento consume el tope y
-   la respuesta llega vacía sin error. En `modelos.py` el tope queda en `None` por defecto, y
+   la respuesta llega vacía sin error. En `models.py` el tope queda en `None` por defecto, y
    una respuesta vacía se tiene que tratar como falla.
 4. **Los tokens de razonamiento cuestan.** gpt-oss usa 50 veces más tokens de salida que Qwen
    para el mismo "NO". Gratis no importa, pero con los límites diarios por tokens se nota:

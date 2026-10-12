@@ -1,4 +1,4 @@
-id	jurisdiccion	organismo	formato	titulo	url	casos
+id	jurisdiction	agency	format	title	url	cases
 pba-arba-exenciones-automotor-flyer	PBA	ARBA	pdf	Exenciones Impuesto Automotor (pieza breve)	https://www.arba.gov.ar/archivos/Publicaciones/pdfexcenci%C3%B3nimpuestoautomotor.pdf	1 página (51 palabras); sigla CIT sin definir; sin fecha ni lista de exenciones; error de tipeo "Ateción"; remite a Centro de Atención sin dirección
 pba-arba-solicitud-exencion-general	PBA	ARBA	pdf	Solicitud de exención - Trámites generales	https://www.arba.gov.ar/archivos/Publicaciones/SolicituddeExencionTramitesGenerales.pdf	plazo de 120 días corridos para certificados; enlaces "Aquí" sin URL visible; advertencias IMPORTANTE; capturas de pantalla; sin fecha del documento
 pba-arba-baja-exencion	PBA	ARBA	pdf	Instructivo de baja de exención Automotor y/o Inmobiliario	https://www.arba.gov.ar/archivos/Publicaciones/instructivobajaexenciondelimpuestoAutomotoryoInmobiliario.pdf	pasos con capturas; CIT sin definir; advertencia IMPORTANTE; sin fecha de vigencia

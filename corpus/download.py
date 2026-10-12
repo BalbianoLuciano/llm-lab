@@ -1,11 +1,12 @@
-"""Descarga el corpus listado en corpus/urls.tsv a data/raw/corpus/.
+"""Download the corpus listed in corpus/urls.tsv into data/raw/corpus/.
 
-Uso:
-    uv run corpus/descargar.py            # baja lo que falte
-    uv run corpus/descargar.py --forzar   # vuelve a bajar todo
+Usage:
+    uv run corpus/download.py           # download what's missing
+    uv run corpus/download.py --force   # download everything again
 
-Los archivos no se versionan (son de sus organismos). Lo que se versiona es la lista de URLs
-y el manifiesto con el hash de cada descarga, para saber si un documento cambió en la fuente.
+The files themselves are not versioned (they belong to their agencies). What gets versioned is
+the URL list and the manifest with each download's hash, to tell whether a document changed at
+the source.
 """
 
 import argparse
@@ -20,54 +21,54 @@ from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 URLS = ROOT / "corpus" / "urls.tsv"
-MANIFIESTO = ROOT / "corpus" / "manifiesto.json"
-DESTINO = ROOT / "data" / "raw" / "corpus"
-# Los sitios de la Provincia piden Crawl-delay 10 en su robots.txt
-PAUSA_S = {"gba.gob.ar": 10, "gba.gov.ar": 10}
-USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) llm-lab/0.1 (investigacion)"
+MANIFEST = ROOT / "corpus" / "manifest.json"
+DEST = ROOT / "data" / "raw" / "corpus"
+# The Province sites ask for Crawl-delay 10 in their robots.txt
+DELAY_S = {"gba.gob.ar": 10, "gba.gov.ar": 10}
+USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) llm-lab/0.1 (research)"
 
 
-def bajar(url: str) -> tuple[bytes, str]:
-    pedido = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-    with urllib.request.urlopen(pedido, timeout=60) as resp:
+def fetch(url: str) -> tuple[bytes, str]:
+    request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    with urllib.request.urlopen(request, timeout=60) as resp:
         return resp.read(), resp.headers.get_content_type()
 
 
 def main() -> None:
     p = argparse.ArgumentParser()
-    p.add_argument("--forzar", action="store_true", help="volver a bajar aunque exista")
+    p.add_argument("--force", action="store_true", help="download again even if it exists")
     args = p.parse_args()
 
-    DESTINO.mkdir(parents=True, exist_ok=True)
-    manifiesto = json.loads(MANIFIESTO.read_text()) if MANIFIESTO.exists() else {}
+    DEST.mkdir(parents=True, exist_ok=True)
+    manifest = json.loads(MANIFEST.read_text()) if MANIFEST.exists() else {}
     with URLS.open(newline="") as f:
-        filas = list(csv.DictReader(f, delimiter="\t"))
+        rows = list(csv.DictReader(f, delimiter="\t"))
 
-    errores = []
-    for fila in filas:
-        archivo = DESTINO / f"{fila['id']}.{fila['formato']}"
-        if archivo.exists() and not args.forzar:
+    errors = []
+    for row in rows:
+        file = DEST / f"{row['id']}.{row['format']}"
+        if file.exists() and not args.force:
             continue
         try:
-            contenido, tipo = bajar(fila["url"])
-        except Exception as e:  # noqa: BLE001 — se reporta y se sigue con el resto
-            errores.append(f"{fila['id']}: {e}")
+            content, content_type = fetch(row["url"])
+        except Exception as e:  # noqa: BLE001 — report it and move on
+            errors.append(f"{row['id']}: {e}")
             continue
-        archivo.write_bytes(contenido)
-        manifiesto[fila["id"]] = {
-            "url": fila["url"],
-            "sha256": hashlib.sha256(contenido).hexdigest(),
-            "bytes": len(contenido),
-            "content_type": tipo,
-            "descargado": date.today().isoformat(),
+        file.write_bytes(content)
+        manifest[row["id"]] = {
+            "url": row["url"],
+            "sha256": hashlib.sha256(content).hexdigest(),
+            "bytes": len(content),
+            "content_type": content_type,
+            "downloaded": date.today().isoformat(),
         }
-        print(f"ok  {archivo.name} ({len(contenido) // 1024} KB)")
-        host = urlparse(fila["url"]).hostname or ""
-        time.sleep(next((s for d, s in PAUSA_S.items() if host.endswith(d)), 1))
+        print(f"ok  {file.name} ({len(content) // 1024} KB)")
+        host = urlparse(row["url"]).hostname or ""
+        time.sleep(next((s for d, s in DELAY_S.items() if host.endswith(d)), 1))
 
-    MANIFIESTO.write_text(json.dumps(manifiesto, ensure_ascii=False, indent=2, sort_keys=True))
-    print(f"\n{len(filas) - len(errores)}/{len(filas)} documentos en {DESTINO}")
-    for e in errores:
+    MANIFEST.write_text(json.dumps(manifest, ensure_ascii=False, indent=2, sort_keys=True))
+    print(f"\n{len(rows) - len(errors)}/{len(rows)} documents in {DEST}")
+    for e in errors:
         print(f"error  {e}")
 
 
