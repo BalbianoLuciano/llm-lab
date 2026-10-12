@@ -16,6 +16,7 @@ preguntas fijo, costo en tokens, latencia. Si no se puede medir, no se concluye.
 | `data/raw/` | Documentos de entrada, tal cual |
 | `data/processed/` | Chunks, embeddings e índices generados (se regeneran, no se versionan los pesados) |
 | `evals/` | Sets de preguntas con su respuesta esperada, compartidos entre labs |
+| `docs/` | Diseño del proyecto integrador ([SDD del semáforo](docs/sdd-semaforo.md)) |
 | `notes/` | Lo aprendido, en limpio |
 
 ## Cómo está armado cada lab
