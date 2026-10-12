@@ -9,3 +9,8 @@ __pycache__/
 # Índices y embeddings pesados: se regeneran con los scripts de cada lab
 data/processed/*
 !data/processed/.gitkeep
+
+# Video y audio: pesados y privados, no se versionan
+data/raw/*.mov
+data/raw/*.mp4
+data/raw/*.wav
