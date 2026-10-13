@@ -466,3 +466,44 @@ semáforo y una pantalla mínima.
    bloquean).
 3. **Umbrales de R13**: 30 palabras por oración y 150 por párrafo, a ajustar con datos.
 4. **Licencia**: MIT. Repo público.
+
+## 13. Lo que cambió después de los labs (2026-10-13)
+
+El diseño de arriba es el de antes de medir. Esto es lo que los labs confirmaron, cambiaron o
+dejaron abierto; el detalle está en el README de cada lab.
+
+**Cambió**
+- **Sin búsqueda híbrida.** BM25 + RRF empeoraba la recuperación (lab 04: recall@1 de 66 % a
+  55 %) y con re-ranking no aportaba nada (lab 05). Queda densa (bge-m3) + re-ranking de 10.
+- **El umbral del re-ranker no detecta preguntas sin respuesta** (lab 07: una pregunta sobre la
+  VTV de la Ciudad saca 0,99 porque el corpus tiene la de la Provincia). El guardrail de §9
+  ("umbral de re-ranking") lo hace el modelo, que acierta 10 de 10.
+- **Evaluador: Qwen3.5-4B por logprobs, con dos órdenes de opciones** (lab 13). Rinde igual que
+  el 9B; pedir JSON acierta un poco más pero su confianza (0,98 siempre) no sirve para el
+  amarillo dudoso.
+- **Guardrail de la revisión: el determinista** (números nuevos). El del evaluador daba falsas
+  alarmas en casi todas las trampas (lab 15).
+- **Qdrant en modo local no tiene HNSW ni filtra durante la búsqueda** (lab 12): es exacto en
+  Python. Alcanza a esta escala; los filtros de permisos de §9 necesitan el servidor.
+- **Cuotas gratuitas**: Groq tiene un tope de 200.000 tokens por día por modelo y Gemini 20
+  pedidos por día. Se agregó un modelo local (Qwen3.5-9B con MLX) al final de la cadena.
+
+**Confirmado**
+- La ruta de títulos en cada chunk es lo que más mejora la recuperación (lab 03).
+- El re-ranking es la mejora más grande de la recuperación (lab 05).
+- El filtro de permisos tiene que ir en la base: post-filtrar pierde un cuarto de los
+  resultados con filtros selectivos (lab 12).
+- El modelo que reescribe no inventa cuando la persona no trae el dato (lab 15).
+
+**Abierto**
+- **La hipótesis (§8.5) no se confirmó**: en el experimento final, corregir antes de indexar
+  empató con no corregir (lab 16). El RAG compensa la vigencia faltante en un bloque leyendo
+  otros fragmentos del mismo documento. Donde la corrección sí cambia lo que se puede
+  responder es cuando agrega un dato que el documento no tenía (emisor, fecha) o junta datos
+  que el parseo separó.
+- El evaluador acierta ~70 % y deja pasar ~28 % de los rojos: poco para bloquear documentos.
+- Parte de los rojos son del parser, no del documento (tablas desarmadas, montos separados de su
+  concepto): el semáforo no los distingue.
+- Las reglas de redacción sobre texto normativo pueden cambiar quién hace qué (lab 15, R14).
+- El compilador de reglas marca como "determinista" cosas que nadie implementó (lab 14).
+- Las etiquetas de todos los sets de oro las puso Claude: falta revisión humana.
