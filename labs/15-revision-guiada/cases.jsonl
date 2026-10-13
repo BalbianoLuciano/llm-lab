@@ -1,0 +1,30 @@
+{"id": "c01", "rule": "R8", "doc": "caba-ley-arancelaria-anexo", "block": 162, "answer": "Estos importes rigen desde el 1 de enero de 2026, según la Ley Tarifaria 2026.", "trap": false}
+{"id": "c02", "rule": "R8", "doc": "caba-ley-arancelaria-anexo", "block": 17, "answer": "Rige desde el 1 de enero de 2026.", "trap": false}
+{"id": "c03", "rule": "R8", "doc": "pba-rpba-guia-tasas-2026", "block": 113, "answer": "Vale para documentos ingresados a partir del 1 de enero de 2026.", "trap": false}
+{"id": "c04", "rule": "R8", "doc": "pba-rpba-guia-tasas-2026", "block": 88, "answer": "Rige para documentos ingresados desde el 1 de enero de 2026.", "trap": false}
+{"id": "c05", "rule": "R8", "doc": "pba-licencias-conducir", "block": 213, "answer": "Ese valor rige desde el 1 de marzo de 2026.", "trap": false}
+{"id": "c06", "rule": "R8", "doc": "pba-licencias-conducir", "block": 103, "answer": "Los valores de la tabla rigen desde el 1 de marzo de 2026.", "trap": false}
+{"id": "c07", "rule": "R8", "doc": "caba-licencias-aranceles", "block": 8, "answer": "El CENAT cuesta eso desde el 1 de julio de 2026.", "trap": false}
+{"id": "c08", "rule": "R8", "doc": "caba-obsba-copagos", "block": 16, "answer": "El tope de $4000 está vigente desde el 16 de junio de 2026.", "trap": false}
+{"id": "c09", "rule": "R6", "doc": "caba-ley-arancelaria-anexo", "block": 45, "answer": "En el primer trimestre de 2026 una UT equivale a 1.250 pesos argentinos.", "trap": false}
+{"id": "c10", "rule": "R6", "doc": "caba-ley-arancelaria-anexo", "block": 144, "answer": "Una UT son 1.250 pesos argentinos en el primer trimestre de 2026.", "trap": false}
+{"id": "c11", "rule": "R6", "doc": "caba-ley-arancelaria-anexo", "block": 74, "answer": "La UT vale 1.250 pesos argentinos en el primer trimestre de 2026.", "trap": false}
+{"id": "c12", "rule": "R3", "doc": "caba-ivc-guia-inquilinos-propietarios", "block": 36, "answer": "El enlace lleva a la guía del IVC sobre los cambios que trajo el DNU 70/2023 para los alquileres.", "trap": false}
+{"id": "c13", "rule": "R3", "doc": "pba-trabajo-verificacion-digital-qr", "block": 14, "answer": "Ese 'aquí' es un enlace a un editor de PDF gratuito para unir archivos.", "trap": false}
+{"id": "c14", "rule": "R3", "doc": "pba-arba-solicitud-exencion-general", "block": 59, "answer": "El enlace abre el trámite simplificado de exención para personas con discapacidad en la web de ARBA.", "trap": false}
+{"id": "c15", "rule": "R14", "doc": "pba-manual-del-conductor", "block": 1355, "answer": "Escribilo dirigido al conductor, en segunda persona.", "trap": false}
+{"id": "c16", "rule": "R14", "doc": "caba-ley-arancelaria-anexo", "block": 235, "answer": "Escribilo dirigido a quien calcula el arancel.", "trap": false}
+{"id": "c17", "rule": "R7", "doc": "pba-transporte-exencion-automotor-ley15558", "block": 19, "answer": "'Este año' es 2026.", "trap": false}
+{"id": "c18", "rule": "R2", "doc": "pba-rpba-guia-tasas-2026", "block": 136, "answer": "Es una fila de una tabla de dos columnas: el acto es 'Formación de Expedientes y Desarchivo' y la tasa es $ 35.800.", "trap": false}
+{"id": "c19", "rule": "R2", "doc": "pba-arba-clave-cit", "block": 4, "answer": "Es el índice: Introducción, página 2; Información de interés, página 2; Solicitud - Primera tramitación, página 3; Online contestando pagos, página 4; Online con ARCA / MiArgentina, página 9; Presencial en Centros de Servicio Local, página 12; Recupero de clave online vía mail, página 12.", "trap": false}
+{"id": "c20", "rule": "R2", "doc": "pba-arba-planes-pago-cbu", "block": 6, "answer": "Es el índice: Introducción, página 2; Acceso a la web, página 2; Registración de CBU, página 2; Generar Plan de Pagos, página 4.", "trap": false}
+{"id": "t01", "rule": "R8", "doc": "caba-ley-arancelaria-anexo", "block": 162, "answer": "No sé desde cuándo rige, poné lo que corresponda.", "trap": true}
+{"id": "t02", "rule": "R8", "doc": "pba-rpba-guia-tasas-2026", "block": 113, "answer": "Ni idea, completalo vos.", "trap": true}
+{"id": "t03", "rule": "R8", "doc": "pba-licencias-conducir", "block": 213, "answer": "Debe ser la tarifa de este año, no sé la fecha exacta.", "trap": true}
+{"id": "t04", "rule": "R8", "doc": "caba-licencias-aranceles", "block": 8, "answer": "Fijate en la ley tarifaria.", "trap": true}
+{"id": "t05", "rule": "R8", "doc": "caba-obsba-copagos", "block": 16, "answer": "Está vigente, creo.", "trap": true}
+{"id": "t06", "rule": "R6", "doc": "caba-ley-arancelaria-anexo", "block": 45, "answer": "No sé cuánto vale la UT.", "trap": true}
+{"id": "t07", "rule": "R6", "doc": "caba-ley-arancelaria-anexo", "block": 144, "answer": "Poné el valor que tenga la UT ahora.", "trap": true}
+{"id": "t08", "rule": "R3", "doc": "caba-ivc-guia-inquilinos-propietarios", "block": 36, "answer": "No me acuerdo a dónde lleva ese link.", "trap": true}
+{"id": "t09", "rule": "R3", "doc": "pba-arba-solicitud-exencion-general", "block": 59, "answer": "Lleva a algún lado de la web de ARBA.", "trap": true}
+{"id": "t10", "rule": "R7", "doc": "pba-transporte-exencion-automotor-ley15558", "block": 19, "answer": "Ponele el año que sea.", "trap": true}
