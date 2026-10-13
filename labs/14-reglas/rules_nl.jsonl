@@ -1,0 +1,30 @@
+{"ref": "r1-color", "text": "No quiero que una advertencia o un dato importante esté marcado solo en rojo o en negrita: lo importante tiene que estar dicho con palabras. Esto viene de WCAG 1.4.1, nivel A, así que si no se cumple el documento no se publica."}
+{"ref": "r2-tablas", "text": "Las tablas tienen que tener encabezado y cada celda se tiene que entender leyendo su fila y su columna, nada de 'ídem' ni celdas vacías que quieren decir algo. Es WCAG 1.3.1 nivel A, bloquea."}
+{"ref": "r3-enlaces", "text": "Los links tienen que decir a dónde llevan. Nada de 'hacé click acá' o 'link'. WCAG 2.4.4 (A), es bloqueante."}
+{"ref": "r4-titulos", "text": "Cada título tiene que describir lo que hay en su sección (WCAG 2.4.6, AA). No bloquea, es una mejora."}
+{"ref": "r5-siglas", "text": "Las siglas se escriben completas la primera vez que aparecen en el documento. WCAG 3.1.4, nivel AAA, no es bloqueante."}
+{"ref": "r6-moneda", "text": "Todo monto de plata tiene que decir en qué moneda está, sin ambigüedad (ISO 4217). El signo $ solo no alcanza porque puede ser pesos o dólares. Si falta, no se indexa."}
+{"ref": "r7-fechas", "text": "Las fechas tienen que ser completas y no relativas: nada de 'el mes que viene' o '03/04' sin año. Seguimos ISO 8601. Es bloqueante."}
+{"ref": "r8-vigencia", "text": "Si el texto da un monto, un arancel o un plazo, tiene que decir desde cuándo rige. Esto sale de ISO 24495-1 (principio relevante) y bloquea la indexación."}
+{"ref": "r9-emisor-fecha", "text": "El documento tiene que decir qué organismo lo publica y la fecha de publicación o de última actualización, como pide Dublin Core. Sin eso no se publica."}
+{"ref": "r10-proposito", "text": "Al principio del documento tiene que quedar claro para quién es y para qué sirve el trámite (ISO 24495-1, relevante). No bloquea."}
+{"ref": "r11-pasos-listas", "text": "Los pasos de un trámite van numerados y en orden, y los requisitos van en una lista, no en un párrafo corrido. ISO 24495-1, encontrable. Es una recomendación."}
+{"ref": "r12-palabras", "text": "Hay que usar palabras que cualquiera entienda, y si aparece un término técnico o jurídico, explicarlo. Principio 'comprensible' de ISO 24495-1, no bloquea."}
+{"ref": "r13-concision", "text": "Ninguna oración puede pasar de 30 palabras y ningún párrafo de 150. Es de ISO 24495-1 (comprensible) y no bloquea."}
+{"ref": "r14-voz-activa", "text": "Las instrucciones le hablan al lector en voz activa: 'presentá el DNI', no 'el DNI deberá ser presentado'. ISO 24495-1, comprensible, no bloqueante."}
+{"ref": "telefonos-completos", "text": "Cuando ponemos un teléfono de contacto tiene que tener el código de área y decir en qué horario atienden. No es bloqueante."}
+{"ref": "horarios-atencion", "text": "Si hay un horario de atención, que diga qué días y de qué hora a qué hora. Es una mejora, no traba la publicación."}
+{"ref": "costo-o-gratuito", "text": "Todo documento de trámite tiene que decir cuánto cuesta o aclarar que es gratis. Si no lo dice, no se publica."}
+{"ref": "plazo-respuesta", "text": "Queremos que el documento diga en cuánto tiempo se resuelve o se entrega el trámite. Si no está, avisar pero dejar pasar."}
+{"ref": "requisitos-antes-pasos", "text": "Los requisitos tienen que aparecer antes que los pasos del trámite, para que la persona sepa qué necesita antes de empezar. Recomendación."}
+{"ref": "titulo-largo", "text": "Los títulos no pueden tener más de 12 palabras. Si tienen entre 13 y 20 es amarillo, más de 20 es rojo. No bloquea."}
+{"ref": "mayusculas-sostenidas", "text": "Nada de párrafos enteros en mayúsculas, cuesta leerlos. Más del 60 % en mayúsculas es rojo. Es una recomendación."}
+{"ref": "normas-con-nombre", "text": "Cuando se cita una ley o resolución por su número, hay que decir también de qué trata. No es bloqueante."}
+{"ref": "lenguaje-inclusivo-consistente", "text": "Para nombrar a las personas usamos una sola forma en todo el bloque, no mezclar 'el/la', 'los usuarios' y 'les usuaries'. Lo pide la guía de lenguaje claro de la Ley 15.184. No bloquea."}
+{"ref": "correos-validos", "text": "Los mails de contacto tienen que estar bien escritos, con formato válido (RFC 5322), nada de 'info (arroba) organismo'. No bloquea."}
+{"ref": null, "text": "Que el documento sea claro."}
+{"ref": null, "text": "Los textos tienen que estar bien escritos y verse profesionales."}
+{"ref": null, "text": "Que sea amigable para el ciudadano."}
+{"ref": null, "text": "El documento no puede tener errores."}
+{"ref": null, "text": "Que la información esté completa."}
+{"ref": null, "text": "Evitar textos aburridos."}

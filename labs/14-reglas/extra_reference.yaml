@@ -1,0 +1,122 @@
+# Diez reglas más, con su compilación de referencia escrita a mano (lab 14).
+# Junto con R1–R14 de rules/reference.yaml forman las 24 reglas compilables del set.
+
+- id: telefonos-completos
+  source: "ISO 24495-1, principio 'utilizable'"
+  kind: semantic
+  scope: block
+  applies_to: [paragraph, list_item, table]
+  question: "¿Los teléfonos de contacto tienen código de área y dicen en qué horario atienden?"
+  levels:
+    green: "Los teléfonos tienen código de área y horario de atención."
+    yellow: "Falta el código de área o el horario."
+    red: "Hay un teléfono sin código de área ni horario."
+  blocking: false
+
+- id: horarios-atencion
+  source: "ISO 24495-1, principio 'utilizable'"
+  kind: semantic
+  scope: block
+  applies_to: [paragraph, list_item, table]
+  question: "¿Los horarios de atención indican días y horas de apertura y cierre?"
+  levels:
+    green: "Indica días, hora de apertura y hora de cierre."
+    yellow: "Indica las horas pero no los días, o al revés."
+    red: "Menciona un horario sin días ni horas concretas."
+  blocking: false
+
+- id: costo-o-gratuito
+  source: "ISO 24495-1, principio 'relevante'"
+  kind: semantic
+  scope: document
+  applies_to: [paragraph, list_item, table]
+  question: "¿El documento dice cuánto cuesta el trámite o que es gratuito?"
+  levels:
+    green: "Dice el costo o que es gratuito."
+    yellow: "Remite a otra norma o página para el costo."
+    red: "No dice nada sobre el costo."
+  blocking: true
+
+- id: plazo-respuesta
+  source: "ISO 24495-1, principio 'relevante'"
+  kind: semantic
+  scope: document
+  applies_to: [paragraph, list_item]
+  question: "¿El documento dice en cuánto tiempo se resuelve o se entrega el trámite?"
+  levels:
+    green: "Dice el plazo de resolución o entrega."
+    yellow: "Da un plazo vago ('a la brevedad', 'en los próximos días')."
+    red: "No dice nada sobre el plazo."
+  blocking: false
+
+- id: requisitos-antes-pasos
+  source: "ISO 24495-1, principio 'encontrable'"
+  kind: semantic
+  scope: document
+  applies_to: [heading, paragraph, list_item]
+  question: "¿Los requisitos aparecen antes de los pasos del trámite?"
+  levels:
+    green: "Los requisitos están antes de los pasos."
+    yellow: "Los requisitos están mezclados con los pasos."
+    red: "Los requisitos aparecen recién al final o después de pedir datos."
+  blocking: false
+
+- id: titulo-largo
+  source: "ISO 24495-1, principio 'encontrable'"
+  kind: deterministic
+  scope: block
+  applies_to: [heading]
+  question: "¿El título tiene 12 palabras o menos?"
+  levels:
+    green: "El título tiene 12 palabras o menos."
+    yellow: "El título tiene entre 13 y 20 palabras."
+    red: "El título tiene más de 20 palabras."
+  blocking: false
+
+- id: mayusculas-sostenidas
+  source: "ISO 24495-1, principio 'comprensible'"
+  kind: deterministic
+  scope: block
+  applies_to: [paragraph, list_item]
+  question: "¿El texto evita párrafos enteros en mayúsculas?"
+  levels:
+    green: "Menos del 20 % de las letras están en mayúscula."
+    yellow: "Entre el 20 % y el 60 % de las letras están en mayúscula."
+    red: "Más del 60 % de las letras están en mayúscula."
+  blocking: false
+
+- id: normas-con-nombre
+  source: "ISO 24495-1, principio 'comprensible'"
+  kind: semantic
+  scope: block
+  applies_to: [paragraph, list_item]
+  question: "¿Cuando se cita una norma por su número, se dice también de qué trata?"
+  levels:
+    green: "Las normas citadas dicen de qué tratan."
+    yellow: "Se citan normas solo por número, pero el contexto deja claro su tema."
+    red: "Se citan normas solo por número y sin contexto."
+  blocking: false
+
+- id: lenguaje-inclusivo-consistente
+  source: "Ley 15.184 (Provincia de Buenos Aires), guía de lenguaje claro"
+  kind: semantic
+  scope: block
+  applies_to: [paragraph, list_item]
+  question: "¿El texto usa una sola forma de nombrar a las personas, de manera consistente?"
+  levels:
+    green: "Usa una sola forma de manera consistente."
+    yellow: "Mezcla dos formas en el mismo bloque ('el/la', 'los usuarios')."
+    red: "Mezcla varias formas y dificulta la lectura ('el/a LOCATARIO/A', 'del/la')."
+  blocking: false
+
+- id: correos-validos
+  source: "RFC 5322"
+  kind: deterministic
+  scope: block
+  applies_to: [paragraph, list_item, table]
+  question: "¿Las direcciones de correo electrónico tienen un formato válido?"
+  levels:
+    green: "Todas las direcciones de correo tienen un formato válido."
+    yellow: "Hay una dirección de correo escrita con espacios o con '(arroba)'."
+    red: "Hay una dirección de correo inválida."
+  blocking: false
