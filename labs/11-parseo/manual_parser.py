@@ -10,7 +10,7 @@ from collections import Counter
 from pathlib import Path
 
 import pymupdf
-from bs4 import BeautifulSoup, NavigableString, Tag
+from bs4 import BeautifulSoup, Comment, NavigableString, Tag
 from html_main import main_content
 
 from llm_lab.blocks import Block, Link, assign_paths
@@ -168,6 +168,8 @@ def _walk(node: Tag, blocks: list[Block]) -> None:
         loose.clear()
 
     for child in node.children:
+        if isinstance(child, Comment):
+            continue  # HTML comments are NavigableStrings too (lab 02 finding)
         if isinstance(child, NavigableString):
             loose.append(str(child))
             continue

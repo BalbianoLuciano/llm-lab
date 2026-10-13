@@ -33,7 +33,7 @@ Por documento (títulos recall / precisión · ítems · tablas · enlaces · da
 | | manual | docling |
 |---|---|---|
 | Documentos parseados | 49 | 49 |
-| Bloques | 5028 | 5618 |
+| Bloques | 4986 | 5618 |
 | Títulos | 1135 | 965 |
 | Ítems de lista | 1145 | 1355 |
 | Tablas | 414 | 408 |

@@ -151,6 +151,19 @@ Cada hallazgo salió de una medición que dio mal, no de leer documentación:
    pasados por `textutil`), y en todos los casos el filtro de encabezados repetidos. Esa
    combinación se arma en `src/llm_lab/` cuando la use el lab 03 (chunking).
 
+### Encontrado después, usando el corpus en los labs 02 y 03
+- **Los comentarios HTML se colaban como texto.** BeautifulSoup trata `<!-- ... -->` como un
+  string más; el parser a mano no los filtraba, y aparecían cosas como `.entry-meta` o un
+  `<script>` entero comentado ("MODAL NO TOCAR"). El set de oro no lo detectó porque esas
+  páginas no estaban en él. Corregido en `manual_parser.py`; las métricas no cambian.
+- **Docling corta algunas resoluciones renglón por renglón.** Un monto y su fecha de vigencia
+  quedaban en bloques distintos. `src/llm_lab/corpus.py` vuelve a unir dos párrafos seguidos
+  cuando el primero no cierra la oración y el segundo empieza en minúscula; quedan sin unir
+  los cortes que siguen en mayúscula y los que cruzan un salto de página con el membrete en
+  el medio.
+- **El calendario de vencimientos de ARBA no sirve como texto**: es una grilla de días y se
+  parsea como una lista de números sueltos. Necesitaría un parser propio o leerse como imagen.
+
 ### Límites de esta medición
 - El set de oro tiene 6 documentos. Alcanza para ver diferencias grandes (17 de 17 ítems
   contra 12 de 17), no para distinguir 63 % de 66 %.
