@@ -1,0 +1,115 @@
+{"rule": "R2", "doc": "caba-ley-arancelaria-anexo", "block": 200, "starts": "| CONCEPTO | CONCEPTO | IMPORTE |\n| 1 | ", "label": "yellow", "note": "encabezado CONCEPTO duplicado, celda repetida"}
+{"rule": "R2", "doc": "caba-dgiur-consulta-usos", "block": 14, "starts": "| AE 27 - 9 de Julio |\n| AE 28 - Salvado", "label": "yellow", "note": "lista de una columna sin encabezado"}
+{"rule": "R2", "doc": "caba-ley-arancelaria-anexo", "block": 440, "starts": "| SM | INCIDENCIA UVA | OBSERVACIÓN |\n| ", "label": "yellow", "note": "sigla SM sin explicar, filas fusionadas"}
+{"rule": "R2", "doc": "caba-ley-arancelaria-anexo", "block": 435, "starts": "| SM | INCIDENCIA UVA | OBSERVACIÓN |\n| ", "label": "red", "note": "fila partida: celda vacía y valor en la fila siguiente"}
+{"rule": "R2", "doc": "pba-manual-del-conductor", "block": 1377, "starts": "| CAPITULO 4 CONDUCIR CON SEGURIDAD | CA", "label": "yellow", "note": "índice sin encabezado de columnas"}
+{"rule": "R2", "doc": "pba-manual-del-conductor", "block": 717, "starts": "| El que sobrepasa | Durante | 6° Su piq", "label": "red", "note": "sin encabezado, celda vacía que significa 'ídem'"}
+{"rule": "R2", "doc": "pba-rpba-guia-tasas-2026", "block": 113, "starts": "| Acto | Total |\n| Servicio de Registrac", "label": "green", "note": ""}
+{"rule": "R2", "doc": "pba-rpba-guia-tasas-2026", "block": 136, "starts": "| Formación de Expedientes y Desarchivo ", "label": "red", "note": "concepto y monto en filas distintas, sin encabezado"}
+{"rule": "R2", "doc": "pba-arba-calendario-vencimientos-2026", "block": 233, "starts": "| Terminación del CUIT | Vencimiento ABR", "label": "green", "note": ""}
+{"rule": "R2", "doc": "pba-arba-baja-exencion", "block": 14, "starts": "| Automotor | Inmobiliario |\n| Por falle", "label": "green", "note": ""}
+{"rule": "R2", "doc": "pba-manual-del-conductor", "block": 865, "starts": "| A.6. Saltos o zigzagueo del volante al", "label": "red", "note": "sin encabezado, referencias cruzadas 'Causa 2 del efecto a.1'"}
+{"rule": "R2", "doc": "pba-rpba-guia-tasas-2026", "block": 93, "starts": "| Simple | Urgente |\n| $ 42.000 | $ 131.", "label": "green", "note": "el concepto está en el título de la sección"}
+{"rule": "R2", "doc": "pba-arba-calendario-vencimientos-2026", "block": 278, "starts": "| COOPERATIVAS | COOPERATIVAS | COOPERAT", "label": "yellow", "note": "encabezado repetido en las tres columnas"}
+{"rule": "R2", "doc": "pba-arba-clave-cit", "block": 4, "starts": "| Introducción | 2 |\n| Información de in", "label": "red", "note": "índice desarmado (números en columnas cambiadas)"}
+{"rule": "R2", "doc": "pba-arba-calendario-vencimientos-2026", "block": 273, "starts": "| COMPAÑÍAS DE SEGUROS Automotores / Emb", "label": "yellow", "note": "encabezado repetido"}
+{"rule": "R2", "doc": "caba-dgiur-consulta-usos", "block": 37, "starts": "| ÁREAS DE ARQUITECTURA ESPECIAL - AE |\n", "label": "yellow", "note": "lista de una columna"}
+{"rule": "R2", "doc": "pba-arba-transferencia-automotor", "block": 25, "starts": "| BAJA | BAJA |\n| Por cambio de radicaci", "label": "yellow", "note": "encabezado BAJA duplicado"}
+{"rule": "R2", "doc": "pba-arba-planes-pago-cbu", "block": 6, "starts": "| Introducción | 2 |\n| Acceso a la web 2", "label": "red", "note": "índice desarmado"}
+{"rule": "R2", "doc": "caba-tesoreria-manual-pago-boletas-2017", "block": 3, "starts": "| Introducción .........................", "label": "yellow", "note": "índice sin encabezado"}
+{"rule": "R2", "doc": "pba-arba-transferencia-automotor", "block": 4, "starts": "| Introducción | 2 |\n| 2 | Requisitos |\n", "label": "red", "note": "índice desarmado"}
+{"rule": "R2", "doc": "pba-arba-transferencia-automotor", "block": 24, "starts": "| ALTA | ALTA |\n| Vehículo 0km | ● Títul", "label": "yellow", "note": "encabezado ALTA duplicado"}
+{"rule": "R2", "doc": "caba-dgiur-consulta-usos", "block": 11, "starts": "| APH2 - Parque 3 de Febrero |\n| APH4 - ", "label": "yellow", "note": "lista de una columna"}
+{"rule": "R2", "doc": "pba-ioma-reglamento-ingreso-carencia", "block": 52, "starts": "| PRESTACIÓN / PROGRAMA | INCLUSIONES | ", "label": "green", "note": ""}
+{"rule": "R2", "doc": "pba-arba-clave-cit", "block": 19, "starts": "| Roles | Presencial | Web |\n| Persona h", "label": "green", "note": ""}
+{"rule": "R2", "doc": "pba-transporte-formulario-e-recorridos", "block": 7, "starts": "| RECORRIDO (1) | TIPO DE SERVICIO (2) |", "label": "yellow", "note": "plantilla con encabezado en dos filas"}
+{"rule": "R2", "doc": "pba-arba-solicitud-exencion-general", "block": 5, "starts": "| Introducción | 2 |\n| Requisitos | 2 |\n", "label": "red", "note": "índice desarmado"}
+{"rule": "R3", "doc": "caba-ivc-guia-inquilinos-propietarios", "block": 36, "starts": "Hacé click acá para la guía del DNU 70/2", "label": "red", "note": "'Hacé click acá'"}
+{"rule": "R3", "doc": "caba-licencias-aranceles", "block": 21, "starts": "- Personas carentes de recursos .", "label": "yellow", "note": "el texto nombra la categoría, no el destino (certificado de pobreza)"}
+{"rule": "R3", "doc": "caba-obsba-afiliaciones", "block": 93, "starts": "- Centro Municipal de Recreación ObSBA", "label": "green", "note": ""}
+{"rule": "R3", "doc": "caba-obsba-afiliaciones", "block": 65, "starts": "- Programa Plan Médicos/as de Cabecera", "label": "green", "note": ""}
+{"rule": "R3", "doc": "caba-obsba-afiliaciones", "block": 84, "starts": "- Centro de Salud Flores I", "label": "green", "note": ""}
+{"rule": "R3", "doc": "pba-trabajo-verificacion-digital-qr", "block": 14, "starts": "Por cada punto intimado podrá cargarse u", "label": "red", "note": "'aquí podrá hacer uso de un editor de PDF'"}
+{"rule": "R3", "doc": "pba-licencias-conducir", "block": 148, "starts": "Descargar Disposición de Corredores de C", "label": "green", "note": ""}
+{"rule": "R3", "doc": "pba-ioma-afiliaciones-voluntarias", "block": 5, "starts": "CONTROLÁ ACÁ TUS PAGOS >>", "label": "yellow", "note": "'CONTROLÁ ACÁ TUS PAGOS'"}
+{"rule": "R3", "doc": "caba-obsba-copagos", "block": 19, "starts": "Es necesario que realices la denuncia co", "label": "green", "note": "mail como texto, el propósito está en la oración"}
+{"rule": "R3", "doc": "pba-transporte-exencion-automotor-ley15558", "block": 29, "starts": "- Comprobante de pago de la Tasa General", "label": "yellow", "note": "URL suelta con 'Link:'"}
+{"rule": "R3", "doc": "caba-habilitar-local-comercial", "block": 3, "starts": "- 3. Revisá la normativa de tu lote Ante", "label": "green", "note": ""}
+{"rule": "R3", "doc": "caba-educacion-preguntas-frecuentes", "block": 47, "starts": "El pase es el acto por el cual el estudi", "label": "green", "note": ""}
+{"rule": "R3", "doc": "caba-canales-lugares-pago", "block": 14, "starts": "- Tarjetas de débito y crédito (Visa, Ma", "label": "yellow", "note": "'Ver tutorial': el contexto del ítem lo aclara"}
+{"rule": "R3", "doc": "caba-registro-civil-partidas-urgentes", "block": 1, "starts": "- Contar con usuario y clave miBA . - Si", "label": "green", "note": ""}
+{"rule": "R3", "doc": "pba-arba-solicitud-exencion-general", "block": 59, "starts": "En caso de Solicitud de Exención para Pe", "label": "red", "note": "'ingresando \"aquí\"'"}
+{"rule": "R6", "doc": "pba-rpba-guia-tasas-2026", "block": 58, "starts": "Suma menor a $ 125.640.625", "label": "yellow", "note": ""}
+{"rule": "R6", "doc": "caba-ley-arancelaria-anexo", "block": 45, "starts": "| CONCEPTO | CONCEPTO | IMPORTE |\n| 1 | ", "label": "red", "note": "montos en UT, sin valor en pesos"}
+{"rule": "R6", "doc": "pba-rpba-guia-tasas-2026", "block": 48, "starts": "En ningún caso la tasa a abonar, estable", "label": "yellow", "note": ""}
+{"rule": "R6", "doc": "caba-canales-lugares-pago", "block": 6, "starts": "PROMOCIÓN OFRECIDA POR BILLETERA BUEPP D", "label": "yellow", "note": ""}
+{"rule": "R6", "doc": "caba-ley-arancelaria-anexo", "block": 144, "starts": "| CONCEPTO | CONCEPTO | IMPORTE |\n| 1 | ", "label": "red", "note": "montos en UT"}
+{"rule": "R6", "doc": "pba-ioma-aumento-cuota-avi-2026", "block": 5, "starts": "En este sentido, para sostener de manera", "label": "green", "note": "pesos en letras"}
+{"rule": "R6", "doc": "pba-rpba-guia-tasas-2026", "block": 50, "starts": "| Simple | Urgente |\n| 2 ‰ | Adicional 1", "label": "yellow", "note": ""}
+{"rule": "R6", "doc": "caba-ley-arancelaria-anexo", "block": 74, "starts": "| CONCEPTO | CONCEPTO | IMPORTE EQUIVALE", "label": "red", "note": "monto en UT"}
+{"rule": "R6", "doc": "pba-vtv-resolucion-tarifa-2026", "block": 16, "starts": "Que mediante Resolución N° 84/2024 de es", "label": "green", "note": "pesos en letras"}
+{"rule": "R6", "doc": "pba-vtv-resolucion-tarifa-2026", "block": 26, "starts": "Técnica Vehicular (V.T.V.) de la Provinc", "label": "green", "note": "pesos en letras"}
+{"rule": "R6", "doc": "pba-ioma-afiliaciones-voluntarias", "block": 1, "starts": "1° Vencimiento: 15 de octubre 2° Vencimi", "label": "yellow", "note": ""}
+{"rule": "R6", "doc": "caba-abl-exencion-jubilados", "block": 5, "starts": "- La valuación no debe superar el monto ", "label": "yellow", "note": ""}
+{"rule": "R6", "doc": "pba-ioma-aumento-cuota-avi-2026", "block": 4, "starts": "Por esta razón, el Directorio de IOMA po", "label": "yellow", "note": ""}
+{"rule": "R6", "doc": "pba-licencias-conducir", "block": 103, "starts": "| Tipo de Trámite | Valor de Tasa Provin", "label": "yellow", "note": ""}
+{"rule": "R6", "doc": "caba-canales-lugares-pago", "block": 4, "starts": "Además si pagas con Buepp, la billetera ", "label": "green", "note": "'$10 mil pesos'"}
+{"rule": "R6", "doc": "pba-licencias-conducir", "block": 253, "starts": "El costo para el otorgamiento de la matr", "label": "yellow", "note": ""}
+{"rule": "R6", "doc": "pba-ioma-aumento-cuota-avi-2026", "block": 15, "starts": "El incremento inicial de $ 7.724 se verá", "label": "yellow", "note": ""}
+{"rule": "R6", "doc": "caba-obsba-copagos", "block": 16, "starts": "Los copagos pueden tener un valor de has", "label": "yellow", "note": ""}
+{"rule": "R6", "doc": "pba-licencias-conducir", "block": 213, "starts": "El costo para la inscripción de las escu", "label": "yellow", "note": ""}
+{"rule": "R6", "doc": "caba-licencias-aranceles", "block": 8, "starts": "- Certificado Nacional de Antecedentes d", "label": "yellow", "note": ""}
+{"rule": "R6", "doc": "caba-abl-exencion-jubilados", "block": 4, "starts": "- Percibir un haber igual o menor de 4 (", "label": "yellow", "note": ""}
+{"rule": "R7", "doc": "pba-manual-del-conductor", "block": 1278, "starts": "- La conducción de vehículos sin respeta", "label": "green", "note": ""}
+{"rule": "R7", "doc": "pba-vtv-resolucion-tarifa-2026", "block": 26, "starts": "Técnica Vehicular (V.T.V.) de la Provinc", "label": "green", "note": ""}
+{"rule": "R7", "doc": "pba-manual-del-conductor", "block": 1288, "starts": "petar los requisitos establecidos por la", "label": "green", "note": ""}
+{"rule": "R7", "doc": "caba-ley-arancelaria-anexo", "block": 464, "starts": "Buenos Aires, Martes 16 de Diciembre de ", "label": "green", "note": ""}
+{"rule": "R7", "doc": "pba-licencias-conducir", "block": 155, "starts": "A partir del 2 de enero de 2019 entrará ", "label": "green", "note": ""}
+{"rule": "R7", "doc": "pba-rpp-inscripcion-nacimiento-online", "block": 85, "starts": "Viernes 2 de Julio de 2021 LA PLATA, BUE", "label": "green", "note": ""}
+{"rule": "R7", "doc": "caba-educacion-preguntas-frecuentes", "block": 123, "starts": "A partir del martes 9 de diciembre tambi", "label": "yellow", "note": "'martes 9 de diciembre' sin año"}
+{"rule": "R7", "doc": "caba-educacion-preguntas-frecuentes", "block": 122, "starts": "A partir del 4 de diciembre por la tarde", "label": "yellow", "note": "'4 de diciembre' sin año"}
+{"rule": "R7", "doc": "pba-ioma-aumento-cuota-avi-2026", "block": 4, "starts": "Por esta razón, el Directorio de IOMA po", "label": "green", "note": ""}
+{"rule": "R7", "doc": "caba-canales-lugares-pago", "block": 6, "starts": "PROMOCIÓN OFRECIDA POR BILLETERA BUEPP D", "label": "green", "note": ""}
+{"rule": "R7", "doc": "caba-ivc-guia-inquilinos-propietarios", "block": 33, "starts": "Ley 27.737, para contratos celebrados en", "label": "green", "note": ""}
+{"rule": "R7", "doc": "pba-transporte-exencion-automotor-ley15558", "block": 19, "starts": "El artículo 38 de la Ley N° 15.558 estab", "label": "red", "note": "'durante este año'"}
+{"rule": "R7", "doc": "caba-resolucion-tarifas-colectivos-julio-2026", "block": 8, "starts": "Argentina ha publicado en fecha 11 de ju", "label": "yellow", "note": "'del corriente año'"}
+{"rule": "R7", "doc": "pba-rpba-guia-tasas-2026", "block": 8, "starts": "Vigencia para documentos ingresados a pa", "label": "yellow", "note": "'01/01/26', año en dos dígitos"}
+{"rule": "R8", "doc": "caba-ley-arancelaria-anexo", "block": 162, "starts": "| CONCEPTO | CONCEPTO | IMPORTE |\n| 1 | ", "label": "red", "note": ""}
+{"rule": "R8", "doc": "caba-ley-arancelaria-anexo", "block": 17, "starts": "Artículo 4°.- Por cada duplicado de libr", "label": "red", "note": ""}
+{"rule": "R8", "doc": "caba-ley-arancelaria-anexo", "block": 188, "starts": "| CONCEPTO | CONCEPTO | IMPORTE |\n| 1 | ", "label": "red", "note": ""}
+{"rule": "R8", "doc": "pba-rpba-guia-tasas-2026", "block": 113, "starts": "| Acto | Total |\n| Servicio de Registrac", "label": "red", "note": "la vigencia figura una vez en otra parte del documento"}
+{"rule": "R8", "doc": "pba-rpba-guia-tasas-2026", "block": 88, "starts": "| Simple | Urgente |\n| $ 450.000 | $ 1.3", "label": "red", "note": "ídem"}
+{"rule": "R8", "doc": "pba-rpba-guia-tasas-2026", "block": 73, "starts": "| Simple | Urgente |\n| $ 42.000 | $ 131.", "label": "red", "note": "ídem"}
+{"rule": "R8", "doc": "pba-licencias-conducir", "block": 213, "starts": "El costo para la inscripción de las escu", "label": "red", "note": ""}
+{"rule": "R8", "doc": "pba-licencias-conducir", "block": 103, "starts": "| Tipo de Trámite | Valor de Tasa Provin", "label": "red", "note": ""}
+{"rule": "R8", "doc": "caba-canales-lugares-pago", "block": 4, "starts": "Además si pagas con Buepp, la billetera ", "label": "red", "note": "las fechas de la promo están en el bloque siguiente"}
+{"rule": "R8", "doc": "caba-abl-exencion-jubilados", "block": 5, "starts": "- La valuación no debe superar el monto ", "label": "yellow", "note": "'para el año a partir del cual se solicita'"}
+{"rule": "R8", "doc": "pba-licencias-conducir", "block": 253, "starts": "El costo para el otorgamiento de la matr", "label": "red", "note": ""}
+{"rule": "R8", "doc": "pba-ioma-aumento-cuota-avi-2026", "block": 15, "starts": "El incremento inicial de $ 7.724 se verá", "label": "green", "note": ""}
+{"rule": "R8", "doc": "pba-ioma-afiliaciones-voluntarias", "block": 1, "starts": "1° Vencimiento: 15 de octubre 2° Vencimi", "label": "green", "note": "'octubre/2026'"}
+{"rule": "R8", "doc": "pba-vtv-resolucion-tarifa-2026", "block": 26, "starts": "Técnica Vehicular (V.T.V.) de la Provinc", "label": "green", "note": ""}
+{"rule": "R8", "doc": "pba-ioma-aumento-cuota-avi-2026", "block": 4, "starts": "Por esta razón, el Directorio de IOMA po", "label": "green", "note": ""}
+{"rule": "R8", "doc": "caba-licencias-aranceles", "block": 8, "starts": "- Certificado Nacional de Antecedentes d", "label": "red", "note": ""}
+{"rule": "R8", "doc": "pba-vtv-resolucion-tarifa-2026", "block": 16, "starts": "Que mediante Resolución N° 84/2024 de es", "label": "yellow", "note": "montos históricos con vigencias parciales"}
+{"rule": "R8", "doc": "caba-canales-lugares-pago", "block": 6, "starts": "PROMOCIÓN OFRECIDA POR BILLETERA BUEPP D", "label": "green", "note": ""}
+{"rule": "R8", "doc": "caba-abl-exencion-jubilados", "block": 4, "starts": "- Percibir un haber igual o menor de 4 (", "label": "green", "note": "'a diciembre 2025'"}
+{"rule": "R8", "doc": "caba-obsba-copagos", "block": 16, "starts": "Los copagos pueden tener un valor de has", "label": "red", "note": ""}
+{"rule": "R8", "doc": "pba-ioma-aumento-cuota-avi-2026", "block": 5, "starts": "En este sentido, para sostener de manera", "label": "green", "note": ""}
+{"rule": "R14", "doc": "pba-manual-del-conductor", "block": 1355, "starts": "- Inhabilitación para conducir vehículos", "label": "red", "note": "'se deberá retener', 'será aplicada'"}
+{"rule": "R14", "doc": "pba-licencias-conducir", "block": 241, "starts": "EVALUACIÓN: Una vez cargada toda la docu", "label": "yellow", "note": "'se le enviará'"}
+{"rule": "R14", "doc": "caba-tad-manual-usuario", "block": 166, "starts": "Si se quiere modificar alguno de los dat", "label": "yellow", "note": "impersonal"}
+{"rule": "R14", "doc": "caba-mecenazgo-instructivo-2024", "block": 44, "starts": "En el buscador, ingresá la palabra 'Mece", "label": "green", "note": ""}
+{"rule": "R14", "doc": "pba-licencias-conducir", "block": 251, "starts": "Podrá rendir hasta 2 (DOS) recuperatorio", "label": "green", "note": ""}
+{"rule": "R14", "doc": "pba-ioma-flyer-afiliaciones", "block": 55, "starts": "- identifiques, ingresá CUIL y contraseñ", "label": "green", "note": ""}
+{"rule": "R14", "doc": "pba-rpp-inscripcion-nacimiento-online", "block": 21, "starts": "De nuevo en el sistema, deberás completa", "label": "green", "note": ""}
+{"rule": "R14", "doc": "pba-arba-solicitud-exencion-general", "block": 44, "starts": "- Si la exención solicitada es para el I", "label": "green", "note": ""}
+{"rule": "R14", "doc": "caba-estacionamiento-beneficio-residentes", "block": 11, "starts": "Importante: Para que la página del trámi", "label": "green", "note": ""}
+{"rule": "R14", "doc": "pba-cic-instructivo-sigeva", "block": 2, "starts": "Ingresar a HYPERLINK \"https://cic.sigeva", "label": "yellow", "note": "infinitivos"}
+{"rule": "R14", "doc": "pba-rpp-partidas-digitales-manual", "block": 34, "starts": "Buscar Partida: desde el Botón SOLICITAR", "label": "yellow", "note": "'se podrá pedir'"}
+{"rule": "R14", "doc": "caba-tad-manual-usuario", "block": 172, "starts": "En \"Calle y Altura\", ingresá primero el ", "label": "green", "note": ""}
+{"rule": "R14", "doc": "pba-manual-del-conductor", "block": 123, "starts": "Los Aspirantes deberán obtener una calif", "label": "yellow", "note": "tercera persona: 'Los Aspirantes deberán'"}
+{"rule": "R14", "doc": "caba-ley-arancelaria-anexo", "block": 235, "starts": "Para los casos en los que la determinaci", "label": "red", "note": "'deberá ser aplicado'"}
+{"rule": "R14", "doc": "caba-educacion-preguntas-frecuentes", "block": 52, "starts": "El Periodo de Inscripción comprende del ", "label": "yellow", "note": "tercera persona"}
+{"rule": "R14", "doc": "caba-educacion-preguntas-frecuentes", "block": 41, "starts": "Sí, deberás preinscribirlo a través de e", "label": "green", "note": ""}
+{"rule": "R14", "doc": "pba-licencias-conducir", "block": 161, "starts": "IMPORTANTE: Las Licencias de Conducir ac", "label": "yellow", "note": "tercera persona"}
+{"rule": "R14", "doc": "pba-arba-alta-sas-iibb", "block": 12, "starts": "Una vez que esté la aplicación dentro de", "label": "green", "note": ""}

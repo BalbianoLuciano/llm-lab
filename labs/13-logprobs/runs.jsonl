@@ -1,0 +1,346 @@
+{"raw": [[24.75, 27.0, 24.0], [25.25, 26.125, 24.625]], "key": "qwen4b|caba-ley-arancelaria-anexo|200|R2", "evaluator": "qwen4b", "rule": "R2", "gold": "yellow", "latency_s": 7.454}
+{"raw": [[23.75, 25.75, 24.0], [24.25, 25.0, 24.625]], "key": "qwen4b|caba-dgiur-consulta-usos|14|R2", "evaluator": "qwen4b", "rule": "R2", "gold": "yellow", "latency_s": 2.681}
+{"raw": [[24.75, 25.625, 24.75], [25.0, 23.0, 24.75]], "key": "qwen4b|caba-ley-arancelaria-anexo|440|R2", "evaluator": "qwen4b", "rule": "R2", "gold": "yellow", "latency_s": 15.55}
+{"raw": [[24.125, 25.5, 25.625], [24.5, 23.5, 25.125]], "key": "qwen4b|caba-ley-arancelaria-anexo|435|R2", "evaluator": "qwen4b", "rule": "R2", "gold": "red", "latency_s": 17.089}
+{"raw": [[25.375, 26.625, 22.625], [25.625, 25.875, 23.875]], "key": "qwen4b|pba-manual-del-conductor|1377|R2", "evaluator": "qwen4b", "rule": "R2", "gold": "yellow", "latency_s": 7.063}
+{"raw": [[23.75, 25.375, 25.625], [23.75, 24.75, 25.75]], "key": "qwen4b|pba-manual-del-conductor|717|R2", "evaluator": "qwen4b", "rule": "R2", "gold": "red", "latency_s": 5.228}
+{"raw": [[24.125, 24.75, 22.875], [24.0, 23.75, 23.875]], "key": "qwen4b|pba-rpba-guia-tasas-2026|113|R2", "evaluator": "qwen4b", "rule": "R2", "gold": "green", "latency_s": 2.759}
+{"raw": [[24.875, 26.0, 23.75], [25.375, 23.75, 25.125]], "key": "qwen4b|pba-rpba-guia-tasas-2026|136|R2", "evaluator": "qwen4b", "rule": "R2", "gold": "red", "latency_s": 2.82}
+{"raw": [[24.25, 25.375, 22.625], [23.875, 24.125, 24.25]], "key": "qwen4b|pba-arba-calendario-vencimientos-2026|233|R2", "evaluator": "qwen4b", "rule": "R2", "gold": "green", "latency_s": 5.245}
+{"raw": [[24.25, 25.375, 23.875], [24.375, 24.625, 24.375]], "key": "qwen4b|pba-arba-baja-exencion|14|R2", "evaluator": "qwen4b", "rule": "R2", "gold": "green", "latency_s": 4.011}
+{"raw": [[24.0, 25.875, 23.75], [23.5, 24.875, 24.5]], "key": "qwen4b|pba-manual-del-conductor|865|R2", "evaluator": "qwen4b", "rule": "R2", "gold": "red", "latency_s": 6.215}
+{"raw": [[25.5, 25.75, 22.25], [26.5, 23.625, 23.625]], "key": "qwen4b|pba-rpba-guia-tasas-2026|93|R2", "evaluator": "qwen4b", "rule": "R2", "gold": "green", "latency_s": 4.25}
+{"raw": [[24.75, 26.75, 24.375], [25.0, 26.0, 24.625]], "key": "qwen4b|pba-arba-calendario-vencimientos-2026|278|R2", "evaluator": "qwen4b", "rule": "R2", "gold": "yellow", "latency_s": 4.632}
+{"raw": [[23.25, 24.5, 23.375], [23.625, 23.625, 23.375]], "key": "qwen4b|pba-arba-clave-cit|4|R2", "evaluator": "qwen4b", "rule": "R2", "gold": "red", "latency_s": 4.212}
+{"raw": [[24.5, 26.5, 24.625], [23.875, 25.625, 25.25]], "key": "qwen4b|pba-arba-calendario-vencimientos-2026|273|R2", "evaluator": "qwen4b", "rule": "R2", "gold": "yellow", "latency_s": 4.84}
+{"raw": [[24.375, 25.75, 23.875], [25.0, 24.75, 24.25]], "key": "qwen4b|caba-dgiur-consulta-usos|37|R2", "evaluator": "qwen4b", "rule": "R2", "gold": "yellow", "latency_s": 4.93}
+{"raw": [[24.25, 26.25, 25.375], [23.625, 26.125, 25.0]], "key": "qwen4b|pba-arba-transferencia-automotor|25|R2", "evaluator": "qwen4b", "rule": "R2", "gold": "yellow", "latency_s": 4.122}
+{"raw": [[23.125, 24.0, 22.625], [23.25, 23.75, 23.5]], "key": "qwen4b|pba-arba-planes-pago-cbu|6|R2", "evaluator": "qwen4b", "rule": "R2", "gold": "red", "latency_s": 4.065}
+{"raw": [[24.5, 24.5, 22.75], [24.5, 23.875, 23.5]], "key": "qwen4b|caba-tesoreria-manual-pago-boletas-2017|3|R2", "evaluator": "qwen4b", "rule": "R2", "gold": "yellow", "latency_s": 2.974}
+{"raw": [[23.5, 23.875, 23.25], [24.125, 23.75, 23.375]], "key": "qwen4b|pba-arba-transferencia-automotor|4|R2", "evaluator": "qwen4b", "rule": "R2", "gold": "red", "latency_s": 3.203}
+{"raw": [[24.625, 26.0, 25.0], [24.75, 25.25, 25.0]], "key": "qwen4b|pba-arba-transferencia-automotor|24|R2", "evaluator": "qwen4b", "rule": "R2", "gold": "yellow", "latency_s": 5.393}
+{"raw": [[23.375, 25.5, 24.5], [23.625, 24.75, 24.875]], "key": "qwen4b|caba-dgiur-consulta-usos|11|R2", "evaluator": "qwen4b", "rule": "R2", "gold": "yellow", "latency_s": 4.7}
+{"raw": [[24.75, 26.125, 24.125], [25.75, 24.625, 24.125]], "key": "qwen4b|pba-ioma-reglamento-ingreso-carencia|52|R2", "evaluator": "qwen4b", "rule": "R2", "gold": "green", "latency_s": 5.264}
+{"raw": [[24.5, 25.0, 23.375], [24.5, 24.125, 23.875]], "key": "qwen4b|pba-arba-clave-cit|19|R2", "evaluator": "qwen4b", "rule": "R2", "gold": "green", "latency_s": 5.221}
+{"raw": [[23.625, 25.5, 24.25], [23.875, 24.0, 24.75]], "key": "qwen4b|pba-transporte-formulario-e-recorridos|7|R2", "evaluator": "qwen4b", "rule": "R2", "gold": "yellow", "latency_s": 4.095}
+{"raw": [[22.5, 24.125, 24.125], [21.875, 23.875, 23.75]], "key": "qwen4b|pba-arba-solicitud-exencion-general|5|R2", "evaluator": "qwen4b", "rule": "R2", "gold": "red", "latency_s": 7.663}
+{"raw": [[22.875, 22.75, 25.625], [20.5, 22.625, 25.75]], "key": "qwen4b|caba-ivc-guia-inquilinos-propietarios|36|R3", "evaluator": "qwen4b", "rule": "R3", "gold": "red", "latency_s": 5.455}
+{"raw": [[23.375, 23.25, 22.5], [23.625, 23.0, 22.25]], "key": "qwen4b|caba-licencias-aranceles|21|R3", "evaluator": "qwen4b", "rule": "R3", "gold": "yellow", "latency_s": 5.466}
+{"raw": [[24.875, 23.875, 21.625], [24.625, 23.25, 21.75]], "key": "qwen4b|caba-obsba-afiliaciones|93|R3", "evaluator": "qwen4b", "rule": "R3", "gold": "green", "latency_s": 4.612}
+{"raw": [[25.5, 23.75, 21.375], [25.375, 23.0, 22.125]], "key": "qwen4b|caba-obsba-afiliaciones|65|R3", "evaluator": "qwen4b", "rule": "R3", "gold": "green", "latency_s": 11.307}
+{"raw": [[24.625, 23.625, 22.5], [24.375, 22.75, 22.0]], "key": "qwen4b|caba-obsba-afiliaciones|84|R3", "evaluator": "qwen4b", "rule": "R3", "gold": "green", "latency_s": 2.82}
+{"raw": [[23.625, 23.125, 24.5], [23.75, 23.75, 23.375]], "key": "qwen4b|pba-trabajo-verificacion-digital-qr|14|R3", "evaluator": "qwen4b", "rule": "R3", "gold": "red", "latency_s": 8.746}
+{"raw": [[24.5, 24.75, 23.125], [24.875, 23.625, 23.0]], "key": "qwen4b|pba-licencias-conducir|148|R3", "evaluator": "qwen4b", "rule": "R3", "gold": "green", "latency_s": 6.013}
+{"raw": [[24.25, 22.375, 25.0], [23.625, 23.375, 24.375]], "key": "qwen4b|pba-ioma-afiliaciones-voluntarias|5|R3", "evaluator": "qwen4b", "rule": "R3", "gold": "yellow", "latency_s": 4.663}
+{"raw": [[23.625, 24.125, 23.25], [23.625, 23.75, 22.625]], "key": "qwen4b|caba-obsba-copagos|19|R3", "evaluator": "qwen4b", "rule": "R3", "gold": "green", "latency_s": 3.513}
+{"raw": [[24.0, 23.875, 23.875], [24.625, 24.125, 23.125]], "key": "qwen4b|pba-transporte-exencion-automotor-ley15558|29|R3", "evaluator": "qwen4b", "rule": "R3", "gold": "yellow", "latency_s": 3.333}
+{"raw": [[25.375, 25.25, 21.5], [25.5, 23.125, 22.75]], "key": "qwen4b|caba-habilitar-local-comercial|3|R3", "evaluator": "qwen4b", "rule": "R3", "gold": "green", "latency_s": 7.585}
+{"raw": [[23.25, 23.0, 21.5], [23.5, 22.375, 21.875]], "key": "qwen4b|caba-educacion-preguntas-frecuentes|47|R3", "evaluator": "qwen4b", "rule": "R3", "gold": "green", "latency_s": 8.916}
+{"raw": [[24.625, 25.25, 19.5], [24.25, 24.375, 22.875]], "key": "qwen4b|caba-canales-lugares-pago|14|R3", "evaluator": "qwen4b", "rule": "R3", "gold": "yellow", "latency_s": 3.863}
+{"raw": [[24.875, 24.375, 22.25], [24.25, 24.375, 23.375]], "key": "qwen4b|caba-registro-civil-partidas-urgentes|1|R3", "evaluator": "qwen4b", "rule": "R3", "gold": "green", "latency_s": 6.286}
+{"raw": [[22.75, 21.375, 26.0], [22.25, 22.5, 26.25]], "key": "qwen4b|pba-arba-solicitud-exencion-general|59|R3", "evaluator": "qwen4b", "rule": "R3", "gold": "red", "latency_s": 3.314}
+{"raw": [[22.5, 26.25, 21.5], [22.875, 25.5, 23.25]], "key": "qwen4b|pba-rpba-guia-tasas-2026|58|R6", "evaluator": "qwen4b", "rule": "R6", "gold": "yellow", "latency_s": 5.424}
+{"raw": [[22.75, 23.75, 25.25], [23.5, 22.375, 25.625]], "key": "qwen4b|caba-ley-arancelaria-anexo|45|R6", "evaluator": "qwen4b", "rule": "R6", "gold": "red", "latency_s": 9.596}
+{"raw": [[22.625, 26.5, 20.375], [23.625, 25.625, 23.375]], "key": "qwen4b|pba-rpba-guia-tasas-2026|48|R6", "evaluator": "qwen4b", "rule": "R6", "gold": "yellow", "latency_s": 6.45}
+{"raw": [[24.75, 24.5, 22.75], [24.625, 24.125, 23.125]], "key": "qwen4b|caba-canales-lugares-pago|6|R6", "evaluator": "qwen4b", "rule": "R6", "gold": "yellow", "latency_s": 7.339}
+{"raw": [[22.625, 24.0, 24.875], [21.25, 22.625, 24.875]], "key": "qwen4b|caba-ley-arancelaria-anexo|144|R6", "evaluator": "qwen4b", "rule": "R6", "gold": "red", "latency_s": 5.292}
+{"raw": [[23.5, 24.875, 22.625], [24.5, 23.875, 21.75]], "key": "qwen4b|pba-ioma-aumento-cuota-avi-2026|5|R6", "evaluator": "qwen4b", "rule": "R6", "gold": "green", "latency_s": 6.287}
+{"raw": [[23.0, 26.125, 21.75], [23.0, 25.625, 23.5]], "key": "qwen4b|pba-rpba-guia-tasas-2026|50|R6", "evaluator": "qwen4b", "rule": "R6", "gold": "yellow", "latency_s": 3.829}
+{"raw": [[23.875, 24.0, 24.875], [22.625, 23.125, 25.625]], "key": "qwen4b|caba-ley-arancelaria-anexo|74|R6", "evaluator": "qwen4b", "rule": "R6", "gold": "red", "latency_s": 5.818}
+{"raw": [[25.25, 25.25, 22.5], [25.25, 25.0, 23.0]], "key": "qwen4b|pba-vtv-resolucion-tarifa-2026|16|R6", "evaluator": "qwen4b", "rule": "R6", "gold": "green", "latency_s": 8.63}
+{"raw": [[24.875, 24.25, 23.375], [25.25, 23.625, 23.0]], "key": "qwen4b|pba-vtv-resolucion-tarifa-2026|26|R6", "evaluator": "qwen4b", "rule": "R6", "gold": "green", "latency_s": 11.927}
+{"raw": [[23.875, 26.25, 22.625], [22.75, 26.25, 23.125]], "key": "qwen4b|pba-ioma-afiliaciones-voluntarias|1|R6", "evaluator": "qwen4b", "rule": "R6", "gold": "yellow", "latency_s": 8.146}
+{"raw": [[23.0, 25.875, 21.5], [22.625, 25.375, 22.25]], "key": "qwen4b|caba-abl-exencion-jubilados|5|R6", "evaluator": "qwen4b", "rule": "R6", "gold": "yellow", "latency_s": 4.78}
+{"raw": [[24.0, 25.625, 22.75], [23.5, 25.875, 23.375]], "key": "qwen4b|pba-ioma-aumento-cuota-avi-2026|4|R6", "evaluator": "qwen4b", "rule": "R6", "gold": "yellow", "latency_s": 9.077}
+{"raw": [[22.0, 27.125, 19.625], [21.5, 26.75, 22.5]], "key": "qwen4b|pba-licencias-conducir|103|R6", "evaluator": "qwen4b", "rule": "R6", "gold": "yellow", "latency_s": 4.367}
+{"raw": [[24.375, 24.0, 22.5], [23.5, 25.25, 23.0]], "key": "qwen4b|caba-canales-lugares-pago|4|R6", "evaluator": "qwen4b", "rule": "R6", "gold": "green", "latency_s": 14.89}
+{"raw": [[23.25, 26.625, 21.0], [21.875, 26.25, 22.875]], "key": "qwen4b|pba-licencias-conducir|253|R6", "evaluator": "qwen4b", "rule": "R6", "gold": "yellow", "latency_s": 2.888}
+{"raw": [[23.75, 25.75, 21.0], [22.5, 26.25, 23.125]], "key": "qwen4b|pba-ioma-aumento-cuota-avi-2026|15|R6", "evaluator": "qwen4b", "rule": "R6", "gold": "yellow", "latency_s": 3.06}
+{"raw": [[23.0, 25.875, 22.375], [21.25, 25.875, 22.75]], "key": "qwen4b|caba-obsba-copagos|16|R6", "evaluator": "qwen4b", "rule": "R6", "gold": "yellow", "latency_s": 2.628}
+{"raw": [[23.5, 26.625, 20.875], [21.625, 26.375, 22.75]], "key": "qwen4b|pba-licencias-conducir|213|R6", "evaluator": "qwen4b", "rule": "R6", "gold": "yellow", "latency_s": 2.705}
+{"raw": [[23.0, 25.5, 21.875], [22.875, 25.375, 23.25]], "key": "qwen4b|caba-licencias-aranceles|8|R6", "evaluator": "qwen4b", "rule": "R6", "gold": "yellow", "latency_s": 5.909}
+{"raw": [[22.625, 26.125, 21.25], [23.125, 25.375, 22.375]], "key": "qwen4b|caba-abl-exencion-jubilados|4|R6", "evaluator": "qwen4b", "rule": "R6", "gold": "yellow", "latency_s": 4.098}
+{"raw": [[23.75, 25.75, 23.25], [24.5, 24.75, 22.25]], "key": "qwen4b|pba-manual-del-conductor|1278|R7", "evaluator": "qwen4b", "rule": "R7", "gold": "green", "latency_s": 4.343}
+{"raw": [[24.75, 24.375, 22.0], [25.5, 22.875, 21.625]], "key": "qwen4b|pba-vtv-resolucion-tarifa-2026|26|R7", "evaluator": "qwen4b", "rule": "R7", "gold": "green", "latency_s": 3.126}
+{"raw": [[23.875, 25.375, 22.25], [23.75, 24.75, 22.5]], "key": "qwen4b|pba-manual-del-conductor|1288|R7", "evaluator": "qwen4b", "rule": "R7", "gold": "green", "latency_s": 9.475}
+{"raw": [[24.625, 24.625, 21.5], [24.375, 23.375, 21.375]], "key": "qwen4b|caba-ley-arancelaria-anexo|464|R7", "evaluator": "qwen4b", "rule": "R7", "gold": "green", "latency_s": 2.977}
+{"raw": [[25.125, 25.375, 21.375], [25.0, 24.25, 22.25]], "key": "qwen4b|pba-licencias-conducir|155|R7", "evaluator": "qwen4b", "rule": "R7", "gold": "green", "latency_s": 6.603}
+{"raw": [[24.125, 24.125, 21.625], [24.875, 23.0, 21.75]], "key": "qwen4b|pba-rpp-inscripcion-nacimiento-online|85|R7", "evaluator": "qwen4b", "rule": "R7", "gold": "green", "latency_s": 5.993}
+{"raw": [[22.625, 24.25, 23.875], [21.625, 25.25, 23.375]], "key": "qwen4b|caba-educacion-preguntas-frecuentes|123|R7", "evaluator": "qwen4b", "rule": "R7", "gold": "yellow", "latency_s": 5.13}
+{"raw": [[24.5, 25.375, 22.875], [24.375, 25.0, 22.75]], "key": "qwen4b|caba-educacion-preguntas-frecuentes|122|R7", "evaluator": "qwen4b", "rule": "R7", "gold": "yellow", "latency_s": 3.37}
+{"raw": [[24.375, 25.125, 23.0], [24.75, 24.0, 22.75]], "key": "qwen4b|pba-ioma-aumento-cuota-avi-2026|4|R7", "evaluator": "qwen4b", "rule": "R7", "gold": "green", "latency_s": 8.985}
+{"raw": [[25.375, 25.125, 22.25], [25.875, 23.25, 22.25]], "key": "qwen4b|caba-canales-lugares-pago|6|R7", "evaluator": "qwen4b", "rule": "R7", "gold": "green", "latency_s": 7.484}
+{"raw": [[24.25, 25.0, 21.0], [24.625, 23.875, 21.5]], "key": "qwen4b|caba-ivc-guia-inquilinos-propietarios|33|R7", "evaluator": "qwen4b", "rule": "R7", "gold": "green", "latency_s": 5.031}
+{"raw": [[21.25, 22.875, 25.375], [20.875, 22.75, 25.5]], "key": "qwen4b|pba-transporte-exencion-automotor-ley15558|19|R7", "evaluator": "qwen4b", "rule": "R7", "gold": "red", "latency_s": 4.342}
+{"raw": [[23.875, 26.125, 23.125], [24.125, 25.25, 23.25]], "key": "qwen4b|caba-resolucion-tarifas-colectivos-julio-2026|8|R7", "evaluator": "qwen4b", "rule": "R7", "gold": "yellow", "latency_s": 3.903}
+{"raw": [[24.875, 24.5, 22.375], [25.125, 22.875, 21.75]], "key": "qwen4b|pba-rpba-guia-tasas-2026|8|R7", "evaluator": "qwen4b", "rule": "R7", "gold": "yellow", "latency_s": 3.174}
+{"raw": [[23.5, 23.5, 25.375], [23.375, 23.375, 24.125]], "key": "qwen4b|caba-ley-arancelaria-anexo|162|R8", "evaluator": "qwen4b", "rule": "R8", "gold": "red", "latency_s": 7.371}
+{"raw": [[21.25, 22.5, 25.375], [22.25, 22.25, 24.625]], "key": "qwen4b|caba-ley-arancelaria-anexo|17|R8", "evaluator": "qwen4b", "rule": "R8", "gold": "red", "latency_s": 5.89}
+{"raw": [[23.25, 22.375, 26.0], [22.25, 22.625, 25.5]], "key": "qwen4b|caba-ley-arancelaria-anexo|188|R8", "evaluator": "qwen4b", "rule": "R8", "gold": "red", "latency_s": 7.825}
+{"raw": [[23.625, 23.125, 24.625], [23.75, 22.0, 23.875]], "key": "qwen4b|pba-rpba-guia-tasas-2026|113|R8", "evaluator": "qwen4b", "rule": "R8", "gold": "red", "latency_s": 9.561}
+{"raw": [[22.875, 22.375, 25.0], [23.875, 22.5, 23.375]], "key": "qwen4b|pba-rpba-guia-tasas-2026|88|R8", "evaluator": "qwen4b", "rule": "R8", "gold": "red", "latency_s": 3.322}
+{"raw": [[24.5, 24.375, 23.625], [24.0, 22.875, 23.875]], "key": "qwen4b|pba-rpba-guia-tasas-2026|73|R8", "evaluator": "qwen4b", "rule": "R8", "gold": "red", "latency_s": 8.21}
+{"raw": [[21.5, 20.125, 26.625], [19.0, 19.375, 26.5]], "key": "qwen4b|pba-licencias-conducir|213|R8", "evaluator": "qwen4b", "rule": "R8", "gold": "red", "latency_s": 3.06}
+{"raw": [[23.375, 22.125, 26.125], [23.375, 23.125, 24.875]], "key": "qwen4b|pba-licencias-conducir|103|R8", "evaluator": "qwen4b", "rule": "R8", "gold": "red", "latency_s": 3.891}
+{"raw": [[22.75, 23.25, 25.125], [22.625, 22.5, 24.5]], "key": "qwen4b|caba-canales-lugares-pago|4|R8", "evaluator": "qwen4b", "rule": "R8", "gold": "red", "latency_s": 5.85}
+{"raw": [[23.875, 25.0, 22.5], [24.5, 22.875, 22.25]], "key": "qwen4b|caba-abl-exencion-jubilados|5|R8", "evaluator": "qwen4b", "rule": "R8", "gold": "yellow", "latency_s": 3.344}
+{"raw": [[22.125, 20.375, 26.5], [19.25, 19.375, 26.5]], "key": "qwen4b|pba-licencias-conducir|253|R8", "evaluator": "qwen4b", "rule": "R8", "gold": "red", "latency_s": 2.854}
+{"raw": [[23.875, 23.375, 24.375], [23.625, 23.5, 24.0]], "key": "qwen4b|pba-ioma-aumento-cuota-avi-2026|15|R8", "evaluator": "qwen4b", "rule": "R8", "gold": "green", "latency_s": 3.213}
+{"raw": [[25.0, 23.125, 24.25], [25.75, 21.5, 23.0]], "key": "qwen4b|pba-ioma-afiliaciones-voluntarias|1|R8", "evaluator": "qwen4b", "rule": "R8", "gold": "green", "latency_s": 5.617}
+{"raw": [[24.875, 23.25, 23.375], [25.875, 20.875, 21.75]], "key": "qwen4b|pba-vtv-resolucion-tarifa-2026|26|R8", "evaluator": "qwen4b", "rule": "R8", "gold": "green", "latency_s": 3.657}
+{"raw": [[25.25, 22.875, 21.25], [25.625, 22.0, 22.625]], "key": "qwen4b|pba-ioma-aumento-cuota-avi-2026|4|R8", "evaluator": "qwen4b", "rule": "R8", "gold": "green", "latency_s": 7.393}
+{"raw": [[23.0, 22.625, 25.125], [22.5, 22.875, 24.5]], "key": "qwen4b|caba-licencias-aranceles|8|R8", "evaluator": "qwen4b", "rule": "R8", "gold": "red", "latency_s": 2.788}
+{"raw": [[24.875, 23.5, 22.875], [24.875, 23.0, 23.0]], "key": "qwen4b|pba-vtv-resolucion-tarifa-2026|16|R8", "evaluator": "qwen4b", "rule": "R8", "gold": "yellow", "latency_s": 10.117}
+{"raw": [[25.5, 22.125, 21.25], [25.875, 20.125, 21.875]], "key": "qwen4b|caba-canales-lugares-pago|6|R8", "evaluator": "qwen4b", "rule": "R8", "gold": "green", "latency_s": 8.209}
+{"raw": [[24.25, 23.375, 24.375], [24.5, 23.625, 23.5]], "key": "qwen4b|caba-abl-exencion-jubilados|4|R8", "evaluator": "qwen4b", "rule": "R8", "gold": "green", "latency_s": 3.75}
+{"raw": [[21.75, 22.0, 25.5], [19.875, 21.625, 25.125]], "key": "qwen4b|caba-obsba-copagos|16|R8", "evaluator": "qwen4b", "rule": "R8", "gold": "red", "latency_s": 7.059}
+{"raw": [[24.0, 23.75, 22.875], [24.5, 22.625, 22.25]], "key": "qwen4b|pba-ioma-aumento-cuota-avi-2026|5|R8", "evaluator": "qwen4b", "rule": "R8", "gold": "green", "latency_s": 8.741}
+{"raw": [[22.0, 25.25, 21.875], [23.75, 24.25, 22.75]], "key": "qwen4b|pba-manual-del-conductor|1355|R14", "evaluator": "qwen4b", "rule": "R14", "gold": "red", "latency_s": 7.169}
+{"raw": [[23.0, 24.875, 19.875], [24.25, 23.625, 21.25]], "key": "qwen4b|pba-licencias-conducir|241|R14", "evaluator": "qwen4b", "rule": "R14", "gold": "yellow", "latency_s": 8.248}
+{"raw": [[21.625, 26.375, 17.75], [24.0, 24.125, 21.375]], "key": "qwen4b|caba-tad-manual-usuario|166|R14", "evaluator": "qwen4b", "rule": "R14", "gold": "yellow", "latency_s": 6.185}
+{"raw": [[21.875, 24.0, 19.0], [23.75, 21.375, 20.375]], "key": "qwen4b|caba-mecenazgo-instructivo-2024|44|R14", "evaluator": "qwen4b", "rule": "R14", "gold": "green", "latency_s": 3.918}
+{"raw": [[23.75, 24.375, 22.125], [24.5, 22.0, 21.0]], "key": "qwen4b|pba-licencias-conducir|251|R14", "evaluator": "qwen4b", "rule": "R14", "gold": "green", "latency_s": 2.974}
+{"raw": [[23.25, 24.75, 19.875], [24.75, 21.75, 20.625]], "key": "qwen4b|pba-ioma-flyer-afiliaciones|55|R14", "evaluator": "qwen4b", "rule": "R14", "gold": "green", "latency_s": 4.237}
+{"raw": [[23.25, 24.125, 20.375], [24.125, 22.5, 20.5]], "key": "qwen4b|pba-rpp-inscripcion-nacimiento-online|21|R14", "evaluator": "qwen4b", "rule": "R14", "gold": "green", "latency_s": 3.936}
+{"raw": [[24.375, 23.125, 20.375], [24.375, 22.25, 21.875]], "key": "qwen4b|pba-arba-solicitud-exencion-general|44|R14", "evaluator": "qwen4b", "rule": "R14", "gold": "green", "latency_s": 4.063}
+{"raw": [[23.625, 25.375, 21.5], [24.25, 22.625, 21.375]], "key": "qwen4b|caba-estacionamiento-beneficio-residentes|11|R14", "evaluator": "qwen4b", "rule": "R14", "gold": "green", "latency_s": 4.332}
+{"raw": [[22.5, 25.125, 18.5], [23.375, 23.875, 22.25]], "key": "qwen4b|pba-cic-instructivo-sigeva|2|R14", "evaluator": "qwen4b", "rule": "R14", "gold": "yellow", "latency_s": 3.203}
+{"raw": [[23.25, 25.0, 20.125], [24.0, 22.5, 21.25]], "key": "qwen4b|pba-rpp-partidas-digitales-manual|34|R14", "evaluator": "qwen4b", "rule": "R14", "gold": "yellow", "latency_s": 2.444}
+{"raw": [[23.25, 24.875, 21.0], [24.125, 22.25, 21.125]], "key": "qwen4b|caba-tad-manual-usuario|172|R14", "evaluator": "qwen4b", "rule": "R14", "gold": "green", "latency_s": 3.536}
+{"raw": [[22.75, 24.875, 21.875], [24.25, 23.0, 21.625]], "key": "qwen4b|pba-manual-del-conductor|123|R14", "evaluator": "qwen4b", "rule": "R14", "gold": "yellow", "latency_s": 4.566}
+{"raw": [[22.75, 25.375, 21.0], [24.0, 24.625, 22.625]], "key": "qwen4b|caba-ley-arancelaria-anexo|235|R14", "evaluator": "qwen4b", "rule": "R14", "gold": "red", "latency_s": 4.832}
+{"raw": [[21.625, 24.75, 21.5], [24.125, 22.625, 21.5]], "key": "qwen4b|caba-educacion-preguntas-frecuentes|52|R14", "evaluator": "qwen4b", "rule": "R14", "gold": "yellow", "latency_s": 3.926}
+{"raw": [[21.625, 25.375, 21.5], [23.625, 23.75, 21.875]], "key": "qwen4b|caba-educacion-preguntas-frecuentes|41|R14", "evaluator": "qwen4b", "rule": "R14", "gold": "green", "latency_s": 5.471}
+{"raw": [[22.625, 25.25, 22.25], [24.125, 23.625, 21.25]], "key": "qwen4b|pba-licencias-conducir|161|R14", "evaluator": "qwen4b", "rule": "R14", "gold": "yellow", "latency_s": 4.351}
+{"raw": [[22.875, 25.25, 19.5], [24.5, 23.125, 21.625]], "key": "qwen4b|pba-arba-alta-sas-iibb|12|R14", "evaluator": "qwen4b", "rule": "R14", "gold": "green", "latency_s": 2.983}
+{"raw": [[20.875, 22.375, 21.625], [20.75, 22.125, 21.375]], "key": "qwen9b|caba-ley-arancelaria-anexo|200|R2", "evaluator": "qwen9b", "rule": "R2", "gold": "yellow", "latency_s": 14.791}
+{"raw": [[21.125, 22.25, 20.0], [20.875, 22.0, 21.125]], "key": "qwen9b|caba-dgiur-consulta-usos|14|R2", "evaluator": "qwen9b", "rule": "R2", "gold": "yellow", "latency_s": 6.271}
+{"raw": [[20.75, 21.75, 22.125], [20.875, 21.125, 22.25]], "key": "qwen9b|caba-ley-arancelaria-anexo|440|R2", "evaluator": "qwen9b", "rule": "R2", "gold": "yellow", "latency_s": 38.812}
+{"raw": [[19.375, 21.75, 22.125], [19.875, 21.75, 21.75]], "key": "qwen9b|caba-ley-arancelaria-anexo|435|R2", "evaluator": "qwen9b", "rule": "R2", "gold": "red", "latency_s": 35.156}
+{"raw": [[21.375, 22.75, 20.625], [20.5, 23.125, 20.75]], "key": "qwen9b|pba-manual-del-conductor|1377|R2", "evaluator": "qwen9b", "rule": "R2", "gold": "yellow", "latency_s": 15.819}
+{"raw": [[22.0, 22.125, 20.875], [21.25, 21.625, 21.5]], "key": "qwen9b|pba-manual-del-conductor|717|R2", "evaluator": "qwen9b", "rule": "R2", "gold": "red", "latency_s": 11.62}
+{"raw": [[22.25, 21.25, 19.625], [21.625, 20.875, 21.125]], "key": "qwen9b|pba-rpba-guia-tasas-2026|113|R2", "evaluator": "qwen9b", "rule": "R2", "gold": "green", "latency_s": 5.966}
+{"raw": [[21.5, 21.875, 21.0], [20.875, 21.5, 21.75]], "key": "qwen9b|pba-rpba-guia-tasas-2026|136|R2", "evaluator": "qwen9b", "rule": "R2", "gold": "red", "latency_s": 8.146}
+{"raw": [[22.25, 21.0, 19.75], [21.5, 21.25, 21.125]], "key": "qwen9b|pba-arba-calendario-vencimientos-2026|233|R2", "evaluator": "qwen9b", "rule": "R2", "gold": "green", "latency_s": 11.3}
+{"raw": [[22.375, 21.125, 19.75], [21.5, 21.75, 21.875]], "key": "qwen9b|pba-arba-baja-exencion|14|R2", "evaluator": "qwen9b", "rule": "R2", "gold": "green", "latency_s": 8.682}
+{"raw": [[21.875, 21.875, 20.0], [21.625, 20.875, 21.125]], "key": "qwen9b|pba-manual-del-conductor|865|R2", "evaluator": "qwen9b", "rule": "R2", "gold": "red", "latency_s": 11.056}
+{"raw": [[22.125, 22.25, 20.625], [21.375, 22.25, 21.875]], "key": "qwen9b|pba-rpba-guia-tasas-2026|93|R2", "evaluator": "qwen9b", "rule": "R2", "gold": "green", "latency_s": 8.013}
+{"raw": [[20.75, 22.375, 21.0], [20.0, 22.375, 20.75]], "key": "qwen9b|pba-arba-calendario-vencimientos-2026|278|R2", "evaluator": "qwen9b", "rule": "R2", "gold": "yellow", "latency_s": 8.777}
+{"raw": [[21.625, 21.75, 20.625], [20.875, 21.5, 21.375]], "key": "qwen9b|pba-arba-clave-cit|4|R2", "evaluator": "qwen9b", "rule": "R2", "gold": "red", "latency_s": 7.784}
+{"raw": [[21.5, 22.0, 20.875], [20.5, 22.25, 21.0]], "key": "qwen9b|pba-arba-calendario-vencimientos-2026|273|R2", "evaluator": "qwen9b", "rule": "R2", "gold": "yellow", "latency_s": 9.005}
+{"raw": [[22.25, 22.125, 20.75], [21.625, 22.25, 21.25]], "key": "qwen9b|caba-dgiur-consulta-usos|37|R2", "evaluator": "qwen9b", "rule": "R2", "gold": "yellow", "latency_s": 12.178}
+{"raw": [[22.125, 22.375, 20.625], [21.25, 22.5, 21.25]], "key": "qwen9b|pba-arba-transferencia-automotor|25|R2", "evaluator": "qwen9b", "rule": "R2", "gold": "yellow", "latency_s": 8.604}
+{"raw": [[20.875, 21.75, 19.125], [20.5, 21.375, 21.25]], "key": "qwen9b|pba-arba-planes-pago-cbu|6|R2", "evaluator": "qwen9b", "rule": "R2", "gold": "red", "latency_s": 6.089}
+{"raw": [[21.875, 21.75, 19.875], [21.75, 21.0, 20.75]], "key": "qwen9b|caba-tesoreria-manual-pago-boletas-2017|3|R2", "evaluator": "qwen9b", "rule": "R2", "gold": "yellow", "latency_s": 5.693}
+{"raw": [[21.75, 21.25, 20.0], [21.375, 21.125, 20.875]], "key": "qwen9b|pba-arba-transferencia-automotor|4|R2", "evaluator": "qwen9b", "rule": "R2", "gold": "red", "latency_s": 5.119}
+{"raw": [[21.75, 22.0, 20.375], [21.375, 22.0, 21.25]], "key": "qwen9b|pba-arba-transferencia-automotor|24|R2", "evaluator": "qwen9b", "rule": "R2", "gold": "yellow", "latency_s": 7.456}
+{"raw": [[20.875, 22.625, 21.375], [21.0, 22.25, 21.375]], "key": "qwen9b|caba-dgiur-consulta-usos|11|R2", "evaluator": "qwen9b", "rule": "R2", "gold": "yellow", "latency_s": 8.747}
+{"raw": [[23.125, 21.125, 20.875], [21.875, 21.875, 21.125]], "key": "qwen9b|pba-ioma-reglamento-ingreso-carencia|52|R2", "evaluator": "qwen9b", "rule": "R2", "gold": "green", "latency_s": 9.648}
+{"raw": [[22.25, 21.5, 20.5], [21.75, 21.625, 21.25]], "key": "qwen9b|pba-arba-clave-cit|19|R2", "evaluator": "qwen9b", "rule": "R2", "gold": "green", "latency_s": 7.579}
+{"raw": [[21.25, 21.5, 20.875], [20.625, 21.25, 21.75]], "key": "qwen9b|pba-transporte-formulario-e-recorridos|7|R2", "evaluator": "qwen9b", "rule": "R2", "gold": "yellow", "latency_s": 7.538}
+{"raw": [[20.75, 21.75, 20.75], [19.875, 21.375, 21.875]], "key": "qwen9b|pba-arba-solicitud-exencion-general|5|R2", "evaluator": "qwen9b", "rule": "R2", "gold": "red", "latency_s": 6.233}
+{"raw": [[20.5, 19.75, 24.25], [19.875, 20.875, 23.375]], "key": "qwen9b|caba-ivc-guia-inquilinos-propietarios|36|R3", "evaluator": "qwen9b", "rule": "R3", "gold": "red", "latency_s": 7.024}
+{"raw": [[19.5, 20.625, 21.625], [20.75, 20.875, 21.125]], "key": "qwen9b|caba-licencias-aranceles|21|R3", "evaluator": "qwen9b", "rule": "R3", "gold": "yellow", "latency_s": 5.951}
+{"raw": [[20.125, 21.125, 21.875], [20.625, 21.0, 21.0]], "key": "qwen9b|caba-obsba-afiliaciones|93|R3", "evaluator": "qwen9b", "rule": "R3", "gold": "green", "latency_s": 5.366}
+{"raw": [[20.125, 20.625, 21.625], [20.5, 20.375, 20.875]], "key": "qwen9b|caba-obsba-afiliaciones|65|R3", "evaluator": "qwen9b", "rule": "R3", "gold": "green", "latency_s": 4.444}
+{"raw": [[19.625, 20.25, 21.875], [20.625, 20.625, 20.75]], "key": "qwen9b|caba-obsba-afiliaciones|84|R3", "evaluator": "qwen9b", "rule": "R3", "gold": "green", "latency_s": 4.465}
+{"raw": [[20.25, 19.25, 22.375], [20.375, 20.125, 22.25]], "key": "qwen9b|pba-trabajo-verificacion-digital-qr|14|R3", "evaluator": "qwen9b", "rule": "R3", "gold": "red", "latency_s": 9.249}
+{"raw": [[21.125, 20.75, 22.375], [21.25, 21.125, 21.875]], "key": "qwen9b|pba-licencias-conducir|148|R3", "evaluator": "qwen9b", "rule": "R3", "gold": "green", "latency_s": 10.968}
+{"raw": [[20.25, 19.625, 22.875], [19.5, 19.875, 22.625]], "key": "qwen9b|pba-ioma-afiliaciones-voluntarias|5|R3", "evaluator": "qwen9b", "rule": "R3", "gold": "yellow", "latency_s": 4.782}
+{"raw": [[20.5, 20.0, 22.375], [20.0, 20.75, 21.875]], "key": "qwen9b|caba-obsba-copagos|19|R3", "evaluator": "qwen9b", "rule": "R3", "gold": "green", "latency_s": 4.972}
+{"raw": [[20.375, 21.25, 22.25], [20.125, 21.375, 22.125]], "key": "qwen9b|pba-transporte-exencion-automotor-ley15558|29|R3", "evaluator": "qwen9b", "rule": "R3", "gold": "yellow", "latency_s": 8.064}
+{"raw": [[21.25, 20.0, 21.75], [21.75, 20.5, 21.125]], "key": "qwen9b|caba-habilitar-local-comercial|3|R3", "evaluator": "qwen9b", "rule": "R3", "gold": "green", "latency_s": 8.396}
+{"raw": [[19.75, 19.25, 21.875], [20.0, 20.125, 20.625]], "key": "qwen9b|caba-educacion-preguntas-frecuentes|47|R3", "evaluator": "qwen9b", "rule": "R3", "gold": "green", "latency_s": 6.408}
+{"raw": [[19.75, 22.75, 21.875], [21.0, 21.75, 21.25]], "key": "qwen9b|caba-canales-lugares-pago|14|R3", "evaluator": "qwen9b", "rule": "R3", "gold": "yellow", "latency_s": 13.175}
+{"raw": [[20.5, 21.875, 22.25], [20.625, 20.5, 22.375]], "key": "qwen9b|caba-registro-civil-partidas-urgentes|1|R3", "evaluator": "qwen9b", "rule": "R3", "gold": "green", "latency_s": 5.697}
+{"raw": [[20.5, 18.875, 24.0], [19.375, 19.25, 23.75]], "key": "qwen9b|pba-arba-solicitud-exencion-general|59|R3", "evaluator": "qwen9b", "rule": "R3", "gold": "red", "latency_s": 6.304}
+{"raw": [[21.125, 22.75, 19.5], [21.125, 22.875, 20.25]], "key": "qwen9b|pba-rpba-guia-tasas-2026|58|R6", "evaluator": "qwen9b", "rule": "R6", "gold": "yellow", "latency_s": 5.815}
+{"raw": [[19.5, 18.5, 22.875], [19.875, 19.5, 22.625]], "key": "qwen9b|caba-ley-arancelaria-anexo|45|R6", "evaluator": "qwen9b", "rule": "R6", "gold": "red", "latency_s": 15.847}
+{"raw": [[22.625, 22.25, 19.5], [21.875, 22.375, 19.375]], "key": "qwen9b|pba-rpba-guia-tasas-2026|48|R6", "evaluator": "qwen9b", "rule": "R6", "gold": "yellow", "latency_s": 5.365}
+{"raw": [[21.625, 22.625, 20.75], [20.625, 22.5, 21.5]], "key": "qwen9b|caba-canales-lugares-pago|6|R6", "evaluator": "qwen9b", "rule": "R6", "gold": "yellow", "latency_s": 11.403}
+{"raw": [[21.0, 19.25, 22.5], [20.875, 19.5, 22.5]], "key": "qwen9b|caba-ley-arancelaria-anexo|144|R6", "evaluator": "qwen9b", "rule": "R6", "gold": "red", "latency_s": 6.81}
+{"raw": [[22.75, 21.25, 20.625], [22.5, 21.625, 19.25]], "key": "qwen9b|pba-ioma-aumento-cuota-avi-2026|5|R6", "evaluator": "qwen9b", "rule": "R6", "gold": "green", "latency_s": 8.292}
+{"raw": [[21.5, 22.625, 20.875], [20.875, 21.875, 21.5]], "key": "qwen9b|pba-rpba-guia-tasas-2026|50|R6", "evaluator": "qwen9b", "rule": "R6", "gold": "yellow", "latency_s": 5.91}
+{"raw": [[20.875, 21.125, 22.625], [21.25, 20.0, 22.625]], "key": "qwen9b|caba-ley-arancelaria-anexo|74|R6", "evaluator": "qwen9b", "rule": "R6", "gold": "red", "latency_s": 8.811}
+{"raw": [[22.625, 21.25, 20.25], [22.375, 21.75, 19.5]], "key": "qwen9b|pba-vtv-resolucion-tarifa-2026|16|R6", "evaluator": "qwen9b", "rule": "R6", "gold": "green", "latency_s": 12.542}
+{"raw": [[22.25, 21.875, 20.875], [22.25, 21.75, 19.875]], "key": "qwen9b|pba-vtv-resolucion-tarifa-2026|26|R6", "evaluator": "qwen9b", "rule": "R6", "gold": "green", "latency_s": 5.333}
+{"raw": [[21.375, 22.625, 19.5], [20.5, 23.5, 19.75]], "key": "qwen9b|pba-ioma-afiliaciones-voluntarias|1|R6", "evaluator": "qwen9b", "rule": "R6", "gold": "yellow", "latency_s": 5.392}
+{"raw": [[22.125, 22.0, 19.125], [21.375, 22.375, 19.875]], "key": "qwen9b|caba-abl-exencion-jubilados|5|R6", "evaluator": "qwen9b", "rule": "R6", "gold": "yellow", "latency_s": 5.457}
+{"raw": [[22.75, 20.875, 20.125], [22.25, 22.25, 19.125]], "key": "qwen9b|pba-ioma-aumento-cuota-avi-2026|4|R6", "evaluator": "qwen9b", "rule": "R6", "gold": "yellow", "latency_s": 7.899}
+{"raw": [[22.125, 22.75, 19.75], [20.875, 23.125, 19.875]], "key": "qwen9b|pba-licencias-conducir|103|R6", "evaluator": "qwen9b", "rule": "R6", "gold": "yellow", "latency_s": 6.175}
+{"raw": [[21.875, 22.0, 20.375], [21.25, 22.5, 19.875]], "key": "qwen9b|caba-canales-lugares-pago|4|R6", "evaluator": "qwen9b", "rule": "R6", "gold": "green", "latency_s": 4.828}
+{"raw": [[22.5, 21.125, 19.375], [21.625, 22.875, 19.75]], "key": "qwen9b|pba-licencias-conducir|253|R6", "evaluator": "qwen9b", "rule": "R6", "gold": "yellow", "latency_s": 4.129}
+{"raw": [[21.25, 22.25, 20.25], [20.75, 23.375, 19.875]], "key": "qwen9b|pba-ioma-aumento-cuota-avi-2026|15|R6", "evaluator": "qwen9b", "rule": "R6", "gold": "yellow", "latency_s": 5.548}
+{"raw": [[22.125, 22.25, 18.875], [20.75, 23.125, 20.125]], "key": "qwen9b|caba-obsba-copagos|16|R6", "evaluator": "qwen9b", "rule": "R6", "gold": "yellow", "latency_s": 4.491}
+{"raw": [[22.625, 21.125, 19.25], [21.625, 22.625, 19.75]], "key": "qwen9b|pba-licencias-conducir|213|R6", "evaluator": "qwen9b", "rule": "R6", "gold": "yellow", "latency_s": 4.765}
+{"raw": [[22.5, 20.875, 20.375], [21.625, 22.25, 20.25]], "key": "qwen9b|caba-licencias-aranceles|8|R6", "evaluator": "qwen9b", "rule": "R6", "gold": "yellow", "latency_s": 4.341}
+{"raw": [[22.0, 22.25, 19.875], [21.875, 22.5, 19.125]], "key": "qwen9b|caba-abl-exencion-jubilados|4|R6", "evaluator": "qwen9b", "rule": "R6", "gold": "yellow", "latency_s": 6.362}
+{"raw": [[20.875, 22.5, 21.75], [19.5, 24.0, 20.25]], "key": "qwen9b|pba-manual-del-conductor|1278|R7", "evaluator": "qwen9b", "rule": "R7", "gold": "green", "latency_s": 7.65}
+{"raw": [[21.875, 20.25, 21.0], [23.125, 20.625, 19.625]], "key": "qwen9b|pba-vtv-resolucion-tarifa-2026|26|R7", "evaluator": "qwen9b", "rule": "R7", "gold": "green", "latency_s": 5.367}
+{"raw": [[20.625, 22.625, 21.75], [20.25, 23.375, 19.875]], "key": "qwen9b|pba-manual-del-conductor|1288|R7", "evaluator": "qwen9b", "rule": "R7", "gold": "green", "latency_s": 5.71}
+{"raw": [[21.875, 20.875, 19.75], [20.875, 21.75, 20.5]], "key": "qwen9b|caba-ley-arancelaria-anexo|464|R7", "evaluator": "qwen9b", "rule": "R7", "gold": "green", "latency_s": 4.653}
+{"raw": [[21.5, 21.5, 20.5], [22.625, 19.75, 19.625]], "key": "qwen9b|pba-licencias-conducir|155|R7", "evaluator": "qwen9b", "rule": "R7", "gold": "green", "latency_s": 7.953}
+{"raw": [[23.25, 19.625, 18.25], [21.75, 21.5, 19.75]], "key": "qwen9b|pba-rpp-inscripcion-nacimiento-online|85|R7", "evaluator": "qwen9b", "rule": "R7", "gold": "green", "latency_s": 4.296}
+{"raw": [[20.0, 21.875, 22.125], [19.75, 22.5, 21.5]], "key": "qwen9b|caba-educacion-preguntas-frecuentes|123|R7", "evaluator": "qwen9b", "rule": "R7", "gold": "yellow", "latency_s": 5.202}
+{"raw": [[20.0, 22.0, 21.875], [21.125, 21.875, 20.5]], "key": "qwen9b|caba-educacion-preguntas-frecuentes|122|R7", "evaluator": "qwen9b", "rule": "R7", "gold": "yellow", "latency_s": 4.65}
+{"raw": [[20.875, 21.25, 21.875], [22.25, 20.125, 19.625]], "key": "qwen9b|pba-ioma-aumento-cuota-avi-2026|4|R7", "evaluator": "qwen9b", "rule": "R7", "gold": "green", "latency_s": 6.927}
+{"raw": [[22.375, 20.625, 19.875], [23.0, 19.375, 20.125]], "key": "qwen9b|caba-canales-lugares-pago|6|R7", "evaluator": "qwen9b", "rule": "R7", "gold": "green", "latency_s": 10.703}
+{"raw": [[23.625, 20.375, 19.25], [23.25, 20.125, 20.0]], "key": "qwen9b|caba-ivc-guia-inquilinos-propietarios|33|R7", "evaluator": "qwen9b", "rule": "R7", "gold": "green", "latency_s": 5.224}
+{"raw": [[18.875, 20.125, 24.0], [17.375, 19.25, 24.75]], "key": "qwen9b|pba-transporte-exencion-automotor-ley15558|19|R7", "evaluator": "qwen9b", "rule": "R7", "gold": "red", "latency_s": 7.125}
+{"raw": [[18.625, 23.125, 21.25], [18.125, 23.25, 20.75]], "key": "qwen9b|caba-resolucion-tarifas-colectivos-julio-2026|8|R7", "evaluator": "qwen9b", "rule": "R7", "gold": "yellow", "latency_s": 7.292}
+{"raw": [[23.375, 19.75, 18.875], [21.875, 21.125, 20.125]], "key": "qwen9b|pba-rpba-guia-tasas-2026|8|R7", "evaluator": "qwen9b", "rule": "R7", "gold": "yellow", "latency_s": 5.085}
+{"raw": [[19.5, 20.0, 23.25], [19.5, 20.0, 23.25]], "key": "qwen9b|caba-ley-arancelaria-anexo|162|R8", "evaluator": "qwen9b", "rule": "R8", "gold": "red", "latency_s": 11.615}
+{"raw": [[19.75, 19.125, 23.5], [19.0, 20.0, 24.125]], "key": "qwen9b|caba-ley-arancelaria-anexo|17|R8", "evaluator": "qwen9b", "rule": "R8", "gold": "red", "latency_s": 6.695}
+{"raw": [[19.375, 19.0, 23.375], [18.5, 19.375, 23.375]], "key": "qwen9b|caba-ley-arancelaria-anexo|188|R8", "evaluator": "qwen9b", "rule": "R8", "gold": "red", "latency_s": 9.998}
+{"raw": [[21.125, 21.125, 21.875], [20.5, 19.875, 22.375]], "key": "qwen9b|pba-rpba-guia-tasas-2026|113|R8", "evaluator": "qwen9b", "rule": "R8", "gold": "red", "latency_s": 4.501}
+{"raw": [[20.625, 20.125, 22.875], [20.0, 19.875, 23.125]], "key": "qwen9b|pba-rpba-guia-tasas-2026|88|R8", "evaluator": "qwen9b", "rule": "R8", "gold": "red", "latency_s": 5.275}
+{"raw": [[21.0, 20.75, 22.25], [19.625, 19.5, 23.0]], "key": "qwen9b|pba-rpba-guia-tasas-2026|73|R8", "evaluator": "qwen9b", "rule": "R8", "gold": "red", "latency_s": 5.567}
+{"raw": [[19.875, 17.875, 24.125], [18.5, 18.875, 24.0]], "key": "qwen9b|pba-licencias-conducir|213|R8", "evaluator": "qwen9b", "rule": "R8", "gold": "red", "latency_s": 4.573}
+{"raw": [[19.375, 18.375, 23.875], [19.125, 19.75, 23.875]], "key": "qwen9b|pba-licencias-conducir|103|R8", "evaluator": "qwen9b", "rule": "R8", "gold": "red", "latency_s": 6.157}
+{"raw": [[21.375, 19.625, 21.5], [19.875, 19.875, 23.0]], "key": "qwen9b|caba-canales-lugares-pago|4|R8", "evaluator": "qwen9b", "rule": "R8", "gold": "red", "latency_s": 5.142}
+{"raw": [[21.625, 21.75, 20.375], [21.25, 21.25, 20.875]], "key": "qwen9b|caba-abl-exencion-jubilados|5|R8", "evaluator": "qwen9b", "rule": "R8", "gold": "yellow", "latency_s": 5.379}
+{"raw": [[19.75, 18.125, 24.25], [18.625, 19.0, 24.25]], "key": "qwen9b|pba-licencias-conducir|253|R8", "evaluator": "qwen9b", "rule": "R8", "gold": "red", "latency_s": 4.596}
+{"raw": [[21.25, 20.5, 21.0], [20.625, 20.625, 21.625]], "key": "qwen9b|pba-ioma-aumento-cuota-avi-2026|15|R8", "evaluator": "qwen9b", "rule": "R8", "gold": "green", "latency_s": 5.375}
+{"raw": [[21.875, 21.0, 21.0], [21.0, 20.375, 21.625]], "key": "qwen9b|pba-ioma-afiliaciones-voluntarias|1|R8", "evaluator": "qwen9b", "rule": "R8", "gold": "green", "latency_s": 5.519}
+{"raw": [[24.625, 18.375, 18.375], [23.875, 17.625, 19.25]], "key": "qwen9b|pba-vtv-resolucion-tarifa-2026|26|R8", "evaluator": "qwen9b", "rule": "R8", "gold": "green", "latency_s": 5.311}
+{"raw": [[24.125, 18.75, 18.875], [23.25, 18.0, 19.75]], "key": "qwen9b|pba-ioma-aumento-cuota-avi-2026|4|R8", "evaluator": "qwen9b", "rule": "R8", "gold": "green", "latency_s": 7.054}
+{"raw": [[19.75, 18.375, 23.625], [18.0, 19.625, 24.125]], "key": "qwen9b|caba-licencias-aranceles|8|R8", "evaluator": "qwen9b", "rule": "R8", "gold": "red", "latency_s": 4.494}
+{"raw": [[22.125, 20.0, 21.125], [22.25, 18.75, 20.875]], "key": "qwen9b|pba-vtv-resolucion-tarifa-2026|16|R8", "evaluator": "qwen9b", "rule": "R8", "gold": "yellow", "latency_s": 12.81}
+{"raw": [[23.75, 18.875, 18.375], [22.875, 18.625, 20.0]], "key": "qwen9b|caba-canales-lugares-pago|6|R8", "evaluator": "qwen9b", "rule": "R8", "gold": "green", "latency_s": 10.782}
+{"raw": [[22.5, 20.125, 19.75], [21.5, 20.75, 21.125]], "key": "qwen9b|caba-abl-exencion-jubilados|4|R8", "evaluator": "qwen9b", "rule": "R8", "gold": "green", "latency_s": 6.161}
+{"raw": [[19.625, 19.125, 23.25], [18.25, 19.875, 23.625]], "key": "qwen9b|caba-obsba-copagos|16|R8", "evaluator": "qwen9b", "rule": "R8", "gold": "red", "latency_s": 5.04}
+{"raw": [[23.75, 19.5, 19.5], [22.375, 19.25, 20.625]], "key": "qwen9b|pba-ioma-aumento-cuota-avi-2026|5|R8", "evaluator": "qwen9b", "rule": "R8", "gold": "green", "latency_s": 8.059}
+{"raw": [[19.125, 20.75, 22.625], [19.125, 21.875, 23.25]], "key": "qwen9b|pba-manual-del-conductor|1355|R14", "evaluator": "qwen9b", "rule": "R14", "gold": "red", "latency_s": 5.84}
+{"raw": [[20.875, 22.375, 19.5], [23.25, 19.5, 18.75]], "key": "qwen9b|pba-licencias-conducir|241|R14", "evaluator": "qwen9b", "rule": "R14", "gold": "yellow", "latency_s": 5.666}
+{"raw": [[19.625, 23.625, 18.5], [20.75, 23.25, 19.75]], "key": "qwen9b|caba-tad-manual-usuario|166|R14", "evaluator": "qwen9b", "rule": "R14", "gold": "yellow", "latency_s": 7.236}
+{"raw": [[22.25, 21.0, 18.375], [21.375, 21.375, 20.625]], "key": "qwen9b|caba-mecenazgo-instructivo-2024|44|R14", "evaluator": "qwen9b", "rule": "R14", "gold": "green", "latency_s": 4.972}
+{"raw": [[20.25, 22.375, 20.375], [23.375, 19.25, 19.25]], "key": "qwen9b|pba-licencias-conducir|251|R14", "evaluator": "qwen9b", "rule": "R14", "gold": "green", "latency_s": 5.007}
+{"raw": [[22.125, 21.375, 18.25], [23.375, 18.875, 19.125]], "key": "qwen9b|pba-ioma-flyer-afiliaciones|55|R14", "evaluator": "qwen9b", "rule": "R14", "gold": "green", "latency_s": 5.638}
+{"raw": [[23.0, 20.0, 18.5], [23.625, 18.875, 18.5]], "key": "qwen9b|pba-rpp-inscripcion-nacimiento-online|21|R14", "evaluator": "qwen9b", "rule": "R14", "gold": "green", "latency_s": 5.066}
+{"raw": [[24.125, 20.375, 17.5], [24.125, 19.25, 18.375]], "key": "qwen9b|pba-arba-solicitud-exencion-general|44|R14", "evaluator": "qwen9b", "rule": "R14", "gold": "green", "latency_s": 6.606}
+{"raw": [[22.25, 20.75, 19.375], [22.125, 20.875, 20.125]], "key": "qwen9b|caba-estacionamiento-beneficio-residentes|11|R14", "evaluator": "qwen9b", "rule": "R14", "gold": "green", "latency_s": 7.401}
+{"raw": [[20.875, 22.5, 19.75], [21.0, 22.375, 20.25]], "key": "qwen9b|pba-cic-instructivo-sigeva|2|R14", "evaluator": "qwen9b", "rule": "R14", "gold": "yellow", "latency_s": 5.394}
+{"raw": [[21.25, 21.5, 18.0], [21.5, 21.625, 20.25]], "key": "qwen9b|pba-rpp-partidas-digitales-manual|34|R14", "evaluator": "qwen9b", "rule": "R14", "gold": "yellow", "latency_s": 4.788}
+{"raw": [[21.5, 21.5, 19.5], [23.0, 19.0, 19.375]], "key": "qwen9b|caba-tad-manual-usuario|172|R14", "evaluator": "qwen9b", "rule": "R14", "gold": "green", "latency_s": 6.089}
+{"raw": [[21.25, 21.25, 19.75], [22.25, 20.25, 19.25]], "key": "qwen9b|pba-manual-del-conductor|123|R14", "evaluator": "qwen9b", "rule": "R14", "gold": "yellow", "latency_s": 6.977}
+{"raw": [[20.5, 22.375, 21.625], [20.625, 22.75, 21.125]], "key": "qwen9b|caba-ley-arancelaria-anexo|235|R14", "evaluator": "qwen9b", "rule": "R14", "gold": "red", "latency_s": 7.164}
+{"raw": [[19.875, 22.375, 20.5], [21.25, 21.5, 20.5]], "key": "qwen9b|caba-educacion-preguntas-frecuentes|52|R14", "evaluator": "qwen9b", "rule": "R14", "gold": "yellow", "latency_s": 6.929}
+{"raw": [[22.0, 20.625, 18.5], [23.5, 18.5, 19.0]], "key": "qwen9b|caba-educacion-preguntas-frecuentes|41|R14", "evaluator": "qwen9b", "rule": "R14", "gold": "green", "latency_s": 4.64}
+{"raw": [[19.5, 22.5, 20.125], [20.625, 22.0, 21.75]], "key": "qwen9b|pba-licencias-conducir|161|R14", "evaluator": "qwen9b", "rule": "R14", "gold": "yellow", "latency_s": 7.501}
+{"raw": [[20.875, 22.375, 19.75], [21.75, 21.375, 20.0]], "key": "qwen9b|pba-arba-alta-sas-iibb|12|R14", "evaluator": "qwen9b", "rule": "R14", "gold": "green", "latency_s": 5.31}
+{"probs": [0.025000000000000022, 0.025000000000000022, 0.95], "key": "api-qwen3.8-27b|caba-dgiur-consulta-usos|14|R2", "evaluator": "api-qwen3.8-27b", "rule": "R2", "gold": "yellow", "latency_s": 1.085}
+{"probs": [0.025000000000000022, 0.95, 0.025000000000000022], "key": "qwen9b-json|caba-ley-arancelaria-anexo|200|R2", "evaluator": "qwen9b-json", "rule": "R2", "gold": "yellow", "latency_s": 30.385}
+{"probs": [0.025000000000000022, 0.95, 0.025000000000000022], "key": "qwen9b-json|caba-dgiur-consulta-usos|14|R2", "evaluator": "qwen9b-json", "rule": "R2", "gold": "yellow", "latency_s": 4.078}
+{"probs": [0.025000000000000022, 0.025000000000000022, 0.95], "key": "qwen9b-json|caba-ley-arancelaria-anexo|440|R2", "evaluator": "qwen9b-json", "rule": "R2", "gold": "yellow", "latency_s": 15.416}
+{"probs": [0.025000000000000022, 0.025000000000000022, 0.95], "key": "qwen9b-json|caba-ley-arancelaria-anexo|435|R2", "evaluator": "qwen9b-json", "rule": "R2", "gold": "red", "latency_s": 16.413}
+{"probs": [0.025000000000000022, 0.95, 0.025000000000000022], "key": "qwen9b-json|pba-manual-del-conductor|1377|R2", "evaluator": "qwen9b-json", "rule": "R2", "gold": "yellow", "latency_s": 7.421}
+{"probs": [0.95, 0.025000000000000022, 0.025000000000000022], "key": "qwen9b-json|pba-manual-del-conductor|717|R2", "evaluator": "qwen9b-json", "rule": "R2", "gold": "red", "latency_s": 5.489}
+{"probs": [0.95, 0.025000000000000022, 0.025000000000000022], "key": "qwen9b-json|pba-rpba-guia-tasas-2026|113|R2", "evaluator": "qwen9b-json", "rule": "R2", "gold": "green", "latency_s": 3.95}
+{"probs": [0.025000000000000022, 0.95, 0.025000000000000022], "key": "qwen9b-json|pba-rpba-guia-tasas-2026|136|R2", "evaluator": "qwen9b-json", "rule": "R2", "gold": "red", "latency_s": 3.867}
+{"probs": [0.95, 0.025000000000000022, 0.025000000000000022], "key": "qwen9b-json|pba-arba-calendario-vencimientos-2026|233|R2", "evaluator": "qwen9b-json", "rule": "R2", "gold": "green", "latency_s": 3.807}
+{"probs": [0.95, 0.025000000000000022, 0.025000000000000022], "key": "qwen9b-json|pba-arba-baja-exencion|14|R2", "evaluator": "qwen9b-json", "rule": "R2", "gold": "green", "latency_s": 5.021}
+{"probs": [0.95, 0.025000000000000022, 0.025000000000000022], "key": "qwen9b-json|pba-manual-del-conductor|865|R2", "evaluator": "qwen9b-json", "rule": "R2", "gold": "red", "latency_s": 5.757}
+{"probs": [0.025000000000000022, 0.95, 0.025000000000000022], "key": "qwen9b-json|pba-rpba-guia-tasas-2026|93|R2", "evaluator": "qwen9b-json", "rule": "R2", "gold": "green", "latency_s": 4.403}
+{"probs": [0.025000000000000022, 0.95, 0.025000000000000022], "key": "qwen9b-json|pba-arba-calendario-vencimientos-2026|278|R2", "evaluator": "qwen9b-json", "rule": "R2", "gold": "yellow", "latency_s": 5.084}
+{"probs": [0.025000000000000022, 0.95, 0.025000000000000022], "key": "qwen9b-json|pba-arba-clave-cit|4|R2", "evaluator": "qwen9b-json", "rule": "R2", "gold": "red", "latency_s": 4.186}
+{"probs": [0.025000000000000022, 0.95, 0.025000000000000022], "key": "qwen9b-json|pba-arba-calendario-vencimientos-2026|273|R2", "evaluator": "qwen9b-json", "rule": "R2", "gold": "yellow", "latency_s": 5.533}
+{"probs": [0.025000000000000022, 0.95, 0.025000000000000022], "key": "qwen9b-json|caba-dgiur-consulta-usos|37|R2", "evaluator": "qwen9b-json", "rule": "R2", "gold": "yellow", "latency_s": 6.401}
+{"probs": [0.025000000000000022, 0.95, 0.025000000000000022], "key": "qwen9b-json|pba-arba-transferencia-automotor|25|R2", "evaluator": "qwen9b-json", "rule": "R2", "gold": "yellow", "latency_s": 5.03}
+{"probs": [0.025000000000000022, 0.95, 0.025000000000000022], "key": "qwen9b-json|pba-arba-planes-pago-cbu|6|R2", "evaluator": "qwen9b-json", "rule": "R2", "gold": "red", "latency_s": 3.653}
+{"probs": [0.025000000000000022, 0.95, 0.025000000000000022], "key": "qwen9b-json|caba-tesoreria-manual-pago-boletas-2017|3|R2", "evaluator": "qwen9b-json", "rule": "R2", "gold": "yellow", "latency_s": 3.948}
+{"probs": [0.025000000000000022, 0.95, 0.025000000000000022], "key": "qwen9b-json|pba-arba-transferencia-automotor|4|R2", "evaluator": "qwen9b-json", "rule": "R2", "gold": "red", "latency_s": 3.629}
+{"probs": [0.025000000000000022, 0.95, 0.025000000000000022], "key": "qwen9b-json|pba-arba-transferencia-automotor|24|R2", "evaluator": "qwen9b-json", "rule": "R2", "gold": "yellow", "latency_s": 4.568}
+{"probs": [0.025000000000000022, 0.95, 0.025000000000000022], "key": "qwen9b-json|caba-dgiur-consulta-usos|11|R2", "evaluator": "qwen9b-json", "rule": "R2", "gold": "yellow", "latency_s": 5.465}
+{"probs": [0.95, 0.025000000000000022, 0.025000000000000022], "key": "qwen9b-json|pba-ioma-reglamento-ingreso-carencia|52|R2", "evaluator": "qwen9b-json", "rule": "R2", "gold": "green", "latency_s": 5.565}
+{"probs": [0.025000000000000022, 0.95, 0.025000000000000022], "key": "qwen9b-json|pba-arba-clave-cit|19|R2", "evaluator": "qwen9b-json", "rule": "R2", "gold": "green", "latency_s": 4.942}
+{"probs": [0.025000000000000022, 0.95, 0.025000000000000022], "key": "qwen9b-json|pba-transporte-formulario-e-recorridos|7|R2", "evaluator": "qwen9b-json", "rule": "R2", "gold": "yellow", "latency_s": 3.975}
+{"probs": [0.025000000000000022, 0.95, 0.025000000000000022], "key": "qwen9b-json|pba-arba-solicitud-exencion-general|5|R2", "evaluator": "qwen9b-json", "rule": "R2", "gold": "red", "latency_s": 8.368}
+{"probs": [0.0, 0.0, 1.0], "key": "qwen9b-json|caba-ivc-guia-inquilinos-propietarios|36|R3", "evaluator": "qwen9b-json", "rule": "R3", "gold": "red", "latency_s": 4.263}
+{"probs": [0.0, 0.0, 1.0], "key": "qwen9b-json|caba-licencias-aranceles|21|R3", "evaluator": "qwen9b-json", "rule": "R3", "gold": "yellow", "latency_s": 4.192}
+{"probs": [0.0, 0.0, 1.0], "key": "qwen9b-json|caba-obsba-afiliaciones|93|R3", "evaluator": "qwen9b-json", "rule": "R3", "gold": "green", "latency_s": 3.442}
+{"probs": [0.0, 0.0, 1.0], "key": "qwen9b-json|caba-obsba-afiliaciones|65|R3", "evaluator": "qwen9b-json", "rule": "R3", "gold": "green", "latency_s": 3.136}
+{"probs": [0.0, 0.0, 1.0], "key": "qwen9b-json|caba-obsba-afiliaciones|84|R3", "evaluator": "qwen9b-json", "rule": "R3", "gold": "green", "latency_s": 3.197}
+{"probs": [0.0, 0.0, 1.0], "key": "qwen9b-json|pba-trabajo-verificacion-digital-qr|14|R3", "evaluator": "qwen9b-json", "rule": "R3", "gold": "red", "latency_s": 5.824}
+{"probs": [1.0, 0.0, 0.0], "key": "qwen9b-json|pba-licencias-conducir|148|R3", "evaluator": "qwen9b-json", "rule": "R3", "gold": "green", "latency_s": 4.254}
+{"probs": [0.0, 0.0, 1.0], "key": "qwen9b-json|pba-ioma-afiliaciones-voluntarias|5|R3", "evaluator": "qwen9b-json", "rule": "R3", "gold": "yellow", "latency_s": 3.253}
+{"probs": [0.0, 0.0, 1.0], "key": "qwen9b-json|caba-obsba-copagos|19|R3", "evaluator": "qwen9b-json", "rule": "R3", "gold": "green", "latency_s": 3.375}
+{"probs": [0.025000000000000022, 0.95, 0.025000000000000022], "key": "qwen9b-json|pba-transporte-exencion-automotor-ley15558|29|R3", "evaluator": "qwen9b-json", "rule": "R3", "gold": "yellow", "latency_s": 4.001}
+{"probs": [1.0, 0.0, 0.0], "key": "qwen9b-json|caba-habilitar-local-comercial|3|R3", "evaluator": "qwen9b-json", "rule": "R3", "gold": "green", "latency_s": 5.568}
+{"probs": [0.0, 0.0, 1.0], "key": "qwen9b-json|caba-educacion-preguntas-frecuentes|47|R3", "evaluator": "qwen9b-json", "rule": "R3", "gold": "green", "latency_s": 4.757}
+{"probs": [0.025000000000000022, 0.95, 0.025000000000000022], "key": "qwen9b-json|caba-canales-lugares-pago|14|R3", "evaluator": "qwen9b-json", "rule": "R3", "gold": "yellow", "latency_s": 6.731}
+{"probs": [1.0, 0.0, 0.0], "key": "qwen9b-json|caba-registro-civil-partidas-urgentes|1|R3", "evaluator": "qwen9b-json", "rule": "R3", "gold": "green", "latency_s": 4.07}
+{"probs": [0.0, 0.0, 1.0], "key": "qwen9b-json|pba-arba-solicitud-exencion-general|59|R3", "evaluator": "qwen9b-json", "rule": "R3", "gold": "red", "latency_s": 4.05}
+{"probs": [0.0, 1.0, 0.0], "key": "qwen9b-json|pba-rpba-guia-tasas-2026|58|R6", "evaluator": "qwen9b-json", "rule": "R6", "gold": "yellow", "latency_s": 3.814}
+{"probs": [0.0, 0.0, 1.0], "key": "qwen9b-json|caba-ley-arancelaria-anexo|45|R6", "evaluator": "qwen9b-json", "rule": "R6", "gold": "red", "latency_s": 8.171}
+{"probs": [0.0, 1.0, 0.0], "key": "qwen9b-json|pba-rpba-guia-tasas-2026|48|R6", "evaluator": "qwen9b-json", "rule": "R6", "gold": "yellow", "latency_s": 7.496}
+{"probs": [0.025000000000000022, 0.95, 0.025000000000000022], "key": "qwen9b-json|caba-canales-lugares-pago|6|R6", "evaluator": "qwen9b-json", "rule": "R6", "gold": "yellow", "latency_s": 16.797}
+{"probs": [0.0, 0.0, 1.0], "key": "qwen9b-json|caba-ley-arancelaria-anexo|144|R6", "evaluator": "qwen9b-json", "rule": "R6", "gold": "red", "latency_s": 5.061}
+{"probs": [1.0, 0.0, 0.0], "key": "qwen9b-json|pba-ioma-aumento-cuota-avi-2026|5|R6", "evaluator": "qwen9b-json", "rule": "R6", "gold": "green", "latency_s": 5.394}
+{"probs": [0.025000000000000022, 0.95, 0.025000000000000022], "key": "qwen9b-json|pba-rpba-guia-tasas-2026|50|R6", "evaluator": "qwen9b-json", "rule": "R6", "gold": "yellow", "latency_s": 4.557}
+{"probs": [0.0, 0.0, 1.0], "key": "qwen9b-json|caba-ley-arancelaria-anexo|74|R6", "evaluator": "qwen9b-json", "rule": "R6", "gold": "red", "latency_s": 7.231}
+{"probs": [1.0, 0.0, 0.0], "key": "qwen9b-json|pba-vtv-resolucion-tarifa-2026|16|R6", "evaluator": "qwen9b-json", "rule": "R6", "gold": "green", "latency_s": 8.985}
+{"probs": [1.0, 0.0, 0.0], "key": "qwen9b-json|pba-vtv-resolucion-tarifa-2026|26|R6", "evaluator": "qwen9b-json", "rule": "R6", "gold": "green", "latency_s": 7.342}
+{"probs": [0.025000000000000022, 0.95, 0.025000000000000022], "key": "qwen9b-json|pba-ioma-afiliaciones-voluntarias|1|R6", "evaluator": "qwen9b-json", "rule": "R6", "gold": "yellow", "latency_s": 6.173}
+{"probs": [0.0, 1.0, 0.0], "key": "qwen9b-json|caba-abl-exencion-jubilados|5|R6", "evaluator": "qwen9b-json", "rule": "R6", "gold": "yellow", "latency_s": 4.495}
+{"probs": [1.0, 0.0, 0.0], "key": "qwen9b-json|pba-ioma-aumento-cuota-avi-2026|4|R6", "evaluator": "qwen9b-json", "rule": "R6", "gold": "yellow", "latency_s": 6.848}
+{"probs": [0.0, 1.0, 0.0], "key": "qwen9b-json|pba-licencias-conducir|103|R6", "evaluator": "qwen9b-json", "rule": "R6", "gold": "yellow", "latency_s": 6.566}
+{"probs": [1.0, 0.0, 0.0], "key": "qwen9b-json|caba-canales-lugares-pago|4|R6", "evaluator": "qwen9b-json", "rule": "R6", "gold": "green", "latency_s": 3.821}
+{"probs": [1.0, 0.0, 0.0], "key": "qwen9b-json|pba-licencias-conducir|253|R6", "evaluator": "qwen9b-json", "rule": "R6", "gold": "yellow", "latency_s": 4.904}
+{"probs": [0.0, 1.0, 0.0], "key": "qwen9b-json|pba-ioma-aumento-cuota-avi-2026|15|R6", "evaluator": "qwen9b-json", "rule": "R6", "gold": "yellow", "latency_s": 4.922}
+{"probs": [0.025000000000000022, 0.95, 0.025000000000000022], "key": "qwen9b-json|caba-obsba-copagos|16|R6", "evaluator": "qwen9b-json", "rule": "R6", "gold": "yellow", "latency_s": 3.555}
+{"probs": [1.0, 0.0, 0.0], "key": "qwen9b-json|pba-licencias-conducir|213|R6", "evaluator": "qwen9b-json", "rule": "R6", "gold": "yellow", "latency_s": 3.893}
+{"probs": [0.025000000000000022, 0.95, 0.025000000000000022], "key": "qwen9b-json|caba-licencias-aranceles|8|R6", "evaluator": "qwen9b-json", "rule": "R6", "gold": "yellow", "latency_s": 3.864}
+{"probs": [0.0, 1.0, 0.0], "key": "qwen9b-json|caba-abl-exencion-jubilados|4|R6", "evaluator": "qwen9b-json", "rule": "R6", "gold": "yellow", "latency_s": 4.298}
+{"probs": [0.0, 1.0, 0.0], "key": "qwen9b-json|pba-manual-del-conductor|1278|R7", "evaluator": "qwen9b-json", "rule": "R7", "gold": "green", "latency_s": 4.981}
+{"probs": [1.0, 0.0, 0.0], "key": "qwen9b-json|pba-vtv-resolucion-tarifa-2026|26|R7", "evaluator": "qwen9b-json", "rule": "R7", "gold": "green", "latency_s": 3.941}
+{"probs": [0.0, 1.0, 0.0], "key": "qwen9b-json|pba-manual-del-conductor|1288|R7", "evaluator": "qwen9b-json", "rule": "R7", "gold": "green", "latency_s": 12.586}
+{"probs": [1.0, 0.0, 0.0], "key": "qwen9b-json|caba-ley-arancelaria-anexo|464|R7", "evaluator": "qwen9b-json", "rule": "R7", "gold": "green", "latency_s": 4.075}
+{"probs": [1.0, 0.0, 0.0], "key": "qwen9b-json|pba-licencias-conducir|155|R7", "evaluator": "qwen9b-json", "rule": "R7", "gold": "green", "latency_s": 5.127}
+{"probs": [1.0, 0.0, 0.0], "key": "qwen9b-json|pba-rpp-inscripcion-nacimiento-online|85|R7", "evaluator": "qwen9b-json", "rule": "R7", "gold": "green", "latency_s": 3.248}
+{"probs": [0.0, 1.0, 0.0], "key": "qwen9b-json|caba-educacion-preguntas-frecuentes|123|R7", "evaluator": "qwen9b-json", "rule": "R7", "gold": "yellow", "latency_s": 3.665}
+{"probs": [0.0, 1.0, 0.0], "key": "qwen9b-json|caba-educacion-preguntas-frecuentes|122|R7", "evaluator": "qwen9b-json", "rule": "R7", "gold": "yellow", "latency_s": 3.766}
+{"probs": [0.0, 1.0, 0.0], "key": "qwen9b-json|pba-ioma-aumento-cuota-avi-2026|4|R7", "evaluator": "qwen9b-json", "rule": "R7", "gold": "green", "latency_s": 5.547}
+{"probs": [1.0, 0.0, 0.0], "key": "qwen9b-json|caba-canales-lugares-pago|6|R7", "evaluator": "qwen9b-json", "rule": "R7", "gold": "green", "latency_s": 7.492}
+{"probs": [1.0, 0.0, 0.0], "key": "qwen9b-json|caba-ivc-guia-inquilinos-propietarios|33|R7", "evaluator": "qwen9b-json", "rule": "R7", "gold": "green", "latency_s": 3.574}
+{"probs": [0.0, 0.0, 1.0], "key": "qwen9b-json|pba-transporte-exencion-automotor-ley15558|19|R7", "evaluator": "qwen9b-json", "rule": "R7", "gold": "red", "latency_s": 4.615}
+{"probs": [0.0, 1.0, 0.0], "key": "qwen9b-json|caba-resolucion-tarifas-colectivos-julio-2026|8|R7", "evaluator": "qwen9b-json", "rule": "R7", "gold": "yellow", "latency_s": 4.418}
+{"probs": [1.0, 0.0, 0.0], "key": "qwen9b-json|pba-rpba-guia-tasas-2026|8|R7", "evaluator": "qwen9b-json", "rule": "R7", "gold": "yellow", "latency_s": 3.134}
+{"probs": [0.025000000000000022, 0.025000000000000022, 0.95], "key": "qwen9b-json|caba-ley-arancelaria-anexo|162|R8", "evaluator": "qwen9b-json", "rule": "R8", "gold": "red", "latency_s": 7.438}
+{"probs": [0.025000000000000022, 0.025000000000000022, 0.95], "key": "qwen9b-json|caba-ley-arancelaria-anexo|17|R8", "evaluator": "qwen9b-json", "rule": "R8", "gold": "red", "latency_s": 4.602}
+{"probs": [0.0, 0.0, 1.0], "key": "qwen9b-json|caba-ley-arancelaria-anexo|188|R8", "evaluator": "qwen9b-json", "rule": "R8", "gold": "red", "latency_s": 5.458}
+{"probs": [0.025000000000000022, 0.025000000000000022, 0.95], "key": "qwen9b-json|pba-rpba-guia-tasas-2026|113|R8", "evaluator": "qwen9b-json", "rule": "R8", "gold": "red", "latency_s": 3.243}
+{"probs": [0.0, 0.0, 1.0], "key": "qwen9b-json|pba-rpba-guia-tasas-2026|88|R8", "evaluator": "qwen9b-json", "rule": "R8", "gold": "red", "latency_s": 4.146}
+{"probs": [0.0, 0.0, 1.0], "key": "qwen9b-json|pba-rpba-guia-tasas-2026|73|R8", "evaluator": "qwen9b-json", "rule": "R8", "gold": "red", "latency_s": 3.458}
+{"probs": [0.0, 0.0, 1.0], "key": "qwen9b-json|pba-licencias-conducir|213|R8", "evaluator": "qwen9b-json", "rule": "R8", "gold": "red", "latency_s": 3.381}
+{"probs": [0.0, 0.0, 1.0], "key": "qwen9b-json|pba-licencias-conducir|103|R8", "evaluator": "qwen9b-json", "rule": "R8", "gold": "red", "latency_s": 4.18}
+{"probs": [0.025000000000000022, 0.025000000000000022, 0.95], "key": "qwen9b-json|caba-canales-lugares-pago|4|R8", "evaluator": "qwen9b-json", "rule": "R8", "gold": "red", "latency_s": 3.517}
+{"probs": [0.025000000000000022, 0.95, 0.025000000000000022], "key": "qwen9b-json|caba-abl-exencion-jubilados|5|R8", "evaluator": "qwen9b-json", "rule": "R8", "gold": "yellow", "latency_s": 4.981}
+{"probs": [0.0, 0.0, 1.0], "key": "qwen9b-json|pba-licencias-conducir|253|R8", "evaluator": "qwen9b-json", "rule": "R8", "gold": "red", "latency_s": 4.012}
+{"probs": [1.0, 0.0, 0.0], "key": "qwen9b-json|pba-ioma-aumento-cuota-avi-2026|15|R8", "evaluator": "qwen9b-json", "rule": "R8", "gold": "green", "latency_s": 4.011}
+{"probs": [0.95, 0.025000000000000022, 0.025000000000000022], "key": "qwen9b-json|pba-ioma-afiliaciones-voluntarias|1|R8", "evaluator": "qwen9b-json", "rule": "R8", "gold": "green", "latency_s": 3.947}
+{"probs": [1.0, 0.0, 0.0], "key": "qwen9b-json|pba-vtv-resolucion-tarifa-2026|26|R8", "evaluator": "qwen9b-json", "rule": "R8", "gold": "green", "latency_s": 4.365}
+{"probs": [1.0, 0.0, 0.0], "key": "qwen9b-json|pba-ioma-aumento-cuota-avi-2026|4|R8", "evaluator": "qwen9b-json", "rule": "R8", "gold": "green", "latency_s": 5.278}
+{"probs": [0.0, 0.0, 1.0], "key": "qwen9b-json|caba-licencias-aranceles|8|R8", "evaluator": "qwen9b-json", "rule": "R8", "gold": "red", "latency_s": 3.48}
+{"probs": [0.95, 0.025000000000000022, 0.025000000000000022], "key": "qwen9b-json|pba-vtv-resolucion-tarifa-2026|16|R8", "evaluator": "qwen9b-json", "rule": "R8", "gold": "yellow", "latency_s": 8.508}
+{"probs": [1.0, 0.0, 0.0], "key": "qwen9b-json|caba-canales-lugares-pago|6|R8", "evaluator": "qwen9b-json", "rule": "R8", "gold": "green", "latency_s": 7.752}
+{"probs": [0.95, 0.025000000000000022, 0.025000000000000022], "key": "qwen9b-json|caba-abl-exencion-jubilados|4|R8", "evaluator": "qwen9b-json", "rule": "R8", "gold": "green", "latency_s": 4.533}
+{"probs": [0.0, 0.0, 1.0], "key": "qwen9b-json|caba-obsba-copagos|16|R8", "evaluator": "qwen9b-json", "rule": "R8", "gold": "red", "latency_s": 3.63}
+{"probs": [1.0, 0.0, 0.0], "key": "qwen9b-json|pba-ioma-aumento-cuota-avi-2026|5|R8", "evaluator": "qwen9b-json", "rule": "R8", "gold": "green", "latency_s": 5.071}
+{"probs": [0.025000000000000022, 0.025000000000000022, 0.95], "key": "qwen9b-json|pba-manual-del-conductor|1355|R14", "evaluator": "qwen9b-json", "rule": "R14", "gold": "red", "latency_s": 4.19}
+{"probs": [0.0, 1.0, 0.0], "key": "qwen9b-json|pba-licencias-conducir|241|R14", "evaluator": "qwen9b-json", "rule": "R14", "gold": "yellow", "latency_s": 4.216}
+{"probs": [0.0, 1.0, 0.0], "key": "qwen9b-json|caba-tad-manual-usuario|166|R14", "evaluator": "qwen9b-json", "rule": "R14", "gold": "yellow", "latency_s": 4.407}
+{"probs": [1.0, 0.0, 0.0], "key": "qwen9b-json|caba-mecenazgo-instructivo-2024|44|R14", "evaluator": "qwen9b-json", "rule": "R14", "gold": "green", "latency_s": 3.62}
+{"probs": [0.0, 1.0, 0.0], "key": "qwen9b-json|pba-licencias-conducir|251|R14", "evaluator": "qwen9b-json", "rule": "R14", "gold": "green", "latency_s": 4.133}
+{"probs": [1.0, 0.0, 0.0], "key": "qwen9b-json|pba-ioma-flyer-afiliaciones|55|R14", "evaluator": "qwen9b-json", "rule": "R14", "gold": "green", "latency_s": 4.032}
+{"probs": [1.0, 0.0, 0.0], "key": "qwen9b-json|pba-rpp-inscripcion-nacimiento-online|21|R14", "evaluator": "qwen9b-json", "rule": "R14", "gold": "green", "latency_s": 7.568}
+{"probs": [1.0, 0.0, 0.0], "key": "qwen9b-json|pba-arba-solicitud-exencion-general|44|R14", "evaluator": "qwen9b-json", "rule": "R14", "gold": "green", "latency_s": 8.684}
+{"probs": [1.0, 0.0, 0.0], "key": "qwen9b-json|caba-estacionamiento-beneficio-residentes|11|R14", "evaluator": "qwen9b-json", "rule": "R14", "gold": "green", "latency_s": 5.883}
+{"probs": [0.0, 1.0, 0.0], "key": "qwen9b-json|pba-cic-instructivo-sigeva|2|R14", "evaluator": "qwen9b-json", "rule": "R14", "gold": "yellow", "latency_s": 7.606}
+{"probs": [0.0, 1.0, 0.0], "key": "qwen9b-json|pba-rpp-partidas-digitales-manual|34|R14", "evaluator": "qwen9b-json", "rule": "R14", "gold": "yellow", "latency_s": 4.717}
+{"probs": [0.0, 1.0, 0.0], "key": "qwen9b-json|caba-tad-manual-usuario|172|R14", "evaluator": "qwen9b-json", "rule": "R14", "gold": "green", "latency_s": 7.159}
+{"probs": [1.0, 0.0, 0.0], "key": "qwen9b-json|pba-manual-del-conductor|123|R14", "evaluator": "qwen9b-json", "rule": "R14", "gold": "yellow", "latency_s": 10.266}
+{"probs": [0.0, 1.0, 0.0], "key": "qwen9b-json|caba-ley-arancelaria-anexo|235|R14", "evaluator": "qwen9b-json", "rule": "R14", "gold": "red", "latency_s": 5.547}
+{"probs": [0.025000000000000022, 0.95, 0.025000000000000022], "key": "qwen9b-json|caba-educacion-preguntas-frecuentes|52|R14", "evaluator": "qwen9b-json", "rule": "R14", "gold": "yellow", "latency_s": 5.814}
+{"probs": [1.0, 0.0, 0.0], "key": "qwen9b-json|caba-educacion-preguntas-frecuentes|41|R14", "evaluator": "qwen9b-json", "rule": "R14", "gold": "green", "latency_s": 3.952}
+{"probs": [0.0, 1.0, 0.0], "key": "qwen9b-json|pba-licencias-conducir|161|R14", "evaluator": "qwen9b-json", "rule": "R14", "gold": "yellow", "latency_s": 5.647}
+{"probs": [0.0, 1.0, 0.0], "key": "qwen9b-json|pba-arba-alta-sas-iibb|12|R14", "evaluator": "qwen9b-json", "rule": "R14", "gold": "green", "latency_s": 4.455}

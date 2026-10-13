@@ -1,0 +1,225 @@
+# Reglas de referencia R1–R14 (docs/sdd-semaforo.md §7), escritas a mano.
+# Son la "compilación correcta" contra la que se compara el compilador del lab 14, y las que
+# usa el evaluador del lab 13. Los textos van en español: son lo que lee el modelo y la UI.
+
+- id: r1-color
+  source: "WCAG 2.2, 1.4.1 (A)"
+  kind: semantic
+  scope: block
+  applies_to: [paragraph, list_item, table]
+  question: "¿La información importante se entiende sin depender del color, el resaltado o el formato?"
+  levels:
+    green: "Lo importante está dicho con palabras; el formato solo acompaña."
+    yellow: "Hay énfasis visual que podría llevar información, pero el texto la repite en parte."
+    red: "Una advertencia, un requisito o un dato solo se distingue por color o formato."
+  blocking: true
+  examples:
+    - text: "IMPORTANTE: el turno se pierde si llegás 10 minutos tarde."
+      expected: green
+    - text: "Los campos en rojo son obligatorios."
+      expected: red
+
+- id: r2-tablas
+  source: "WCAG 2.2, 1.3.1 (A)"
+  kind: semantic
+  scope: block
+  applies_to: [table]
+  question: "¿La tabla tiene una fila de encabezado y cada celda se entiende con su fila y su columna?"
+  levels:
+    green: "Tiene encabezado y cada celda se entiende con su fila y su columna."
+    yellow: "Tiene encabezado duplicado o ambiguo, o es una lista armada como tabla."
+    red: "No tiene encabezado, o hay celdas vacías, partidas o con 'ídem' que cambian el significado."
+  blocking: true
+  examples:
+    - text: "| Trámite | Arancel |\n| DNI | $ 5.000 |"
+      expected: green
+    - text: "| Duplicado | $ 23.460 |\n|  | $ 10.150 |"
+      expected: red
+
+- id: r3-enlaces
+  source: "WCAG 2.2, 2.4.4 (A)"
+  kind: semantic
+  scope: block
+  applies_to: [paragraph, list_item, table]
+  question: "¿El texto de cada enlace dice a dónde lleva o para qué sirve?"
+  levels:
+    green: "El texto del enlace describe su destino."
+    yellow: "El texto es genérico ('ver tutorial', una URL suelta) pero el contexto inmediato lo aclara."
+    red: "El enlace dice 'acá', 'aquí', 'click' o 'link' sin decir a dónde lleva."
+  blocking: true
+  examples:
+    - text: "Consultá el Código Urbanístico."
+      expected: green
+    - text: "Para más información hacé click acá."
+      expected: red
+
+- id: r4-titulos
+  source: "WCAG 2.2, 2.4.6 (AA)"
+  kind: semantic
+  scope: block
+  applies_to: [heading]
+  question: "¿El título describe el contenido de su sección?"
+  levels:
+    green: "El título dice de qué trata la sección."
+    yellow: "El título es genérico ('Información', 'Otros') o demasiado largo."
+    red: "El título no tiene relación con su contenido o es solo un número."
+  blocking: false
+  examples:
+    - text: "Requisitos para pedir la exención"
+      expected: green
+    - text: "Varios"
+      expected: yellow
+
+- id: r5-siglas
+  source: "WCAG 2.2, 3.1.4 (AAA)"
+  kind: semantic
+  scope: document
+  applies_to: [heading, paragraph, list_item, table]
+  question: "¿Cada sigla aparece con su forma completa la primera vez que se usa?"
+  levels:
+    green: "Todas las siglas se explican la primera vez."
+    yellow: "Algunas siglas conocidas (DNI, CUIT) no se explican."
+    red: "Hay siglas propias del trámite que nunca se explican."
+  blocking: false
+  examples:
+    - text: "Clave de Identificación Tributaria (CIT)."
+      expected: green
+    - text: "Presentá el F-931 en la DGIUR."
+      expected: red
+
+- id: r6-moneda
+  source: "ISO 4217"
+  kind: semantic
+  scope: block
+  applies_to: [paragraph, list_item, table]
+  question: "¿Cada monto de dinero indica la moneda de forma inequívoca?"
+  levels:
+    green: "La moneda está dicha con palabras o con su código (pesos, ARS, dólares, USD)."
+    yellow: "Los montos solo tienen el signo $, que puede ser pesos o dólares."
+    red: "Hay montos sin ninguna moneda, o en unidades (UT, módulos) sin su valor en dinero."
+  blocking: true
+  examples:
+    - text: "El arancel es de $ 5.000 (pesos cinco mil)."
+      expected: green
+    - text: "| Trámite | Arancel |\n| DNI | 5000 |"
+      expected: red
+
+- id: r7-fechas
+  source: "ISO 8601"
+  kind: semantic
+  scope: block
+  applies_to: [paragraph, list_item, table]
+  question: "¿Las fechas son absolutas e inequívocas, con día, mes y año?"
+  levels:
+    green: "Las fechas tienen día, mes y año."
+    yellow: "Alguna fecha no tiene año, tiene el año en dos dígitos o dice 'del corriente'."
+    red: "Hay referencias relativas sin ancla ('el mes próximo', 'este año', 'mañana')."
+  blocking: true
+  examples:
+    - text: "Vigente desde el 1 de julio de 2026."
+      expected: green
+    - text: "El trámite se habilita el mes próximo."
+      expected: red
+
+- id: r8-vigencia
+  source: "ISO 24495-1, principio 'relevante'"
+  kind: semantic
+  scope: block
+  applies_to: [paragraph, list_item, table]
+  question: "¿Los montos, aranceles y plazos dicen desde cuándo rigen?"
+  levels:
+    green: "Dice desde qué fecha o para qué período rige el monto o plazo."
+    yellow: "La vigencia es vaga ('según la ley tarifaria vigente', 'para el año en curso')."
+    red: "Hay un monto o plazo sin ninguna indicación de vigencia."
+  blocking: true
+  examples:
+    - text: "Arancel $ 18.500, vigente desde el 1 de julio de 2026."
+      expected: green
+    - text: "El duplicado cuesta $ 23.460."
+      expected: red
+
+- id: r9-emisor-fecha
+  source: "Dublin Core (publisher, date)"
+  kind: semantic
+  scope: document
+  applies_to: [heading, paragraph, list_item, table]
+  question: "¿El documento dice qué organismo lo emite y cuándo se publicó o actualizó?"
+  levels:
+    green: "Dice el organismo y la fecha de publicación o actualización."
+    yellow: "Dice solo una de las dos cosas."
+    red: "No dice quién lo emite ni cuándo."
+  blocking: true
+  examples:
+    - text: "Agencia de Recaudación de la Provincia de Buenos Aires. Actualizado: 3 de marzo de 2026."
+      expected: green
+
+- id: r10-proposito
+  source: "ISO 24495-1, principio 'relevante'"
+  kind: semantic
+  scope: document
+  applies_to: [heading, paragraph, list_item]
+  question: "¿El documento dice al principio para quién es y para qué sirve?"
+  levels:
+    green: "Al principio dice a quién está dirigido y para qué sirve el trámite."
+    yellow: "Dice para qué sirve pero no a quién está dirigido, o al revés."
+    red: "Empieza directo con pasos o normas sin decir de qué se trata."
+  blocking: false
+
+- id: r11-pasos-listas
+  source: "ISO 24495-1, principio 'encontrable'"
+  kind: semantic
+  scope: block
+  applies_to: [paragraph, list_item]
+  question: "¿Los pasos del trámite están numerados y en orden, y los requisitos en una lista?"
+  levels:
+    green: "Pasos numerados y requisitos en lista."
+    yellow: "Están en lista pero sin numerar, o el orden no es claro."
+    red: "Varios pasos o requisitos van mezclados en un párrafo corrido."
+  blocking: false
+  examples:
+    - text: "Para pedirlo tenés que ingresar a la web, completar el formulario, pagar la boleta y después esperar el mail y descargar la constancia."
+      expected: red
+
+- id: r12-palabras
+  source: "ISO 24495-1, principio 'comprensible'"
+  kind: semantic
+  scope: block
+  applies_to: [paragraph, list_item, table]
+  question: "¿Usa palabras conocidas y explica los términos técnicos o jurídicos?"
+  levels:
+    green: "Palabras de uso común; los términos técnicos se explican."
+    yellow: "Hay algún término técnico sin explicar, pero se entiende por el contexto."
+    red: "Hay jerga jurídica o técnica que impide entender qué hacer."
+  blocking: false
+  examples:
+    - text: "Si se constatare la falsedad de lo declarado, operará la caducidad del beneficio ipso iure."
+      expected: red
+
+- id: r13-concision
+  source: "ISO 24495-1, principio 'comprensible'"
+  kind: deterministic
+  scope: block
+  applies_to: [paragraph, list_item]
+  question: "¿Las oraciones tienen 30 palabras o menos y el párrafo 150 o menos?"
+  levels:
+    green: "Todas las oraciones tienen 30 palabras o menos y el párrafo 150 o menos."
+    yellow: "Alguna oración supera las 30 palabras."
+    red: "El párrafo supera las 150 palabras."
+  blocking: false
+
+- id: r14-voz-activa
+  source: "ISO 24495-1, principio 'comprensible'"
+  kind: semantic
+  scope: block
+  applies_to: [paragraph, list_item]
+  question: "¿Las instrucciones se dirigen al lector en voz activa?"
+  levels:
+    green: "Se dirige al lector con verbos activos ('presentá', 'deberás completar', 'podrá rendir')."
+    yellow: "Usa formas impersonales ('se seleccionará', 'ingresar a…') o habla del lector en tercera persona."
+    red: "Usa voz pasiva ('deberá ser presentado', 'será aplicada')."
+  blocking: false
+  examples:
+    - text: "Presentá el DNI en la ventanilla."
+      expected: green
+    - text: "El formulario deberá ser presentado por el interesado."
+      expected: red
