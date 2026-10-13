@@ -51,11 +51,26 @@ DEFAULT_CHAIN = [
     Model("groq", "qwen/qwen3.8-27b"),  # lab 01: the fastest one, no reasoning
     Model("nvidia", "z-ai/glm-5.3"),
     Model("groq", "openai/gpt-oss-120b"),
-    Model("gemini", "gemini-3.5-flash"),
     Model("openrouter", "nvidia/nemotron-3-super-120b-a12b:free"),
+    Model("gemini", "gemini-3.5-flash"),  # lab 02: 20 requests/day on the free tier
+    Model("local", "mlx-community/Qwen3.5-9B-4bit"),  # lab 16: no quota, last resort
 ]
 
 _clients: dict[str, openai.OpenAI] = {}
+_local: dict[str, tuple] = {}
+
+
+def _complete_local(model: Model, messages: list[dict], max_tokens: int | None) -> tuple[str, int, int]:
+    """Provider "local": an MLX model on this machine. No quotas, slower (lab 16: Groq's free
+    tier caps each model at 200k tokens a day, and the full experiment needs more)."""
+    from mlx_lm import generate, load
+    if model.id not in _local:
+        _local[model.id] = load(model.id)
+    mlx_model, tokenizer = _local[model.id]
+    prompt = tokenizer.apply_chat_template(messages, add_generation_prompt=True,
+                                           enable_thinking=False)
+    text = generate(mlx_model, tokenizer, prompt=prompt, max_tokens=max_tokens or 512)
+    return text, len(prompt), len(tokenizer.encode(text))
 
 
 def client(provider: str) -> openai.OpenAI:
@@ -76,15 +91,22 @@ def complete(
     temperature: float = 0.0,
     max_tokens: int | None = None,
     allow_empty: bool = False,
+    response_format: dict | None = None,
 ) -> Response:
     chain = [models] if isinstance(models, Model) else models
     failed = []
     for model in chain:
         start = time.perf_counter()
+        if model.provider == "local":
+            text, n_in, n_out = _complete_local(model, messages, max_tokens)
+            return Response(text=text, model=model, input_tokens=n_in, output_tokens=n_out,
+                            latency_s=round(time.perf_counter() - start, 2),
+                            failed_attempts=failed)
         try:
+            extra = {"response_format": response_format} if response_format else {}
             r = client(model.provider).chat.completions.create(
                 model=model.id, messages=messages, temperature=temperature,
-                max_tokens=max_tokens,
+                max_tokens=max_tokens, **extra,
             )
         except (openai.RateLimitError, openai.InternalServerError, openai.APITimeoutError,
                 openai.APIConnectionError) as e:
@@ -103,4 +125,28 @@ def complete(
             latency_s=round(time.perf_counter() - start, 2),
             failed_attempts=failed,
         )
+    raise RuntimeError(f"No model answered: {failed}")
+
+
+def stream(messages: list[dict], models: Model | list[Model], temperature: float = 0.0):
+    """Yield the answer token by token (for the app's chat). Falls back to the next model only
+    if a provider fails before the first token; after that, an error is raised."""
+    chain = [models] if isinstance(models, Model) else models
+    failed = []
+    for model in chain:
+        try:
+            response = client(model.provider).chat.completions.create(
+                model=model.id, messages=messages, temperature=temperature, stream=True)
+            started = False
+            for chunk in response:
+                delta = chunk.choices[0].delta.content if chunk.choices else None
+                if delta:
+                    started = True
+                    yield delta
+            if started:
+                return
+            failed.append(f"{model}: empty stream")
+        except (openai.RateLimitError, openai.InternalServerError, openai.APITimeoutError,
+                openai.APIConnectionError) as e:
+            failed.append(f"{model}: {type(e).__name__}")
     raise RuntimeError(f"No model answered: {failed}")

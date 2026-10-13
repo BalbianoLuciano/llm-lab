@@ -41,6 +41,7 @@ class Document:
     pages: int | None
     seconds: float
     blocks: list[Block]
+    meta: dict = field(default_factory=dict)  # corpus metadata (title, agency, url...)
 
     def save(self, path: Path) -> None:
         path.parent.mkdir(parents=True, exist_ok=True)
