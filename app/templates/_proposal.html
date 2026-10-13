@@ -1,0 +1,13 @@
+<div class="proposal">
+  <h3>Antes y después <span class="pill {{ r.level_after }}">después: {{ r.level_after }}</span></h3>
+  <p class="diff">{{ diff | safe }}</p>
+  {% if invented %}
+    <p class="warning">La reescritura agrega números que no estaban ni en el bloque ni en tu
+      respuesta: {{ invented | join(", ") }}. No se puede aceptar.</p>
+  {% else %}
+    <form action="/reviews/{{ r.id }}/accept" method="post" id="accept-form">
+      <input type="hidden" name="n" value="{{ n }}">
+      <button type="submit" class="primary">Aceptar y seguir (Enter)</button>
+    </form>
+  {% endif %}
+</div>

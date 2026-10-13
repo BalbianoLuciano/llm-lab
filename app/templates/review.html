@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Revisión · {{ doc.meta.title or doc.id }}{% endblock %}
+{% block content %}
+<div class="review" data-doc="{{ doc.id }}" data-n="{{ n }}" data-total="{{ total }}">
+  <p class="crumbs"><a href="/documents/{{ doc.id }}">{{ doc.meta.title or doc.id }}</a>
+    · problema {{ n + 1 }} de {{ total }}
+    · <kbd>n</kbd> siguiente · <kbd>p</kbd> anterior · <kbd>Enter</kbd> aceptar · <kbd>Esc</kbd> saltear</p>
+
+  <div class="rule {{ problem.level }}">
+    <b>{{ rule.id }}</b> ({{ rule.source }}){% if problem.blocking %} · <b>bloqueante</b>{% endif %}<br>
+    {{ rule.levels[problem.level] }}
+  </div>
+
+  <p class="path">{{ path }}</p>
+  <pre class="block-text">{{ block }}</pre>
+
+  <form hx-post="/documents/{{ doc.id }}/review" hx-target="#proposal" hx-indicator="#working">
+    <input type="hidden" name="block" value="{{ problem.block }}">
+    <input type="hidden" name="rule" value="{{ problem.rule }}">
+    <input type="hidden" name="n" value="{{ n }}">
+    <label>{{ question }}</label>
+    <textarea name="answer" rows="2" autofocus required></textarea>
+    <button type="submit">Proponer corrección</button>
+    <span id="working" class="htmx-indicator">reescribiendo y re-evaluando…</span>
+  </form>
+
+  <div id="proposal"></div>
+</div>
+{% endblock %}

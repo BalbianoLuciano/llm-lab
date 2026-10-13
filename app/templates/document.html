@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block title %}{{ doc.meta.title or doc.id }}{% endblock %}
+{% block content %}
+<h1>{{ doc.meta.title or doc.id }} <small>versión {{ version }}</small></h1>
+
+<section class="toolbar">
+  {% if evaluated %}
+    <span class="counter"><b class="red">{{ reds }} rojos</b> · <b class="yellow">{{ yellows }} amarillos</b>
+      · {{ blocking }} bloqueantes</span>
+    {% if problems %}<a class="button" href="/documents/{{ doc.id }}/review">Revisar (empieza por el primer rojo)</a>{% endif %}
+    {% if can_index %}
+      <form action="/documents/{{ doc.id }}/index" method="post" style="display:inline">
+        <button type="submit" class="primary">Indexar</button>
+      </form>
+    {% endif %}
+  {% endif %}
+  <button id="evaluate" data-doc="{{ doc.id }}">{% if evaluated %}Evaluar lo que falta{% else %}Evaluar{% endif %}</button>
+  <progress id="progress" value="0" max="1" hidden></progress>
+  <span id="progress-text"></span>
+</section>
+
+{% if doc_verdicts %}
+<section class="doc-rules">
+  {% for v in doc_verdicts %}
+    <span class="pill {{ v.level }}" title="{{ rules[v.rule].levels[v.level] }}">{{ v.rule }}: {{ v.level }}</span>
+  {% endfor %}
+</section>
+{% endif %}
+
+<article class="blocks">
+  {% for b in blocks %}
+    <div class="block {{ b.kind }} {{ b.worst }}" id="b{{ b.i }}">
+      {% if b.kind == 'table' %}<pre>{{ b.text }}</pre>
+      {% elif b.kind == 'heading' %}<h3>{{ b.text }}</h3>
+      {% else %}<p>{{ b.text }}</p>{% endif %}
+      {% if b.verdicts %}
+        <div class="verdicts">
+        {% for v in b.verdicts %}
+          {% if v.level != 'green' %}
+          <span class="pill {{ v.level }}" title="{{ rules[v.rule].levels[v.level] }}">{{ v.rule }}</span>
+          {% endif %}
+        {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  {% endfor %}
+</article>
+
+{% if history %}
+<section class="history">
+  <h2>Historial de correcciones</h2>
+  <ul>
+  {% for h in history %}
+    <li>Bloque {{ h.block }} · {{ h.rule }} · respuesta: «{{ h.answer }}»</li>
+  {% endfor %}
+  </ul>
+</section>
+{% endif %}
+{% endblock %}

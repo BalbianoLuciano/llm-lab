@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Chat{% endblock %}
+{% block content %}
+<h1>Preguntar</h1>
+<p class="lead">Responde solo con documentos indexados ({{ indexed | length }}), citando de dónde sale cada dato.</p>
+<form id="ask">
+  <input name="q" placeholder="¿Cuánto cuesta el duplicado de la licencia en la Ciudad?" required autofocus>
+  <button type="submit">Preguntar</button>
+</form>
+<p id="stage"></p>
+<div id="answer" class="answer"></div>
+<ol id="sources" class="sources"></ol>
+{% endblock %}

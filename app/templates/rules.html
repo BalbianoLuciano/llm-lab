@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Reglas{% endblock %}
+{% block content %}
+<h1>Reglas</h1>
+<p class="lead">Cada regla cita la norma de la que sale. Las nuevas se escriben en lenguaje natural y un modelo las compila.</p>
+
+<form hx-post="/rules/compile" hx-target="#compiled" hx-indicator="#compiling">
+  <textarea name="text" rows="3" placeholder="Los teléfonos de contacto tienen que tener código de área…" required></textarea>
+  <button type="submit">Compilar</button>
+  <span id="compiling" class="htmx-indicator">compilando…</span>
+</form>
+<div id="compiled"></div>
+
+<table class="rules">
+  <thead><tr><th>Regla</th><th>Fuente</th><th>Tipo</th><th>Alcance</th><th>Bloquea</th><th>Rojo significa</th></tr></thead>
+  <tbody>
+  {% for r in rules.values() %}
+    <tr><td><b>{{ r.id }}</b><br><small>{{ r.question }}</small></td><td>{{ r.source }}</td>
+      <td>{{ r.kind }}</td><td>{{ r.scope }}</td><td>{{ "sí" if r.blocking else "no" }}</td>
+      <td>{{ r.levels.red }}</td></tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

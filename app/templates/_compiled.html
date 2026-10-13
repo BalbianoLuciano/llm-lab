@@ -1,0 +1,8 @@
+{% if not result %}
+  <p class="warning">No se pudo compilar después de {{ attempts }} intentos: {{ error }}</p>
+{% elif result.status == "ambiguous" %}
+  <p class="warning"><b>La regla es vaga.</b> {{ result.clarification }}</p>
+{% else %}
+  <p>Compilada. Revisala antes de activarla:</p>
+  <pre>{{ yaml }}</pre>
+{% endif %}
