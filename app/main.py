@@ -1,10 +1,11 @@
 """The quality-gate app: upload a document, see its traffic light, fix the reds one by one,
-index it, ask questions about what is indexed.
+index it, ask questions about what is indexed, and read the study behind every decision.
 
     uv run uvicorn app.main:app --reload
     # http://localhost:8000
 
-Three screens (SDD §5.7): Documento (upload, gate, guided review), Chat, Reglas.
+Screens: Inicio (the project and its pipeline), Documentos, Documento (traffic light and
+guided review), Chat, Reglas, Estudio (every lab's write-up, in Spanish and English).
 """
 
 import json
@@ -16,6 +17,7 @@ from fastapi.responses import HTMLResponse, RedirectResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
+from app import study
 from app.services import Services, word_diff
 from app.store import Store
 from llm_lab.chunking import block_text
@@ -26,23 +28,61 @@ DATA = Path(os.environ.get("LLM_LAB_APP_DATA", HERE.parent / "data" / "app"))
 app = FastAPI(title="Semáforo de calidad documental")
 app.mount("/static", StaticFiles(directory=HERE / "static"), name="static")
 templates = Jinja2Templates(directory=HERE / "templates")
+
+
+def asset(name: str) -> str:
+    """Static URL with the file's modification time, so browsers never keep a stale copy."""
+    return f"/static/{name}?v={int((HERE / 'static' / name).stat().st_mtime)}"
+
+
+templates.env.globals["asset"] = asset
 services = Services(Store(DATA / "app.sqlite"))
+
+
+def friendly(error: Exception) -> str:
+    """What the person sees when a model call fails."""
+    text = str(error)
+    if "RateLimit" in text or "429" in text:
+        return ("Se agotó la cuota gratuita de los modelos por API (Groq limita los tokens por "
+                "día). Probá de nuevo en un rato o mañana.")
+    if "No model answered" in text:
+        return "Ningún modelo respondió: revisá la conexión o las claves en .env."
+    return f"Algo falló: {text[:200]}"
 
 
 def sse(events) -> StreamingResponse:
     def gen():
-        for e in events:
-            yield f"data: {json.dumps(e, ensure_ascii=False)}\n\n"
+        try:
+            for e in events:
+                yield f"data: {json.dumps(e, ensure_ascii=False)}\n\n"
+        except Exception as e:  # noqa: BLE001 — tell the page instead of cutting the stream
+            yield f"data: {json.dumps({'error': friendly(e), 'done': True})}\n\n"
     return StreamingResponse(gen(), media_type="text/event-stream")
 
 
-# ---------------------------------------------------------------- documents
+# ---------------------------------------------------------------- home and documents
 
 
 @app.get("/", response_class=HTMLResponse)
-def index(request: Request):
-    return templates.TemplateResponse(request, "index.html",
-                                      {"documents": services.store.documents()})
+def home(request: Request):
+    findings = [{"label": a, "title": b, "text": c} for a, b, c in study.FINDINGS]
+    return templates.TemplateResponse(request, "home.html",
+                                      {"stages": study.STAGES, "findings": findings})
+
+
+@app.get("/documentos", response_class=HTMLResponse)
+def documents(request: Request):
+    docs = services.store.documents()
+    corpus = services.corpus_ids()
+    return templates.TemplateResponse(request, "documents.html", {
+        "documents": docs, "corpus_size": len(corpus),
+        "imported": sum(d["id"] in corpus for d in docs)})
+
+
+@app.post("/documentos/importar")
+def import_corpus():
+    services.import_corpus()
+    return RedirectResponse("/documentos", status_code=303)
 
 
 @app.post("/documents")
@@ -76,7 +116,9 @@ def document(request: Request, doc_id: str):
         "yellows": sum(p.level == "yellow" for p in problems),
         "blocking": sum(p.blocking for p in problems),
         "can_index": services.can_index(doc_id),
+        "indexed": doc_id in dict(services.store.indexed()),
         "evaluated": bool(verdicts), "rules": services.rules,
+        "pending": len(services.checks(doc)) - sum(len(v) for v in verdicts.values()),
         "history": services.store.history(doc_id),
     })
 
@@ -109,18 +151,22 @@ def review(request: Request, doc_id: str, n: int = 0):
     rule = services.rules[p.rule]
     return templates.TemplateResponse(request, "review.html", {
         "doc": doc, "n": n, "total": len(problems), "problem": p, "rule": rule,
+        "problems": problems,
         "block": (block_text(doc.blocks[p.block]) if p.block >= 0
                   else services.document_state(doc).split("]\n", 1)[-1]),
         "path": (" > ".join(doc.blocks[p.block].path) if p.block >= 0
                  else "Documento completo: la corrección agrega una oración al comienzo"),
-        "question": f"{rule.levels.red} ¿Qué dato falta o cómo debería decirse?",
+        "question": "¿Qué dato falta o cómo debería decirse?",
     })
 
 
 @app.post("/documents/{doc_id}/review", response_class=HTMLResponse)
 def propose(request: Request, doc_id: str, block: int = Form(...), rule: str = Form(...),
             answer: str = Form(...), n: int = Form(0)):
-    review_id = services.propose(doc_id, block, rule, answer)
+    try:
+        review_id = services.propose(doc_id, block, rule, answer)
+    except Exception as e:  # noqa: BLE001 — a failed model call is shown, not raised
+        return templates.TemplateResponse(request, "_error.html", {"message": friendly(e)})
     r = services.store.review(review_id)
     return templates.TemplateResponse(request, "_proposal.html", {
         "doc_id": doc_id, "r": r, "n": n, "diff": word_diff(r["before"], r["after"]),
@@ -141,8 +187,9 @@ def accept(review_id: int, n: int = Form(0)):
 
 @app.get("/chat", response_class=HTMLResponse)
 def chat(request: Request):
-    return templates.TemplateResponse(request, "chat.html",
-                                      {"indexed": services.store.indexed()})
+    titles = {d["id"]: d["title"] for d in services.store.documents()}
+    indexed = [(doc_id, titles.get(doc_id, doc_id)) for doc_id, _ in services.store.indexed()]
+    return templates.TemplateResponse(request, "chat.html", {"indexed": indexed})
 
 
 @app.get("/chat/ask")
@@ -152,13 +199,43 @@ def ask(q: str):
 
 @app.get("/rules", response_class=HTMLResponse)
 def rules(request: Request):
-    return templates.TemplateResponse(request, "rules.html", {"rules": services.rules})
+    groups: dict[str, list] = {}
+    for r in services.rules.values():
+        family = r.source.split(",")[0].split(" (")[0]
+        groups.setdefault(family, []).append(r)
+    return templates.TemplateResponse(request, "rules.html", {"groups": groups})
 
 
 @app.post("/rules/compile", response_class=HTMLResponse)
 def compile_rule_view(request: Request, text: str = Form(...)):
     from llm_lab.compiler import compile_rule
-    result, attempts, error = compile_rule(text)
+    try:
+        result, attempts, error = compile_rule(text)
+    except Exception as e:  # noqa: BLE001
+        return templates.TemplateResponse(request, "_error.html", {"message": friendly(e)})
     return templates.TemplateResponse(request, "_compiled.html", {
         "result": result, "error": error, "attempts": attempts,
         "yaml": result.rule.model_dump_json(indent=2) if result and result.rule else None})
+
+
+# ---------------------------------------------------------------- study: the labs' documents
+
+
+@app.get("/estudio", response_class=HTMLResponse)
+def estudio(request: Request, doc: str = "README.md", lang: str = "es"):
+    lang = "en" if lang == "en" else "es"
+    try:
+        markdown, served, fallback = study.read(doc, lang)
+    except KeyError as e:
+        raise HTTPException(404, "Ese documento no está en el estudio.") from e
+    entries = study.entries(lang)
+    readable = [e for e in entries if not e.group.startswith("results")]
+    current = next((i for i, e in enumerate(readable) if e.path == doc), None)
+    prev_doc = readable[current - 1] if current else None
+    next_doc = (readable[current + 1] if current is not None and current + 1 < len(readable)
+                else None)
+    return templates.TemplateResponse(request, "study.html", {
+        "doc": doc, "lang": lang, "served": served, "fallback": fallback,
+        "markdown": markdown, "entries": entries, "prev_doc": prev_doc, "next_doc": next_doc,
+        "generated": doc.endswith("results.md"),
+    })

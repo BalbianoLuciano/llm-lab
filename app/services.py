@@ -120,6 +120,24 @@ class Services:
         self.store.add_document(doc)
         return doc.id
 
+    @staticmethod
+    def corpus_ids() -> set[str]:
+        from llm_lab.corpus import BLOCKS, metadata
+        return {doc_id for doc_id, m in metadata().items()
+                if (BLOCKS / ("docling" if m["format"] == "pdf" else "manual")
+                    / f"{doc_id}.json").exists()}
+
+    def import_corpus(self) -> int:
+        """Load the 49 already-parsed corpus documents (labs 11 and corpus/) as version 1, so
+        they can be evaluated without uploading them one by one."""
+        from llm_lab.corpus import load_document
+        existing = {d["id"] for d in self.store.documents()}
+        added = 0
+        for doc_id in sorted(self.corpus_ids() - existing):
+            self.store.add_document(load_document(doc_id), note="importado del corpus")
+            added += 1
+        return added
+
     # ---------------------------------------------------------------- quality gate
 
     def checks(self, doc: Document) -> list[tuple[int | None, str]]:

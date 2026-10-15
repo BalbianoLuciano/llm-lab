@@ -63,7 +63,7 @@ def test_upload_evaluate_review_index(client):
     # a blocking red: the document cannot be indexed yet
     assert c.post(f"/documents/{doc_id}/index").status_code == 409
     page = c.get(f"/documents/{doc_id}").text
-    assert "2 rojos" in page and "Revisar" in page
+    assert "<b>2</b> <span class=\"label\">rojos" in page and "Revisar" in page
 
     # guided review: a document problem (who publishes it) and a block problem (no date)
     review = c.get(f"/documents/{doc_id}/review").text
@@ -108,7 +108,9 @@ def test_invented_numbers_cannot_be_accepted(client, monkeypatch):
 
 def test_pages_render(client):
     c, _ = client
-    assert c.get("/").status_code == 200
+    home = c.get("/").text
+    assert "Experimento final" in home and "transcrip" not in home.lower()
+    assert "Importar el corpus" in c.get("/documentos").text
     assert "r6-moneda" in c.get("/rules").text
     assert c.get("/chat").status_code == 200
 
@@ -118,3 +120,11 @@ def test_concision_rule():
     assert concision("Una oración corta.") == "green"
     assert concision(" ".join(["palabra"] * 35) + ".") == "yellow"
     assert concision(" ".join(["palabra"] * 160)) == "red"
+
+
+def test_study_reader(client):
+    c, _ = client
+    page = c.get("/estudio?doc=labs/03-chunking/README.md").text
+    assert "Lab 03" in page and "Resultados (números)" in page
+    assert c.get("/estudio?doc=.env").status_code == 404  # only listed documents
+    assert c.get("/estudio?doc=labs/03-chunking/results.md&lang=en").status_code == 200

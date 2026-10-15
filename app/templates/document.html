@@ -1,59 +1,93 @@
 {% extends "base.html" %}
 {% block title %}{{ doc.meta.title or doc.id }}{% endblock %}
 {% block content %}
-<h1>{{ doc.meta.title or doc.id }} <small>versión {{ version }}</small></h1>
+<header class="page-head fade-in">
+  <span class="label"><a href="/documentos">Documentos</a> · {{ doc.format }} · versión {{ version }}{% if indexed %} · indexado{% endif %}</span>
+  <h1>{{ doc.meta.title or doc.id }}</h1>
+</header>
 
-<section class="toolbar">
-  {% if evaluated %}
-    <span class="counter"><b class="red">{{ reds }} rojos</b> · <b class="yellow">{{ yellows }} amarillos</b>
-      · {{ blocking }} bloqueantes</span>
-    {% if problems %}<a class="button" href="/documents/{{ doc.id }}/review">Revisar (empieza por el primer rojo)</a>{% endif %}
-    {% if can_index %}
-      <form action="/documents/{{ doc.id }}/index" method="post" style="display:inline">
-        <button type="submit" class="primary">Indexar</button>
-      </form>
+<section class="summary" id="summary">
+  <div class="row">
+    {% if evaluated %}
+      <div class="counts">
+        <span class="red"><b>{{ reds }}</b> <span class="label">rojos</span></span>
+        <span class="yellow"><b>{{ yellows }}</b> <span class="label">amarillos</span></span>
+        <span class="blocking"><b>{{ blocking }}</b> <span class="label">bloquean</span></span>
+      </div>
+      <div class="filters" role="group" aria-label="Filtrar bloques">
+        <button type="button" class="on" data-filter="all">Todos</button>
+        <button type="button" data-filter="red">Rojos</button>
+        <button type="button" data-filter="yellow">Amarillos</button>
+      </div>
+    {% else %}
+      <span class="meta">Este documento todavía no pasó por el semáforo.</span>
     {% endif %}
-  {% endif %}
-  <button id="evaluate" data-doc="{{ doc.id }}">{% if evaluated %}Evaluar lo que falta{% else %}Evaluar{% endif %}</button>
-  <progress id="progress" value="0" max="1" hidden></progress>
-  <span id="progress-text"></span>
+    <div class="actions" style="margin-left:auto">
+      {% if pending > 0 %}
+        <button class="action no-arrow" id="evaluate" data-doc="{{ doc.id }}" data-total="{{ pending }}">
+          {% if evaluated %}Evaluar lo que falta ({{ pending }}){% else %}Evaluar ({{ pending }} chequeos){% endif %}
+        </button>
+      {% endif %}
+      {% if problems %}<a class="action primary arrow-right" href="/documents/{{ doc.id }}/review">Revisar desde el primer rojo</a>{% endif %}
+      {% if can_index and not indexed %}
+        <form action="/documents/{{ doc.id }}/index" method="post" style="display:inline">
+          <button type="submit" class="action primary">Indexar</button>
+        </form>
+      {% elif evaluated and not indexed %}
+        <span class="action" aria-disabled="true" title="Quedan rojos bloqueantes">Indexar</span>
+      {% endif %}
+    </div>
+  </div>
+  <div class="progress" id="progress" hidden><span></span></div>
+  <div class="row meta" id="progress-text" hidden></div>
+  <div class="legend">
+    <span><i class="dot green"></i>cumple</span>
+    <span><i class="dot yellow"></i>mejorable o dudoso</span>
+    <span><i class="dot red"></i>no cumple</span>
+    <span><i class="dot none"></i>sin reglas que apliquen</span>
+  </div>
 </section>
 
 {% if doc_verdicts %}
-<section class="doc-rules">
+<section style="margin-bottom:1.2rem">
+  <span class="label">Reglas del documento entero</span>
+  <div class="actions" style="gap:.5rem;margin-top:.5rem">
   {% for v in doc_verdicts %}
-    <span class="pill {{ v.level }}" title="{{ rules[v.rule].levels[v.level] }}">{{ v.rule }}: {{ v.level }}</span>
+    <span class="pill {{ v.level }}" title="{{ rules[v.rule].question }} — {{ rules[v.rule].levels[v.level] }}"><i class="dot {{ v.level }}"></i>{{ v.rule }}</span>
   {% endfor %}
+  </div>
 </section>
 {% endif %}
 
 <article class="blocks">
   {% for b in blocks %}
-    <div class="block {{ b.kind }} {{ b.worst }}" id="b{{ b.i }}">
-      {% if b.kind == 'table' %}<pre>{{ b.text }}</pre>
-      {% elif b.kind == 'heading' %}<h3>{{ b.text }}</h3>
-      {% else %}<p>{{ b.text }}</p>{% endif %}
-      {% if b.verdicts %}
-        <div class="verdicts">
-        {% for v in b.verdicts %}
-          {% if v.level != 'green' %}
-          <span class="pill {{ v.level }}" title="{{ rules[v.rule].levels[v.level] }}">{{ v.rule }}</span>
-          {% endif %}
-        {% endfor %}
-        </div>
-      {% endif %}
+    <div class="block {{ b.worst }}" id="b{{ b.i }}" data-level="{{ b.worst }}">
+      <div class="content">
+        {% if b.kind == 'table' %}<pre>{{ b.text }}</pre>
+        {% elif b.kind == 'heading' %}<h3>{{ b.text }}</h3>
+        {% else %}<p>{{ b.text }}</p>{% endif %}
+        {% set flagged = b.verdicts | rejectattr("level", "equalto", "green") | list %}
+        {% if flagged %}
+          <div class="verdicts">
+          {% for v in flagged %}
+            <span class="pill {{ v.level }}" title="{{ rules[v.rule].source }} · {{ rules[v.rule].levels[v.level] }}">{{ v.rule }}</span>
+          {% endfor %}
+          </div>
+        {% endif %}
+      </div>
     </div>
   {% endfor %}
 </article>
 
 {% if history %}
-<section class="history">
-  <h2>Historial de correcciones</h2>
-  <ul>
+<h2>Historial de correcciones</h2>
+<table>
+  <thead><tr><th>Bloque</th><th>Regla</th><th>Lo que contestó la persona</th></tr></thead>
+  <tbody>
   {% for h in history %}
-    <li>Bloque {{ h.block }} · {{ h.rule }} · respuesta: «{{ h.answer }}»</li>
+    <tr><td class="mono">{{ "documento" if h.block < 0 else h.block }}</td><td class="rule-id">{{ h.rule }}</td><td>«{{ h.answer }}»</td></tr>
   {% endfor %}
-  </ul>
-</section>
+  </tbody>
+</table>
 {% endif %}
 {% endblock %}

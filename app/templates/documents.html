@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %}Documentos{% endblock %}
+{% block content %}
+<header class="page-head fade-in">
+  <span class="label">Paso 1 · ingesta</span>
+  <h1>Documentos</h1>
+  <p class="lead">Un documento no entra al buscador hasta pasar el semáforo: sin rojos bloqueantes.
+    Subí uno propio o importá el corpus de guías de trámites que usan los labs.</p>
+</header>
+
+<div class="grid-cols">
+  <form class="dropzone" id="dropzone" action="/documents" method="post" enctype="multipart/form-data">
+    <span class="label">Subir</span>
+    <span class="display">Soltá un PDF, HTML o Word acá</span>
+    <span class="meta">o hacé clic para elegirlo. Se parsea en un proceso aparte: Docling para PDF, parser propio para HTML y Word.</span>
+    <input type="file" name="file" accept=".pdf,.html,.htm,.doc,.docx" required>
+    <span class="working" id="uploading"><span class="spinner"></span> Parseando…</span>
+  </form>
+
+  <form class="panel" action="/documentos/importar" method="post" hx-boost="false">
+    <span class="label">Corpus del laboratorio</span>
+    <h3 style="margin:.5rem 0">{{ corpus_size }} guías de trámites públicas</h3>
+    <p class="meta">Provincia y Ciudad de Buenos Aires, ya parseadas en el lab 11. Importadas: {{ imported }} de {{ corpus_size }}.</p>
+    <button class="action primary arrow-right" type="submit" {% if imported == corpus_size %}disabled{% endif %}
+            onclick="this.closest('form').querySelector('.working').classList.add('on')">
+      {% if imported == corpus_size %}Ya está todo importado{% else %}Importar el corpus{% endif %}
+    </button>
+    <span class="working"><span class="spinner"></span> Importando…</span>
+  </form>
+</div>
+
+<h2>En la app</h2>
+{% if documents %}
+<table>
+  <thead><tr><th>Documento</th><th>Formato</th><th>Versión</th><th>Estado</th></tr></thead>
+  <tbody>
+  {% for d in documents %}
+    <tr>
+      <td><a href="/documents/{{ d.id }}">{{ d.title }}</a><br><span class="meta">{{ d.id }}</span></td>
+      <td class="mono">{{ d.format }}</td>
+      <td class="mono">v{{ d.version }}</td>
+      <td><span class="status {{ d.status }}"><span class="dot"></span>{{ d.status }}</span>
+        {% if d.status == 'indexado' and not d.reviewed %}<br><span class="meta">sin correcciones</span>{% endif %}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<p class="meta">Todavía no hay documentos. Subí uno o importá el corpus.</p>
+{% endif %}
+{% endblock %}

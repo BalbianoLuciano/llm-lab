@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}Inicio{% endblock %}
+{% block content %}
+<section class="hero fade-in">
+  <span class="label">Proyecto integrador · labs 01 a 16</span>
+  <h1>Un semáforo para los documentos antes de que lleguen al buscador.</h1>
+  <p class="lead">
+    Antes de indexar un documento en un RAG, cada bloque se evalúa contra reglas que salen de
+    normas (WCAG, lenguaje claro, ISO 4217, ISO 8601). Lo que queda en rojo se corrige con ayuda
+    de un modelo, la persona acepta el cambio, y recién entonces se indexa. Cada paso del
+    pipeline se construyó a mano, se comparó con una librería y se midió.
+  </p>
+  <div class="actions">
+    <a class="action primary arrow-right" href="/documentos">Probar con un documento</a>
+    <a class="action arrow-right" href="/estudio?doc=docs/sdd-semaforo.md">Leer el diseño</a>
+    <a class="action arrow-right" href="/estudio?doc=labs/16-app/README.md">Ver el experimento final</a>
+  </div>
+</section>
+
+<span class="label">El pipeline, en el orden en que se construyó</span>
+<div class="rail" style="margin-top:.8rem">
+  {% for s in stages %}
+    <a class="stage{{ ' highlight' if s.highlight }}" href="/estudio?doc=labs/{{ s.folder }}/README.md">
+      <span class="num">{{ s.number }} · {{ s.kind }}</span>
+      <h3>{{ s.title }}</h3>
+      <span class="metric">{{ s.metric }}<small>{{ s.caption }}</small></span>
+      <span class="more">Ver el estudio →</span>
+    </a>
+  {% endfor %}
+</div>
+
+<h2>Lo que dejaron los números</h2>
+<div class="findings">
+  {% for f in findings %}
+    <div class="finding">
+      <span class="label">{{ f.label }}</span>
+      <h3>{{ f.title }}</h3>
+      <p>{{ f.text }}</p>
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}

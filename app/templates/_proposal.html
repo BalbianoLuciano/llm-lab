@@ -1,13 +1,19 @@
-<div class="proposal">
-  <h3>Antes y después <span class="pill {{ r.level_after }}">después: {{ r.level_after }}</span></h3>
-  <p class="diff">{{ diff | safe }}</p>
+<div class="fade-in" style="display:grid;gap:.8rem;margin-top:1rem">
+  <div class="actions" style="justify-content:space-between">
+    <span class="label">Antes y después</span>
+    <span class="pill {{ r.level_after }}"><i class="dot {{ r.level_after }}"></i>re-evaluado: {{ {"green": "verde", "yellow": "amarillo", "red": "rojo"}[r.level_after] }}</span>
+  </div>
+  <div class="diff">{{ diff | safe }}</div>
   {% if invented %}
-    <p class="warning">La reescritura agrega números que no estaban ni en el bloque ni en tu
-      respuesta: {{ invented | join(", ") }}. No se puede aceptar.</p>
+    <p class="warning">La reescritura agrega números que no estaban ni en el bloque ni en tu respuesta:
+      <b>{{ invented | join(", ") }}</b>. No se puede aceptar: probá contestando con el dato completo.</p>
   {% else %}
+    {% if "[FALTA" in r.after.upper() %}
+      <p class="notice">El modelo dejó una marca [FALTA] porque tu respuesta no traía el dato. Así queda a la vista en vez de inventarlo.</p>
+    {% endif %}
     <form action="/reviews/{{ r.id }}/accept" method="post" id="accept-form">
       <input type="hidden" name="n" value="{{ n }}">
-      <button type="submit" class="primary">Aceptar y seguir (Enter)</button>
+      <button type="submit" class="action primary arrow-right">Aceptar y seguir <kbd>Enter</kbd></button>
     </form>
   {% endif %}
 </div>

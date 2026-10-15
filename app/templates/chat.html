@@ -1,13 +1,36 @@
 {% extends "base.html" %}
 {% block title %}Chat{% endblock %}
 {% block content %}
-<h1>Preguntar</h1>
-<p class="lead">Responde solo con documentos indexados ({{ indexed | length }}), citando de dónde sale cada dato.</p>
-<form id="ask">
-  <input name="q" placeholder="¿Cuánto cuesta el duplicado de la licencia en la Ciudad?" required autofocus>
-  <button type="submit">Preguntar</button>
+<header class="page-head fade-in">
+  <span class="label">Paso final · respuesta</span>
+  <h1>Preguntar</h1>
+  <p class="lead">Responde solo con los documentos que pasaron el semáforo y cita de dónde sale cada dato.
+    Si no está, lo dice.</p>
+</header>
+
+{% if not indexed %}
+  <p class="notice">Todavía no hay documentos indexados. Evaluá uno en <a href="/documentos">Documentos</a>,
+    corregí sus rojos bloqueantes e indexalo.</p>
+{% else %}
+  <p class="meta">Buscando en {{ indexed | length }} documento{{ "s" if indexed | length != 1 }}:
+    {% for id, title in indexed %}<a href="/documents/{{ id }}">{{ title }}</a>{{ ", " if not loop.last }}{% endfor %}</p>
+{% endif %}
+
+<form id="ask" class="ask-form">
+  <input name="q" placeholder="¿Cuánto cuesta el duplicado de la licencia en la Ciudad?" required autofocus autocomplete="off">
+  <button type="submit" class="action primary arrow-right">Preguntar</button>
 </form>
-<p id="stage"></p>
+<div class="suggestions" style="margin-top:.8rem">
+  <button type="button">¿Quién publica esta información?</button>
+  <button type="button">¿Desde cuándo rige el arancel?</button>
+  <button type="button">¿Cuánto cuesta sacar el pasaporte?</button>
+</div>
+
+<div class="stages-line" id="stages" hidden>
+  <span data-stage="buscando"><i class="dot none"></i>Buscando</span>
+  <span data-stage="respondiendo"><i class="dot none"></i>Respondiendo</span>
+  <span data-stage="listo"><i class="dot none"></i>Fuentes</span>
+</div>
 <div id="answer" class="answer"></div>
-<ol id="sources" class="sources"></ol>
+<ol id="sources" class="sources" hidden></ol>
 {% endblock %}

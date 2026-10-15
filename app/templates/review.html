@@ -2,28 +2,59 @@
 {% block title %}Revisión · {{ doc.meta.title or doc.id }}{% endblock %}
 {% block content %}
 <div class="review" data-doc="{{ doc.id }}" data-n="{{ n }}" data-total="{{ total }}">
-  <p class="crumbs"><a href="/documents/{{ doc.id }}">{{ doc.meta.title or doc.id }}</a>
-    · problema {{ n + 1 }} de {{ total }}
-    · <kbd>n</kbd> siguiente · <kbd>p</kbd> anterior · <kbd>Enter</kbd> aceptar · <kbd>Esc</kbd> saltear</p>
+  <header class="page-head fade-in">
+    <span class="label"><a href="/documents/{{ doc.id }}">{{ doc.meta.title or doc.id }}</a> · revisión guiada</span>
+    <h1>Problema {{ n + 1 }} de {{ total }}</h1>
+    <nav class="steps-dots" aria-label="Problemas">
+      {% for p in problems %}
+        <a href="?n={{ loop.index0 }}" class="{{ p.level }}{{ ' current' if loop.index0 == n }}" title="{{ p.rule }}{{ ' · bloqueante' if p.blocking }}"></a>
+      {% endfor %}
+    </nav>
+  </header>
 
-  <div class="rule {{ problem.level }}">
-    <b>{{ rule.id }}</b> ({{ rule.source }}){% if problem.blocking %} · <b>bloqueante</b>{% endif %}<br>
-    {{ rule.levels[problem.level] }}
+  <div class="review-grid">
+    <section class="problem-card">
+      <span class="label">{{ path }}</span>
+      <pre class="block-text {{ problem.level }}">{{ block }}</pre>
+
+      <form hx-post="/documents/{{ doc.id }}/review" hx-target="#proposal" hx-indicator="#rewriting" hx-disabled-elt="find button">
+        <input type="hidden" name="block" value="{{ problem.block }}">
+        <input type="hidden" name="rule" value="{{ problem.rule }}">
+        <input type="hidden" name="n" value="{{ n }}">
+        <label class="field">
+          <span class="question">{{ question }}</span>
+          <textarea name="answer" rows="2" autofocus required placeholder="Contestá con el dato, como se lo dirías a un colega. Si no lo sabés, decilo: no se va a inventar."></textarea>
+        </label>
+        <div class="actions" style="margin-top:.6rem">
+          <button type="submit" class="action primary arrow-right">Proponer corrección</button>
+          <a class="action no-arrow" href="?n={{ n + 1 if n + 1 < total else n }}">Saltear</a>
+        </div>
+      </form>
+
+      <div id="rewriting" class="working" style="width:100%">
+        <div style="width:100%;display:grid;gap:.6rem">
+          <span class="label"><span class="spinner"></span>&nbsp; Reescribiendo el bloque y volviendo a evaluarlo…</span>
+          <div class="skeleton"><i></i><i></i><i></i></div>
+        </div>
+      </div>
+      <div id="proposal"></div>
+    </section>
+
+    <aside class="review-side">
+      <div class="panel">
+        <span class="label">Regla</span>
+        <div class="rule-name" style="margin:.4rem 0">{{ rule.id }}</div>
+        <p style="margin:0">{{ rule.question }}</p>
+        <p class="meta">{{ rule.source }}{% if problem.blocking %} · <b>bloquea la indexación</b>{% endif %}</p>
+      </div>
+      <div class="rule-left">
+        <span class="pill {{ problem.level }}"><i class="dot {{ problem.level }}"></i>{{ "rojo" if problem.level == "red" else "amarillo" }}</span>
+        <p>{{ rule.levels[problem.level] }}</p>
+        <span class="label">Para quedar en verde</span>
+        <p style="margin-bottom:0">{{ rule.levels.green }}</p>
+      </div>
+      <p class="meta"><kbd>Enter</kbd> acepta la propuesta · <kbd>n</kbd> siguiente · <kbd>p</kbd> anterior · <kbd>Esc</kbd> saltea</p>
+    </aside>
   </div>
-
-  <p class="path">{{ path }}</p>
-  <pre class="block-text">{{ block }}</pre>
-
-  <form hx-post="/documents/{{ doc.id }}/review" hx-target="#proposal" hx-indicator="#working">
-    <input type="hidden" name="block" value="{{ problem.block }}">
-    <input type="hidden" name="rule" value="{{ problem.rule }}">
-    <input type="hidden" name="n" value="{{ n }}">
-    <label>{{ question }}</label>
-    <textarea name="answer" rows="2" autofocus required></textarea>
-    <button type="submit">Proponer corrección</button>
-    <span id="working" class="htmx-indicator">reescribiendo y re-evaluando…</span>
-  </form>
-
-  <div id="proposal"></div>
 </div>
 {% endblock %}

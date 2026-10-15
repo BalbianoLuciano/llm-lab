@@ -18,3 +18,7 @@ data/raw/*.wav
 # Corpus descargado: se versiona la lista de URLs, no los archivos
 data/raw/corpus/
 data/interim/
+
+# Base SQLite, uploads y audio generado de la app
+data/app/
+data/podcast/
