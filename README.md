@@ -36,7 +36,6 @@ calidad documental** que revisa los documentos antes de indexarlos en un RAG
 
 | # | Lab | La pregunta | Estado |
 |---|---|---|---|
-| 00 | [Transcripción](labs/00-transcripcion/) | Herramienta: cortar un video y transcribirlo con Whisper local | hecho |
 | 01 | [Llamar al modelo](labs/01-llamar-al-modelo/) | ¿Qué cambia entre modelo, system prompt, temperatura y largo máximo? | hecho |
 | 02 | [Salida estructurada](labs/02-salida-estructurada/) | ¿Cuántas respuestas cumplen un esquema con y sin validación, y qué pasa cuando no? | hecho |
 | 11 | [Parseo](labs/11-parseo/) | ¿Cuánta estructura sobrevive al pasar de PDF, HTML y Word a bloques? | hecho |
