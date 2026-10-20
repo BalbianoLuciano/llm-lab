@@ -1,0 +1,60 @@
+{
+ "naive_text": "Registro de ejemplo: aranceles 2026\nValores vigentes para los trámites presenciales del registro.\nTrámite\nArancel\nTurno\nLicencia nueva\n$42.230\nCon turno previo\nRenovación\n$35.000\nCon turno previo\nDuplicado\n$23.460\nSin turno\nCambio de domicilio\n$8.900\nSin turno\nCertificado de antecedentes\n$5.100\nSin turno",
+ "plain": "| Trámite | Arancel | Turno |\n| Licencia nueva | $42.230 | Con turno previo |\n| Renovación | $35.000 | Con turno previo |\n| Duplicado | $23.460 | Sin turno |\n| Cambio de domicilio | $8.900 | Sin turno |\n| Certificado de antecedentes | $5.100 | Sin turno |",
+ "styled": "| Trámite | Arancel | Turno |  [fila: fondo oscuro, texto blanco, negrita]\n| Licencia nueva | $42.230 | Con turno previo |\n| Renovación | $35.000 | Con turno previo |  [fila: fondo oscuro, texto rojo]\n| Duplicado | $23.460 | Sin turno |  [fila: fondo oscuro, texto rojo]\n| Cambio de domicilio | $8.900 | Sin turno |\n| Certificado de antecedentes | $5.100 | Sin turno |",
+ "review_question": "Las filas «Renovación» y «Duplicado» tienen fondo oscuro, texto rojo. ¿Qué indica ese formato?",
+ "person_answer": "Suspendido hasta el 30/11/2026 por cambio de sistema",
+ "fixed": "| Trámite | Arancel | Turno | Observación |\n| Licencia nueva | $42.230 | Con turno previo |  |\n| Renovación | $35.000 | Con turno previo | Suspendido hasta el 30/11/2026 por cambio de sistema |\n| Duplicado | $23.460 | Sin turno | Suspendido hasta el 30/11/2026 por cambio de sistema |\n| Cambio de domicilio | $8.900 | Sin turno |  |\n| Certificado de antecedentes | $5.100 | Sin turno |  |",
+ "jev": {
+  "plain": {
+   "visual": 0.349,
+   "format": "ninguno",
+   "format_conf": 0.482,
+   "r1": "green",
+   "r1_probs": {
+    "green": 0.881,
+    "yellow": 0.031,
+    "red": 0.088
+   },
+   "useful": 3.63
+  },
+  "styled": {
+   "visual": 0.965,
+   "format": "oculto",
+   "format_conf": 0.496,
+   "r1": "red",
+   "r1_probs": {
+    "green": 0.116,
+    "yellow": 0.068,
+    "red": 0.816
+   },
+   "useful": 3.22
+  },
+  "fixed": {
+   "visual": 0.5,
+   "format": "explicado",
+   "format_conf": 0.639,
+   "r1": "green",
+   "r1_probs": {
+    "green": 0.815,
+    "yellow": 0.051,
+    "red": 0.133
+   },
+   "useful": 3.88
+  }
+ },
+ "answers": {
+  "naive_text": {
+   "answer": "Renovar la licencia te sale $35.000 y necesitás sacar turno previo [1].",
+   "model": "groq/qwen/qwen3.8-27b"
+  },
+  "plain": {
+   "answer": "Renovar la licencia te sale $35.000 y necesitás sacar turno previo [1].",
+   "model": "groq/qwen/qwen3.8-27b"
+  },
+  "fixed": {
+   "answer": "Renovar la licencia cuesta $35.000, pero está suspendido hasta el 30/11/2026, así que no podés hacerlo esta semana. [1]",
+   "model": "groq/openai/gpt-oss-120b"
+  }
+ }
+}
