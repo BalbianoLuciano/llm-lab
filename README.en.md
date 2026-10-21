@@ -50,6 +50,8 @@ traffic light** that reviews documents before indexing them in a RAG
 | 07 | [When it doesn't know](labs/07-cuando-no-sabe/) | Does it say "no tengo esa información" ("I don't have that information") instead of making something up? | done |
 | 10 | [Evaluation](labs/10-evaluacion/) | Does an automatic judge agree with the hand labels? | done |
 | 16 | [App and final experiment](labs/16-app/) | Does fixing before indexing improve the answers? | done |
+| 17 | [Dirty vs clean index](labs/17-base-sucia/) | How many answers are lost by indexing the raw text? | done |
+| 18 | [When the meaning is in the colour](labs/18-formato-visual/) | Can a table whose meaning lives in its formatting be detected and fixed? Choice, Score and Noul | done |
 | 08 | Tool use and agents | How many steps does an agent take and when does it pick the wrong tool? | optional |
 | 09 | Cost and caching | How much does each answer cost and how can it be lowered? | optional |
 

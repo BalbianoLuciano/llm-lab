@@ -50,6 +50,8 @@ calidad documental** que revisa los documentos antes de indexarlos en un RAG
 | 07 | [Cuándo no sabe](labs/07-cuando-no-sabe/) | ¿Dice "no tengo esa información" en vez de inventar? | hecho |
 | 10 | [Evaluación](labs/10-evaluacion/) | ¿Un juez automático coincide con las etiquetas a mano? | hecho |
 | 16 | [App y experimento final](labs/16-app/) | ¿Corregir antes de indexar mejora las respuestas? | hecho |
+| 17 | [Base sucia contra limpia](labs/17-base-sucia/) | ¿Cuántas respuestas se pierden indexando el texto crudo? | hecho |
+| 18 | [Cuando el dato está en el color](labs/18-formato-visual/) | ¿Se detecta y se corrige una tabla cuyo significado está en el formato? Choice, Score y Noul | hecho |
 | 08 | Tool use y agentes | ¿Cuántos pasos usa un agente y cuándo se equivoca de herramienta? | opcional |
 | 09 | Costo y caché | ¿Cuánto cuesta cada respuesta y cómo se baja? | opcional |
 
