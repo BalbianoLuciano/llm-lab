@@ -177,8 +177,8 @@ red) and a confidence. It aggregates per block and per document.
 **Where the idea comes from.** [Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev)
 (TypeSafe AI) popularized "System One" models: they don't generate text, they take a state and
 typed questions (`Choice`, `Score`, `Noul`) and return decisions with calibrated
-probabilities. That is exactly the shape of the traffic light. But Jev is paid and has had sign-ups closed
-since 22-Sep-2026, so **it is not a project dependency**.
+probabilities. That is exactly the shape of the traffic light. But Jev is paid and in early access with a
+waitlist, so **it is not a project dependency**.
 
 **The technique behind it is simple, and we build it ourselves.** Before writing, an LLM
 computes a probability for every possible token. If the question ends with

@@ -177,8 +177,8 @@ rojo) y una confianza. Agrega por bloque y por documento.
 **De dónde sale la idea.** [Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev)
 (TypeSafe AI) popularizó los modelos "System One": no generan texto, reciben un estado y
 preguntas tipadas (`Choice`, `Score`, `Noul`) y devuelven decisiones con probabilidades
-calibradas. Es exactamente la forma del semáforo. Pero Jev es pago y tiene las altas cerradas
-desde el 22-sep-2026, así que **no es una dependencia del proyecto**.
+calibradas. Es exactamente la forma del semáforo. Pero Jev es pago y está en acceso anticipado con
+lista de espera, así que **no es una dependencia del proyecto**.
 
 **La técnica detrás es simple, y la construimos nosotros.** Un LLM, antes de escribir,
 calcula una probabilidad para cada token posible. Si la pregunta termina en
