@@ -3,6 +3,7 @@ One detect it, ask the right question and fix it?
 
     uv run labs/18-formato-visual/run.py --phase detect   # 8 tables, with and without styles
     uv run labs/18-formato-visual/run.py --phase demo     # the full flow on the main case
+    uv run labs/18-formato-visual/run.py --phase answers  # the demo's answers, one model each
     uv run labs/18-formato-visual/run.py --phase report
 
 The tables are synthetic PDFs drawn with PyMuPDF (cases.py), so the ground truth is known: in
@@ -145,6 +146,26 @@ def phase_demo() -> None:
     (OUT / "demo.json").write_text(json.dumps(steps, ensure_ascii=False, indent=1))
 
 
+def phase_answers() -> None:
+    """The demo's answers, with one fixed model per row: the first demo run fell back from one
+    model to another between the versions, so it could not tell the fix from the model."""
+    demo = json.loads((OUT / "demo.json").read_text())
+    case = next(c for c in CASES if c["id"] == MAIN)
+    models = [Model("groq", "qwen/qwen3.8-27b"), Model("groq", "openai/gpt-oss-120b"),
+              Model("local", "mlx-community/Qwen3.5-9B-4bit")]
+    demo["answers_by_model"] = {}
+    for m in models:
+        demo["answers_by_model"][str(m)] = {}
+        for view in ("naive_text", "plain", "fixed"):
+            r = complete([{"role": "system", "content": SYSTEM},
+                          {"role": "user", "content": f"Fragmentos:\n\n[1] ({case['title']})\n"
+                                                      f"{state(case, demo[view])}\n\n"
+                                                      f"Pregunta: {case['user_question']}"}], m)
+            demo["answers_by_model"][str(m)][view] = r.text.strip()
+            print(m, view, r.text.strip()[:160], flush=True)
+    (OUT / "demo.json").write_text(json.dumps(demo, ensure_ascii=False, indent=1))
+
+
 # ---------------------------------------------------------------- report
 
 
@@ -194,13 +215,18 @@ def phase_report() -> None:
     for view, r in demo["jev"].items():
         md.append(f"| {view} | {r['visual']:.2f} | {r['r1']} | {r['useful']:.2f} |")
     md += ["", f"### 6. Lo que responde el asistente: «{case['user_question']}»", ""]
-    for view, r in demo["answers"].items():
-        md.append(f"- **{view}** ({r['model']}): {r['answer']}")
+    md += ["Cada modelo responde las tres versiones (modelo fijo por fila):", "",
+           "| Modelo | Texto plano (get_text) | Tabla sin estilo | Tabla corregida |",
+           "|---|---|---|---|"]
+    for model, answers in demo.get("answers_by_model", {}).items():
+        cells = [" ".join(answers[v].split()) for v in ("naive_text", "plain", "fixed")]
+        md.append(f"| {model} | " + " | ".join(cells) + " |")
     (HERE / "results.md").write_text("\n".join(md) + "\n")
     print("\n".join(md))
 
 
 if __name__ == "__main__":
     p = argparse.ArgumentParser()
-    p.add_argument("--phase", choices=["detect", "demo", "report"], required=True)
-    {"detect": phase_detect, "demo": phase_demo, "report": phase_report}[p.parse_args().phase]()
+    p.add_argument("--phase", choices=["detect", "demo", "answers", "report"], required=True)
+    {"detect": phase_detect, "demo": phase_demo, "answers": phase_answers,
+     "report": phase_report}[p.parse_args().phase]()

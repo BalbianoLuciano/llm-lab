@@ -21,8 +21,10 @@ que la API de Jev:
   *explicado* por el texto u *oculto*. La otra, la regla R1 en verde, amarillo o rojo.
 - **Score**: de 1 a 5, ¿qué tan bien respondería un asistente con este texto?
 
-Jev no acepta altas nuevas, así que no se probó Jev en sí: se probó la técnica abierta detrás
-(lab 13) con Qwen3.5 de 4B y 9B. Cambiar `SystemOne` por el cliente de Jev es tocar una clase.
+Jev está en acceso anticipado con lista de espera, así que no se probó Jev en sí: se probó la
+técnica abierta detrás (lab 13) con Qwen3.5 de 4B y 9B. Jev es otra cosa: un modelo entrenado
+para dar probabilidades calibradas. Las preguntas y respuestas de `SystemOne` copian la forma
+de las de Jev, para que reemplazarlo sea tocar una clase; no se comparó contra su cliente real.
 
 ## 2. Método
 
@@ -58,11 +60,19 @@ Sin el estilo (plain), **ninguna pregunta detecta ninguno de los 3 casos**, con 
 El flujo completo, caso principal (dos filas con fondo oscuro y texto rojo, sin leyenda), con
 el 9B:
 
-| Paso | Noul | R1 (Choice) | Score | Lo que responde el asistente a «¿Cuánto sale renovar la licencia y puedo hacerlo esta semana?» |
+| Paso | Noul | R1 (Choice) | Choice contrastado | Score |
 |---|---|---|---|---|
-| Texto plano | 0,35 | verde (0,88) | 3,63 | "Te sale $35.000 y necesitás sacar turno previo" (**mal**) |
-| Con el estilo anotado | 0,96 | **rojo (0,82)** | 3,22 | — |
-| Corregido | 0,50 | verde (0,82) | 3,88 | "Cuesta $35.000, pero está suspendido hasta el 30/11/2026, así que no podés hacerlo esta semana" (**bien**) |
+| Tabla sin estilo | 0,35 | verde (0,88) | ninguno (0,48) | 3,63 |
+| Con el estilo anotado | 0,96 | **rojo (0,82)** | oculto (0,50) | 3,22 |
+| Corregida | 0,50 | verde (0,82) | explicado (0,64) | 3,88 |
+
+Lo que responde el asistente a «¿Cuánto sale renovar la licencia y puedo hacerlo esta
+semana?», con cada modelo fijo en las tres versiones (Qwen3.8-27B y gpt-oss-120b en Groq,
+Qwen3.5-9B local):
+
+| | Texto plano y tabla sin estilo | Tabla corregida |
+|---|---|---|
+| Los tres modelos | "$35.000, con turno previo" (**mal**: el trámite está suspendido) | "$35.000, pero está suspendido hasta el 30/11/2026: no podés hacerlo esta semana" (**bien**) |
 
 La pregunta de la revisión se arma con lo que vio el parser, sin LLM: *"Las filas «Renovación»
 y «Duplicado» tienen fondo oscuro, texto rojo. ¿Qué indica ese formato?"*. La respuesta de la
@@ -93,7 +103,10 @@ nueva, también sin LLM.
    sube muchos documentos.
 6. **La corrección no necesita un LLM.** La pregunta sale de lo que vio el parser y la
    respuesta se escribe como una columna. Un solo dato de la persona cambió la respuesta del
-   asistente de incorrecta a correcta.
+   asistente de incorrecta a correcta, con los tres modelos probados.
+7. **La confianza del Choice contrastado en el caso principal fue baja (0,50).** Acertó la
+   opción, pero en el diseño propuesto ese bloque quedaría en amarillo "dudoso" y se le
+   preguntaría a la persona igual: es el comportamiento buscado, no un acierto firme.
 
 ### Límites
 - 8 tablas sintéticas, hechas por quien escribió las preguntas: sirven para ver el mecanismo,

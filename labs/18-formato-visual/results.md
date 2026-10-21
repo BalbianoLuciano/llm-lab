@@ -129,6 +129,10 @@ Sin turno
 
 ### 6. Lo que responde el asistente: «¿Cuánto sale renovar la licencia y puedo hacerlo esta semana?»
 
-- **naive_text** (groq/qwen/qwen3.8-27b): Renovar la licencia te sale $35.000 y necesitás sacar turno previo [1].
-- **plain** (groq/qwen/qwen3.8-27b): Renovar la licencia te sale $35.000 y necesitás sacar turno previo [1].
-- **fixed** (groq/openai/gpt-oss-120b): Renovar la licencia cuesta $35.000, pero está suspendido hasta el 30/11/2026, así que no podés hacerlo esta semana. [1]
+Cada modelo responde las tres versiones (modelo fijo por fila):
+
+| Modelo | Texto plano (get_text) | Tabla sin estilo | Tabla corregida |
+|---|---|---|---|
+| groq/qwen/qwen3.8-27b | Renovar la licencia te sale $35.000 y necesitás sacar turno previo [1]. | Renovar la licencia te sale $35.000 y necesitás sacar turno previo [1]. | Renovar la licencia cuesta $35.000, pero no podés hacerlo esta semana porque el trámite está suspendido hasta el 30/11/2026 por cambio de sistema [1]. |
+| groq/openai/gpt-oss-120b | Renovar la licencia cuesta $35.000 y se hace con turno previo【1】. | Renovar la licencia cuesta $35.000 y necesitás sacarte un turno previo [1]. | Renovar la licencia cuesta $35.000, pero está suspendido hasta el 30/11/2026, por lo que no podés hacerlo esta semana [1]. |
+| local/mlx-community/Qwen3.5-9B-4bit | Renovar la licencia cuesta $35.000 y tenés que agendar turno previo [1]. No tengo esa información en los documentos si querés saber si podés hacerlo esta semana. | Renovar la licencia cuesta $35.000 y tenés que agendar turno previo [1]. No tengo esa información en los documentos si querés saber si podés hacerlo esta semana. | Renovar la licencia cuesta $35.000, pero no podés hacerlo esta semana porque está suspendido hasta el 30/11/2026 por cambio de sistema [1]. |
