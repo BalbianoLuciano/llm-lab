@@ -2,6 +2,7 @@
 
     uv run labs/17-base-sucia/run.py --phase retrieval   # 4 bases, dense + re-ranking, no LLM
     uv run labs/17-base-sucia/run.py --phase rag         # answers on limpia and sucia, judged
+    uv run labs/17-base-sucia/run.py --phase context     # clean base, 8 chunks, its misses
     uv run labs/17-base-sucia/run.py --phase score       # Jev-style Score on sampled chunks
     uv run labs/17-base-sucia/run.py --phase report
 
@@ -33,8 +34,10 @@ OUT = HERE / "runs"
 RETRIEVAL = OUT / "retrieval.json"
 RAG_RUNS = OUT / "rag.jsonl"
 SCORES = OUT / "score.jsonl"
-ANSWERER = [Model("groq", "qwen/qwen3.8-27b"), Model("groq", "openai/gpt-oss-120b"),
-            Model("local", "mlx-community/Qwen3.5-9B-4bit")]
+CONTEXT = OUT / "context.jsonl"
+# One fixed model for both bases. A first run with the free-tier chain (runs/rag-cadena.jsonl)
+# ended with different models answering the same question on each base in 49 of 72 cases.
+ANSWERER = Model("local", "mlx-community/Qwen3.5-9B-4bit")
 JUDGE = [Model("groq", "openai/gpt-oss-120b"), Model("nvidia", "z-ai/glm-5.3"),
          Model("openrouter", "nvidia/nemotron-3-super-120b-a12b:free")]
 COMPARED = ["limpia", "sucia"]
@@ -134,6 +137,25 @@ def phase_rag() -> None:
                                                       else "respondió"), ans.model, flush=True)
 
 
+def phase_context() -> None:
+    """Diagnosis, not a fair comparison: the clean chunks average 588 characters and the dirty
+    ones 976, so five clean chunks give the model about half the text. Re-ask, on the clean
+    base, only the questions it did not get right, with 8 chunks instead of 5."""
+    from llm_lab.rag import RAG
+    first = {r["id"]: r for r in rows(RAG_RUNS).values() if r["base"] == "limpia"}
+    done = rows(CONTEXT)
+    rag = RAG(build("limpia"))
+    for q in load_questions():
+        prev = first.get(q["id"])
+        if not prev or prev["correctness"]["veredicto"] == "correcta" or q["id"] in done:
+            continue
+        ans = rag.answer(q["question"], k=8, models=ANSWERER)
+        row = {"key": q["id"], "before": prev["correctness"]["veredicto"], "answer": ans.text,
+               "abstained": ans.abstained, "correctness": judge(q, ans.text)}
+        append(CONTEXT, row)
+        print(q["id"], row["before"], "->", row["correctness"]["veredicto"], flush=True)
+
+
 # ---------------------------------------------------------------- phase 3: System One Score
 
 
@@ -223,6 +245,8 @@ def phase_report() -> None:
 
 if __name__ == "__main__":
     p = argparse.ArgumentParser()
-    p.add_argument("--phase", choices=["retrieval", "rag", "score", "report"], required=True)
-    {"retrieval": phase_retrieval, "rag": phase_rag, "score": phase_score,
+    p.add_argument("--phase", choices=["retrieval", "rag", "context", "score", "report"],
+                   required=True)
+    {"retrieval": phase_retrieval, "rag": phase_rag, "context": phase_context,
+     "score": phase_score,
      "report": phase_report}[p.parse_args().phase]()
